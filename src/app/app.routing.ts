@@ -24,9 +24,8 @@ const appRoutes: Routes = [
         component: RegisterComponent 
     },
 
-
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**', component: PageNotFoundComponent }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

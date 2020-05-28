@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router ,RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule }    from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { JwtModule,JwtHelperService } from '@auth0/angular-jwt';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -23,8 +23,9 @@ import { UserService } from './services/user.service';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    HttpClientModule,
     NgbModule,
-    routing,
+    routing
     JwtModule.forRoot({}),
     
   ],

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { AlertSer UserService } from '../services';
+import { UserService } from '../services';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
      lastName: ['', Validators.required],
      email: ['', Validators.required],
      mobileno: ['', Validators.required],
-     password: ['', Validators.required]
+     password: ['', [Validators.required, ]]
    });
   }
 

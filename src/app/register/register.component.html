@@ -26,7 +26,7 @@
 
 
                    <div class="form-group">
-                            <label for="lastName">La name</label>
+                            <label for="lastName">Last name</label>
                              <input type="text" name="lastName" class="form-control"  formControlName="lastName" placeholder="Enter full name" id="lastName"
                              [ngClass]="{'is-invalid':registerForm.get('lastName').touched && registerForm.get('lastName').invalid}"/>
                           <div *ngIf="registerForm.get('lastName').touched &&        registerForm.get('lastName').invalid"   class="invalid-feedback">

@@ -15,15 +15,29 @@
     
                 <form [formGroup] = "registerForm" (ngSubmit) = "registerForm.valid && onSubmit()" class="col s12 white">
                    <div class="form-group">
-                            <label for="fname">Full name</label>
-                             <input type="text" name="fname" class="form-control"  formControlName="fname" placeholder="Enter full name" id="fname"
-                             [ngClass]="{'is-invalid':registerForm.get('fname').touched && registerForm.get('fname').invalid}"/>
-                          <div *ngIf="registerForm.get('fname').touched &&        registerForm.get('fname').invalid"   class="invalid-feedback">
-                             <div *ngIf="registerForm.get('fname').errors.required">Name is required 
+                            <label for="firstName">First name</label>
+                             <input type="text" name="firstName" class="form-control"  formControlName="firstName" placeholder="Enter full name" id="firstName"
+                             [ngClass]="{'is-invalid':registerForm.get('firstName').touched && registerForm.get('firstName').invalid}"/>
+                          <div *ngIf="registerForm.get('firstName').touched &&        registerForm.get('firstName').invalid"   class="invalid-feedback">
+                             <div *ngIf="registerForm.get('firstName').errors.required">Name is required 
+                             </div>
+                             </div>
+                           </div>
+
+
+                   <div class="form-group">
+                            <label for="lastName">La name</label>
+                             <input type="text" name="lastName" class="form-control"  formControlName="lastName" placeholder="Enter full name" id="lastName"
+                             [ngClass]="{'is-invalid':registerForm.get('lastName').touched && registerForm.get('lastName').invalid}"/>
+                          <div *ngIf="registerForm.get('lastName').touched &&        registerForm.get('lastName').invalid"   class="invalid-feedback">
+                             <div *ngIf="registerForm.get('lastName').errors.required">Name is required 
                              </div>
                              </div>
                            </div>
                         
+
+
+            
 
 
 

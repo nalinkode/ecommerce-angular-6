@@ -11,8 +11,6 @@ import { AppComponent } from './app.component';
 
 import { routing } from './app.routing';
 
-import { AuthorizationService } from './services/authorization.service';
-
 import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { RegisterComponent } from './register/register.component';

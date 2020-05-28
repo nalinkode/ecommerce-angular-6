@@ -5,6 +5,6 @@ export class User {
     mobileno: number; 
     email: string;
     password: string;
-      role: string;
+    role: string;
     token?: string;
 }

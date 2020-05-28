@@ -10,7 +10,12 @@ import { UserService } from '../services';
 })
 export class RegisterComponent implements OnInit {
   registerForm : FormGroup; 
-  constructor(private fb: FormBuilder) { }
+  constructor(
+     private fb: FormBuilder,
+     private router: Router,
+     private userService: UserService 
+  ) 
+  { }
 
   ngOnInit() {
     this.createRegisterForm();
@@ -23,13 +28,14 @@ export class RegisterComponent implements OnInit {
      lastName: ['', Validators.required],
      email: ['', Validators.required],
      mobileno: ['', Validators.required],
-     password: ['', [Validators.required, ]]
+     password: ['', [Validators.required, Validators.minLength(6)]]
    });
   }
 
   onSubmit(){
     console.log('registerForm', this.registerForm.value);
     
+    this.userService.
  
   }
 

@@ -1,8 +1,9 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from '@angular/core';import { HttpClient } from '@angular/common/http';
+import { User } from '../models';
 
 @Injectable()
 export class UserService {
 
-  constructor() { }
+  constructor(http:HttpClient) { }
 
 }

@@ -5,5 +5,8 @@ import { User } from '../models';
 export class UserService {
 
   constructor(http:HttpClient) { }
-
+    
+register(user: User) {
+ 
+    }
 }

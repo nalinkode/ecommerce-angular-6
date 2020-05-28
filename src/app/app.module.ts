@@ -19,6 +19,7 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -41,7 +42,7 @@ import { AdminComponent } from './admin/admin.component';
       
   ],
   bootstrap: [ AppComponent ],
-  providers: []
+  providers: [UserService]
 })
 export class AppModule { }
 

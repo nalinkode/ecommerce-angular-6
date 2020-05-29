@@ -11,10 +11,16 @@ const appRoutes: Routes = [
         path: '',
         component: HomeComponent
     },
+     {
+        path: 'home',
+        component: HomeComponent
+    },
     { 
         path: 'admin', 
-        component: AdminComponent, 
-          },
+        component: AdminComponent,
+        canActivate:[activateGuard]
+
+    },
     { 
         path: 'login', 
         component: LoginComponent 

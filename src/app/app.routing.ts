@@ -5,6 +5,7 @@ import { RegisterComponent } from './register/register.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
+import { UserlistComponent } from './admin/userlist/userlist.component';
 
 const appRoutes: Routes = [
     {
@@ -18,7 +19,12 @@ const appRoutes: Routes = [
     { 
         path: 'admin', 
         component: AdminComponent,
-        canActivate:[activateGuard]
+        canActivate:[],
+        children: [
+        {path:'userlist', component: UserlistComponent }
+        
+         ]
+
 
     },
     { 

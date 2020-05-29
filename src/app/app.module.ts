@@ -25,7 +25,7 @@ import { UserService } from './services/user.service';
     ReactiveFormsModule,
     HttpClientModule,
     NgbModule,
-    routing
+    routing,
     JwtModule.forRoot({}),
     
   ],
@@ -36,11 +36,11 @@ import { UserService } from './services/user.service';
     RegisterComponent,
     PageNotFoundComponent,
     LoginComponent,
-    AdminComponent,
+    AdminComponent
       
   ],
   bootstrap: [ AppComponent ],
-  providers: [UserService]
+  providers: [ UserService ]
 })
 export class AppModule { }
 
@@ -62,8 +62,7 @@ can be found in the LICENSE file at http://angular.io/license
     ])
        
        
-       
-       
+    
        
         { path:"admin", component: AdminComponent ,
       children: [

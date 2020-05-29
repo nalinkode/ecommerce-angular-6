@@ -7,7 +7,7 @@ export class UserService {
   constructor(http:HttpClient) { }
     
    register(user: User) { 
-    console.log(user);
+    console.log("in user UserService",user);
 
    }
 }

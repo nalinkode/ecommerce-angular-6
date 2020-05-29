@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { UserService } from '../services';
+
+
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -32,9 +34,25 @@ export class RegisterComponent implements OnInit {
    });
   }
 
+
   onSubmit(){
     console.log('registerForm', this.registerForm.value);
- 
+      
+      if (this.registerForm.invalid) {
+            return;
+      }
+       
+        this.userService.register(this.registerForm.value)
+            .pipe(first())
+            .subscribe(
+                data => {
+                    
+                    this.router.navigate(['/login']);
+                },
+                error => {
+                    
+              });
+
   }
 
 

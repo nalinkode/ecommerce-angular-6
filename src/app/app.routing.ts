@@ -6,6 +6,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
+import { OrdersComponent } from './admin/orders/orders.component';
+
 
 const appRoutes: Routes = [
     {
@@ -21,8 +23,8 @@ const appRoutes: Routes = [
         component: AdminComponent,
         canActivate:[],
         children: [
-        {path:'userlist', component: UserlistComponent }
-        
+        {path:'userlist', component: UserlistComponent },
+        {path:'orders', component: OrdersComponent }
          ]
 
 

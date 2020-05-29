@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserService } from './services/user.service';
+import { UserlistComponent } from './admin/userlist/userlist.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { UserService } from './services/user.service';
     RegisterComponent,
     PageNotFoundComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    UserlistComponent
       
   ],
   bootstrap: [ AppComponent ],

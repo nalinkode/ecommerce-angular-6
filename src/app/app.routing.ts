@@ -7,7 +7,7 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { OrdersComponent } from './admin/orders/orders.component';
-
+import { ProductComponent } from './product/product.component';
 
 const appRoutes: Routes = [
     {
@@ -32,6 +32,10 @@ const appRoutes: Routes = [
     { 
         path: 'login', 
         component: LoginComponent 
+    },
+     { 
+        path: 'product', 
+        component: ProductComponent 
     },
     { 
         path: 'register', 

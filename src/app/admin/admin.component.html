@@ -11,24 +11,24 @@
    <ng-sidebar [opened]="opened">
         <p>Sidebar contents</p>
         <button (click)="toggleSidebar()">Closed sidebar</button>
-          <ul>
+          <ul class="menu">
             <li class="nav-item active">
-              <a class="nav-link" routerLink = "user">User</a>
+              <a class="nav-link" (click)="toggleSidebar() routerLink = "user">User</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" routerLink = "order">Order</a>
+              <a class="nav-link" (click)="toggleSidebar() routerLink = "order">Order</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" routerLink = "product">Product</a>
+              <a class="nav-link" (click)="toggleSidebar() routerLink = "product">Product</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" routerLink = "category">Category</a>
+              <a class="nav-link"(click)="toggleSidebar() routerLink = "category">Category</a>
             </li> 
           </ul>
    </ng-sidebar>
    <div ng-sidebar-content>
      <button (click)="toggleSidebar()">open sidebar</button>
-         
+         <router-outlet></router-outlet>
    </div>
 
 </ng-sidebar-container>

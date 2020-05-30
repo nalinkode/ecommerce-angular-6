@@ -9,6 +9,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
+import { OrderComponent } from './admin/order/order.component';
 
 const appRoutes: Routes = [
     {
@@ -25,6 +26,7 @@ const appRoutes: Routes = [
         canActivate:[],
         children: [
         {path:'user', component: UserlistComponent },
+        {path:'o', component: OrderComponent },
         {path:'product', component: ProductComponent },
         {path:'category', component: CategoryComponent }
         ]

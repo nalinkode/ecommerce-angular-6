@@ -10,6 +10,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { SidebarModule } from 'ng-sidebar';
 
+
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
@@ -34,7 +35,8 @@ import { OrderComponent } from './admin/order/order.component';
     routing,
     SidebarModule.forRoot(),
     JwtModule.forRoot({}),
-    
+
+
   ],
   declarations: [
     AppComponent,

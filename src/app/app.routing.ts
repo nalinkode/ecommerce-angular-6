@@ -7,7 +7,8 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { OrdersComponent } from './admin/orders/orders.component';
-
+import { ProductComponent } from './admin/product/product.component';
+import { CategoryComponent } from './admin/order/order.component';
 
 const appRoutes: Routes = [
     {
@@ -24,7 +25,9 @@ const appRoutes: Routes = [
         canActivate:[],
         children: [
         {path:'userlist', component: UserlistComponent },
-        {path:'orders', component: OrdersComponent }
+        {path:'orders', component: OrdersComponent },
+        {path:'product', component: ProductComponent },
+        {path:'category', component: CategoryComponent }
          ]
 
 
@@ -32,7 +35,7 @@ const appRoutes: Routes = [
     { 
         path: 'login', 
         component: LoginComponent 
-    }
+    },
     { 
         path: 'register', 
         component: RegisterComponent 

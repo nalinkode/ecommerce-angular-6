@@ -20,6 +20,7 @@ import { UserService } from './services/user.service';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
+import { OrderComponent } from './admin/order/order.component';
 
 
 
@@ -41,6 +42,7 @@ import { CategoryComponent } from './admin/category/category.component';
     PageNotFoundComponent,
     LoginComponent,
     AdminComponent,
+    OrderComponent,
     UserlistComponent,
     ProductComponent,
     CategoryComponent,

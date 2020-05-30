@@ -18,7 +18,6 @@ import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserService } from './services/user.service';
 import { UserlistComponent } from './admin/userlist/userlist.component';
-import { OrdersComponent } from './admin/orders/orders.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 
@@ -43,7 +42,6 @@ import { CategoryComponent } from './admin/category/category.component';
     LoginComponent,
     AdminComponent,
     UserlistComponent,
-    OrdersComponent,
     ProductComponent,
     CategoryComponent,
   ],

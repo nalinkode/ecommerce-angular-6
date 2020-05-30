@@ -8,6 +8,7 @@ import { JwtModule,JwtHelperService } from '@auth0/angular-jwt';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
+import { SidebarModule } from 'ng-sidebar';
 
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
@@ -31,6 +32,7 @@ import { OrderComponent } from './admin/order/order.component';
     HttpClientModule,
     NgbModule,
     routing,
+    SidebarModule.forRoot({),
     JwtModule.forRoot({}),
     
   ],

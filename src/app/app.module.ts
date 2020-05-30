@@ -32,7 +32,7 @@ import { OrderComponent } from './admin/order/order.component';
     HttpClientModule,
     NgbModule,
     routing,
-    SidebarModule.forRoot({),
+    SidebarModule.forRoot(),
     JwtModule.forRoot({}),
     
   ],

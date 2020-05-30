@@ -19,3 +19,15 @@
 <router-outlet></router-outlet>
 </div>
 </div>
+
+<ng-sidebar-container> 
+   <ng-sidebar [opened]="opened">
+        <p>side bar contents</p>
+   </ng-sidebar>
+   <div ng-sidebar-content>
+     <button (click)="toggleSidebar()">open sidebar</button>
+
+   </div>
+
+</ng-sidebar-container>
+

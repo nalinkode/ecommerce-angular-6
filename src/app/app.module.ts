@@ -19,7 +19,7 @@ import { AdminComponent } from './admin/admin.component';
 import { UserService } from './services/user.service';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { OrdersComponent } from './admin/orders/orders.component';
-import { ProductComponent } from './product/product.component';
+
 
 
 @NgModule({
@@ -42,8 +42,6 @@ import { ProductComponent } from './product/product.component';
     AdminComponent,
     UserlistComponent,
     OrdersComponent,
-    ProductComponent
-      
   ],
   bootstrap: [ AppComponent ],
   providers: [ UserService ]

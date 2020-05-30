@@ -24,13 +24,11 @@ const appRoutes: Routes = [
         component: AdminComponent,
         canActivate:[],
         children: [
-        {path:'userlist', component: UserlistComponent },
-        {path:'orders', component: OrdersComponent },
+        {path:'user', component: UserlistComponent },
+        {path:'order', component: OrdersComponent },
         {path:'product', component: ProductComponent },
         {path:'category', component: CategoryComponent }
-         ]
-
-
+        ]
     },
     { 
         path: 'login', 
@@ -40,7 +38,6 @@ const appRoutes: Routes = [
         path: 'register', 
         component: RegisterComponent 
     },
-
     // otherwise redirect to home
     { path: '**', component: PageNotFoundComponent }
 ];

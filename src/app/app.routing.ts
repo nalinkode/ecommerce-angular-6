@@ -11,6 +11,8 @@ import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
 
+
+
 const appRoutes: Routes = [
     {
         path: '',

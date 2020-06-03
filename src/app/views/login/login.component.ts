@@ -37,7 +37,10 @@ export class LoginComponent implements OnInit {
    //get password() {
    //  return this.loginForm.get('password');
    //}
-  SetRememberMe(){
-
+  SetRememberMe(event: any) {
+    if (event === 0) {
+      this.rememberMe = false;
+      localStorage.removeItem('RememberMe');
+    }
   }
 }

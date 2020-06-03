@@ -10,7 +10,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 })
 export class LoginComponent implements OnInit {
    loginForm : FormGroup; 
-   rememberMe: boolean;
+   rememberMe: any;;
   
   constructor(private fb: FormBuilder) { }
 
@@ -28,7 +28,13 @@ export class LoginComponent implements OnInit {
   }
 
    onSubmit() {
-     console.log('loginForm', this.loginForm.value);
+    console.log('loginForm', this.loginForm.value);
+    if (this.loginForm.value.email != null && this.loginForm.value.password != null ){
+      
+
+
+     }
+           
    }
 
   // get email() {

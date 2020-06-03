@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-import { UserService } from '../services';
+
 
 
 @Component({
@@ -14,8 +14,7 @@ export class RegisterComponent implements OnInit {
   registerForm : FormGroup; 
   constructor(
      private fb: FormBuilder,
-     private router: Router,
-     private userService: UserService 
+     private router: Router 
   ) 
   { }
 
@@ -42,16 +41,7 @@ export class RegisterComponent implements OnInit {
             return;
       }
        
-        this.userService.register(this.registerForm.value)
-            .pipe(first())
-            .subscribe(
-                data => {
-                    
-                    this.router.navigate(['/login']);
-                },
-                error => {
-                    
-              });
+       
 
   }
 

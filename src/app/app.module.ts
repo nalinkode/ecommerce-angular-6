@@ -24,7 +24,11 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
-im
+
+//Error component
+import { P500Component } from './error/500/500.component';
+import { P404Component } from './error/404/404.component';
+
 
 
 @NgModule({
@@ -50,7 +54,8 @@ im
     UserlistComponent,
     ProductComponent,
     CategoryComponent,
-    404Component, 500Component,
+    P500Component,
+    P404Component
   ],
   bootstrap: [ AppComponent ],
   providers: [ UserService ]

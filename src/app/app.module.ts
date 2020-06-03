@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { Router ,RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule }    from '@angular/forms';
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { JwtModule,JwtHelperService } from '@auth0/angular-jwt';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
@@ -11,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 
 //routing module
 import { routing } from './app.routing';
+
+import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
 //custom component
 import { RegisterComponent } from './views/register/register.component';

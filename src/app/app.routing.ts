@@ -12,7 +12,6 @@ import { OrderComponent } from './admin/order/order.component';
 //Error component
 import { P500Component, P404Component } from './views/error/';
 
-
 const appRoutes: Routes = [
     {
         path: '',

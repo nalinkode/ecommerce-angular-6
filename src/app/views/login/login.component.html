@@ -52,11 +52,11 @@
                 type="checkbox" 
                 name="rememberMe"
                 [(ngModel)]="rememberMe"
-               (change)="SetRememberMe(rememberMe?'1':'0')">
+                (change)="SetRememberMe(rememberMe?'1':'0')">
                </div>
             </div>
       </div>
-			<button type="submit" [disabled]= "!f.valid" class="btn btn-primary btn-block"> Submit</button>
+			<button type="submit" [disabled]= "!f.form.valid" class="btn btn-primary btn-block"> Submit</button>
 		</form>
 					<a [routerLink]="['/register']" class="btn btn-link">Sign-up</a>
 					<a (click)="gotoforgotpassword()" class="btn btn-link">Forget Password</a>

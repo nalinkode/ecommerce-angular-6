@@ -3,7 +3,7 @@ import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { RegisterComponent } from './register/register.component';
 
-import { LoginComponent } from './login/login.component';
+import { LoginComponent } from './/login/login.component';
 
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';

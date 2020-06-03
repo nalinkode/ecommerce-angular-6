@@ -19,7 +19,7 @@ import { RegisterComponent } from './register/register.component';
 
 import { LoginComponent } from './views/login/login.component';
 import { AdminComponent } from './admin/admin.component';
-import { UserService } from './services/user.service';
+
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
@@ -58,7 +58,7 @@ import { P404Component } from './error/404/404.component';
     P404Component
   ],
   bootstrap: [ AppComponent ],
-  providers: [ UserService ]
+  providers: []
 })
 export class AppModule { }
 

@@ -9,8 +9,8 @@ import { Md5 } from 'ts-md5/dist/md5';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-
    loginForm : FormGroup; 
+   rememberMe: boolean;
   
   constructor(private fb: FormBuilder) { }
 
@@ -22,7 +22,8 @@ export class LoginComponent implements OnInit {
    //forms controll
    this.loginForm = this.fb.group({
      email: ['', Validators.required], 
-     password: ['', Validators.required]
+     password: ['', Validators.required],
+     rememberMe:[false]
    });
   }
 
@@ -36,5 +37,7 @@ export class LoginComponent implements OnInit {
    //get password() {
    //  return this.loginForm.get('password');
    //}
+  SetRememberMe(){
 
+  }
 }

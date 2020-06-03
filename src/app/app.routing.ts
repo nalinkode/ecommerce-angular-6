@@ -67,13 +67,3 @@ export const routing = RouterModule.forRoot(appRoutes);
 
 
 
-
-/*
-   
-    RouterModule.forRoot([
-      { path:'', redirectTo:'/home', pathMatch:'full' },
-      { path:'home', component: HomeComponent},
-      { path:'login', component: LoginComponent},
-      { path:'register', component: RegisterComponent},
-      { path:"**", component: PageNotFoundComponent },
-*/

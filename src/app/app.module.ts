@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
 
 //routing module
 import { routing } from './app.routing';
-
+import { Router ,RouterModule, Routes } from '@angular/router';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 
 //custom component
@@ -55,7 +55,9 @@ import { P500Component, P404Component  } from './views/error';
     P404Component
   ],
   bootstrap: [ AppComponent ],
-  providers: []
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ]
 })
 export class AppModule { }
 

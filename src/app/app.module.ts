@@ -56,7 +56,7 @@ import { P500Component, P404Component  } from './views/error';
   ],
   bootstrap: [ AppComponent ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+    
   ]
 })
 export class AppModule { }

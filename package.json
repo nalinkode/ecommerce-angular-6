@@ -30,7 +30,6 @@
     "tslib": "1.13.0",
     "zone.js": "0.8.26",
     "ng2-cookies": "^1.0.12"
-
   },
   "scripts": {
     "ng": "ng",

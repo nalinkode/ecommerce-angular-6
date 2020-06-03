@@ -1,5 +1,5 @@
-;
-import { 500Component } from './error/500/500.component'import { NgModule } from '@angular/core';
+
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router ,RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule }    from '@angular/forms';
@@ -24,8 +24,7 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
-import { 404Component } from './error/404/404.component';
-
+im
 
 
 @NgModule({

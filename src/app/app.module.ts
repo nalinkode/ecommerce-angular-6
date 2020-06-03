@@ -11,14 +11,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { SidebarModule } from 'ng-sidebar';
-
+import { FormsModule } from '@angular/forms';
 
 import { routing } from './app.routing';
 
 //custom component
 import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
-//-
+
 import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { AdminComponent } from './admin/admin.component';
@@ -37,6 +37,7 @@ import { P404Component } from './views/error/404/404.component';
   imports: [
     BrowserModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
     NgbModule,
     routing,

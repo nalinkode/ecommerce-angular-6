@@ -12,14 +12,14 @@
 							<form [formGroup] = "loginForm" (ngSubmit) = "loginForm.valid && onSubmit()" class="col s12 white">
 								<div class="form-group">
 									<label for="email">E-mail</label>
-									<input type="email" class="form-control"  formControlName="email" placeholder="Enter Email"
+									<input type="email" class="form-control"  formControlName="email" placeholder="Username or Email"
                              [ngClass]="{'is-invalid':loginForm.get('email').touched && loginForm.get('email').invalid}"/>
 									<div *ngIf="loginForm.get('email').touched &&         loginForm.get('email').invalid"   class="invalid-feedback">
 										<div *ngIf="loginForm.get('email').errors.required">Email is required 
                              </div>
 										<div *ngIf="loginForm.get('email').errors.email">
                                 Email must be valid email address
-                              </div>
+                    </div>
 									</div>
 								</div>
 								<div class="form-group">
@@ -32,6 +32,17 @@
                                 password must be at least 6 characters          </div>
 									</div>
 								</div>
+                <div class="clearfix">
+                                    <div class="float-left">
+                                        <div class="custom-control custom-control-alternative custom-checkbox">
+                                            <input class="custom-control-input" id="customCheckLogin" type="checkbox"
+                                                name="rememberMe" [(ngModel)]="rememberMe"
+                                                (change)="SetRememberMe(rememberMe?'1':'0')">
+                                            <label class="custom-control-label text-muted"
+                                                for="customCheckLogin"><span>Remember me</span></label>
+                                        </div>
+                                    </div>
+                                </div>
 								<button type="submit" [disabled]= "!loginForm.valid"
                    class="btn btn-primary btn-block"> Submit</button>
 							</form>
@@ -44,9 +55,3 @@
 		</div>
 	</div>
 </div>
-<!-- <div class="row"><div class="col s8 offset-s2"><div class="card"><div class="sm-jumbotron center-align"><h2>HTECOMMERCE Login</h2></div><div class="panel-body"><div class="container"><form class="col s12 white" (ngSubmit)="login()"  ><div class="form-group"><label>Email</label><input type="email" class="form-control" required   placeholder="Enter Email" 
-            name="Email" #Email="ngModel" [(ngModel)]="user.email"></div><div class="form-group"><label>Password</label><input type="password" class="form-control"  placeholder="Enter Password" required 
-            name="Password" #Password="ngModel"
-            [(ngModel)]="user.password"></div><button class="btn-large btn-primary"  type="submit"> Submit</button><a (click)="gotoRegister()" class="btn btn-link">Register</a><a (click)="gotoforgotpassword()" class="btn btn-link">Forget Password</a></form></div></div></div></div></div>
-    
-   -->

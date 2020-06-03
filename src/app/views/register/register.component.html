@@ -10,7 +10,8 @@
 						<h2 class="text-center">Sign Up</h2>
 						<div class="panel">
 							<form [formGroup] = "registerForm" (ngSubmit) = "registerForm.valid && onSubmit()" class="col s12 white">
-								<div class="form-group">
+								
+                <div class="form-group">
 									<label for="firstName">First name</label>
 									<input type="text" 
                   name="firstName" 
@@ -88,6 +89,7 @@
                   password must be at least 6 characters</div>
 									</div>
 								</div>
+                
 								<button type="submit" [disabled]= "!registerForm.valid"
                   class="btn btn-primary btn-block"> Submit</button>
 							</form>

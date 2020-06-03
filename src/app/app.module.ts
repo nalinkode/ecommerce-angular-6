@@ -6,6 +6,7 @@ import { ReactiveFormsModule }    from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
 import { JwtModule,JwtHelperService } from '@auth0/angular-jwt';
 
+
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
@@ -13,13 +14,14 @@ import { SidebarModule } from 'ng-sidebar';
 
 
 import { routing } from './app.routing';
+
+//custom component
+import { RegisterComponent } from './views/register/register.component';
+import { LoginComponent } from './views/login/login.component';
+//-
 import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
-import { RegisterComponent } from './register/register.component';
-
-import { LoginComponent } from './views/login/login.component';
 import { AdminComponent } from './admin/admin.component';
-
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';

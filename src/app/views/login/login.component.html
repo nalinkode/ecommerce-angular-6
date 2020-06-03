@@ -11,7 +11,7 @@
 				<div class="panel">
 	
   
-  	<form [formGroup] = "loginForm" (ngSubmit) = "f.form.valid && onSubmit()"      class="col s12 white" >
+  	<form [formGroup] = "loginForm" (ngSubmit) = "loginForm..valid && onSubmit()"      class="col s12 white" >
 				
        <div class="form-group">
 									<label for="email">E-mail</label>
@@ -45,6 +45,7 @@
                   password must be at least 6 characters</div>
 									</div>
 								</div>
+
 
           <div class="clearfix">
            <div class="float-left">

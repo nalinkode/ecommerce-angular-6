@@ -44,7 +44,8 @@ export class LoginComponent implements OnInit {
       }
       const md5 = new Md5();
       const pwd = md5.appendStr(this.loginForm.value.password).end();
-      const dat = { 'Email': this.loginForm.value.email, 'Password': pwd , 'RememberMe': this.rememberMe };
+      const dat = { 'Email': this.loginForm.value.email, 'Password': pwd , 
+       'RememberMe': this.loginForm.value.rememberMe };
       console.log(dat);
 
      }

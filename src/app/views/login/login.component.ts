@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   createForm(){
    //forms controll
    this.loginForm = this.fb.group({
-     email: ['', Validators.required], 
+     email: string  ['', Validators.required], 
      password: ['', Validators.required],
      rememberMe:[false]
    });
@@ -30,9 +30,10 @@ export class LoginComponent implements OnInit {
    onSubmit() {
     console.log('loginForm', this.loginForm.value);
     if (this.loginForm.value.email != null && this.loginForm.value.password != null ){
-      email : this.loginForm.value.email;
-      password: this.loginForm.value.password;
-      if (this.rememberMe) {
+      email : String = this.loginForm.value.email;
+      password: CharacterData = this.loginForm.value.password;
+       
+       if (this.rememberMe) {
         localStorage.setItem('username', this.loginForm.value.email);
         localStorage.setItem('password', this.loginForm.value.password);
         localStorage.setItem('RememberMe', JSON.stringify(this.rememberMe));
@@ -44,8 +45,7 @@ export class LoginComponent implements OnInit {
       }
       const md5 = new Md5();
       const pwd = md5.appendStr(this.loginForm.value.password).end();
-      const dat = { 'Email': this.loginForm.value.email, 'Password': pwd , 
-       'RememberMe': this.loginForm.value.rememberMe };
+      const dat = { 'Email': this.loginForm.value.email, 'Password': pwd };
       console.log(dat);
 
      }

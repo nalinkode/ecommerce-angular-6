@@ -1,4 +1,5 @@
-import { NgModule } from '@angular/core';
+;
+import { 500Component } from './error/500/500.component'import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Router ,RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule }    from '@angular/forms';
@@ -15,7 +16,7 @@ import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { RegisterComponent } from './register/register.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 import { LoginComponent } from './login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserService } from './services/user.service';
@@ -23,6 +24,7 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
+import { 404Component } from './error/404/404.component';
 
 
 
@@ -43,13 +45,13 @@ import { OrderComponent } from './admin/order/order.component';
     HomeComponent,
     HeaderNavComponent,
     RegisterComponent,
-    PageNotFoundComponent,
     LoginComponent,
     AdminComponent,
     OrderComponent,
     UserlistComponent,
     ProductComponent,
     CategoryComponent,
+    404Component, 500Component,
   ],
   bootstrap: [ AppComponent ],
   providers: [ UserService ]

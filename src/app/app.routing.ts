@@ -2,7 +2,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { RegisterComponent } from './register/register.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+
 import { LoginComponent } from './login/login.component';
 
 import { AdminComponent } from './admin/admin.component';
@@ -40,7 +40,7 @@ const appRoutes: Routes = [
         component: RegisterComponent 
     },
     // otherwise redirect to home
-    { path: '**', component: PageNotFoundComponent }
+    { path: '**', component:  }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

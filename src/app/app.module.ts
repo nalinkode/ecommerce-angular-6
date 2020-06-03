@@ -26,8 +26,8 @@ import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
 
 //Error component
-import { P500Component } from './error/500/500.component';
-import { P404Component } from './error/404/404.component';
+import { P500Component } from './views/error/500/500.component';
+import { P404Component } from './views/error/404/404.component';
 
 
 

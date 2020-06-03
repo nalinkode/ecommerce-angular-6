@@ -11,6 +11,9 @@ import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
 
+//Error component
+import { P500Component } from './error/500/500.component';
+import { P404Component } from './error/404/404.component';
 
 
 const appRoutes: Routes = [
@@ -41,8 +44,23 @@ const appRoutes: Routes = [
         path: 'register', 
         component: RegisterComponent 
     },
-    // otherwise redirect to home
-    { path: '**', component:  }
+    // ERROR 
+    { 
+      path: '404',
+      component: P404Component,
+      data: {
+        title:'Page-404'
+      }
+    },
+    { 
+      path: '500',
+      component: P500Component,
+      data: {
+        title:'Page-500'
+      }
+    },
+    
+    { path: '**', component: P404Component }
 ];
 
 export const routing = RouterModule.forRoot(appRoutes);

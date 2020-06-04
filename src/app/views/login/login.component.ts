@@ -30,8 +30,8 @@ export class LoginComponent implements OnInit {
    onSubmit() {
     console.log('loginForm', this.loginForm.value);
     if (this.loginForm.value.email != null && this.loginForm.value.password != null ){
-      console.log(this.rememberMe); 
-       if (this.rememberMe) {
+      console.log(this.loginForm.value.rememberMe); 
+       if (this.loginForm.value.rememberMe) {
         localStorage.setItem('username', this.loginForm.value.email);
         localStorage.setItem('password', this.loginForm.value.password);
         localStorage.setItem('RememberMe', JSON.stringify(this.rememberMe));

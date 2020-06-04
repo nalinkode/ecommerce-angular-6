@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   createForm(){
    //forms controll
    this.loginForm = this.fb.group({
-     email: ['', Validators.required], 
+     userName: ['', Validators.required], 
      password: ['', Validators.required],
      rememberMe:[false]
    });
@@ -42,10 +42,10 @@ export class LoginComponent implements OnInit {
 
    onSubmit() {
     console.log('loginForm', this.loginForm.value);
-    if (this.loginForm.value.email != null && this.loginForm.value.password != null ){
+    if (this.loginForm.value.userName != null && this.loginForm.value.password != null ){
 
        if (this.loginForm.value.rememberMe) {
-        localStorage.setItem('username', this.loginForm.value.email);
+        localStorage.setItem('username', this.loginForm.value.userName);
         localStorage.setItem('password', this.loginForm.value.password);
         localStorage.setItem('RememberMe', JSON.stringify(this.loginForm.value.rememberMe));
         debugger

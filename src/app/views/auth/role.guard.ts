@@ -12,7 +12,7 @@ export class RoleGuard implements CanActivate {
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
       const role = Cookie.get('userRole');
       if(role == next.data.role){
-         return 
+         return true;
       }
     return false;
   }

@@ -8,7 +8,7 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
-
+import { RoleGuard } from './views/auth/role.guard';
 //Error component
 import { P500Component, P404Component } from './views/error/';
 
@@ -24,7 +24,7 @@ const appRoutes: Routes = [
     { 
         path: 'admin', 
         component: AdminComponent,
-        canActivate:[],
+        canActivate: [RoleGuard], data: {role: 'Admin'},
         children: [
         {path:'user', component: UserlistComponent },
         {path:'order', component: OrderComponent },

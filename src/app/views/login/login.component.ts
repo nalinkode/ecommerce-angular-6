@@ -53,11 +53,8 @@ export class LoginComponent implements OnInit {
       console.log(dat);
       this.loginService.login(dat).subscribe((res: any) => {
  
-  
-      }
-
-
-
+     
+      });
      }     
    }
 

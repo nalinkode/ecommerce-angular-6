@@ -46,21 +46,20 @@
 									</div>
 								</div>
 
-
-          <div class="clearfix">
-           <div class="float-left">
-           <div class="custom-control custom-control-alternative custom-checkbox">
-           <label class="custom-control-label"
-           for="customCheckLogin"><span>Remember me</span></label>
-           <input class="custom-control-input" 
+         
+          <div class="form-group">
+           <div class="form-check">
+           <label class="form-check-label"
+           for="customCheckLogin"> <span>Remember me </span></label>
+           <input class="form-check-input" 
            id="customCheckLogin"
            type="checkbox" 
            name="rememberMe"
            formControlName="rememberMe"
            (change)="SetRememberMe(rememberMe?'1':'0')">
             </div>
-            </div>
-      </div>
+           </
+      
 			<button type="submit" [disabled]= "!loginForm.valid" class="btn btn-primary btn-block"> Submit</button>
 		</form>
 					<a [routerLink]="['/register']" class="btn btn-link">Sign-up</a>

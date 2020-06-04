@@ -11,7 +11,7 @@ export class LoginService {
   constructor(private http: HttpClient) { }
 
   login(data){
-  d
+  debug
   return this.http.post(environment.BASE_URL + 'authenticate', data).pipe(map(res => res));
 
   }

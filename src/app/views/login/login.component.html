@@ -30,24 +30,23 @@
 									</div>
 								</div>
 
-				          <div class="form-group">
-									<label for="password">Password</label>
-									<input type="password" 
-                  formControlName="password" 
-                  class="form-control" 
-                  id="password" 
-                  placeholder="Enter Password"  
-                  [ngClass]="{'is-invalid':loginForm.get('password').touched && loginForm.get('password').invalid}"/>
-									<div *ngIf="loginForm.get('password').touched &&         loginForm.get('password').invalid" class="invalid-feedback">
-									<div *ngIf="loginForm.get('password').errors.required">Password is required 
-                  </div>
-									<div *ngIf="loginForm.get('password').errors.minlength">
-                  password must be at least 6 characters</div>
-									</div>
+			    <div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" 
+            formControlName="password" 
+            class="form-control"
+            id="password" 
+            placeholder="Enter Password"  
+            [ngClass]="{'is-invalid':loginForm.get('password').touched && loginForm.get('password').invalid}"/>
+						<div *ngIf="loginForm.get('password').touched &&         loginForm.get('password').invalid" class="invalid-feedback">
+						<div *ngIf="loginForm.get('password').errors.required">Password is required 
+            </div>
+						<div *ngIf="loginForm.get('password').errors.minlength">
+            password must be at least 6 characters</div>
+						</div>
 								</div>
 
-         
-          <div class="form-group">
+                   <div class="form-group">
            <div class="form-check">
            <label class="form-check-label"
            for="customCheckLogin"> <span>Remember me </span></label>
@@ -55,11 +54,12 @@
            id="customCheckLogin"
            type="checkbox" 
            name="rememberMe"
+           style="margin: 4px;"
            formControlName="rememberMe"
            (change)="SetRememberMe(rememberMe?'1':'0')">
             </div>
-           </
-      
+          </div>
+              
 			<button type="submit" [disabled]= "!loginForm.valid" class="btn btn-primary btn-block"> Submit</button>
 		</form>
 					<a [routerLink]="['/register']" class="btn btn-link">Sign-up</a>

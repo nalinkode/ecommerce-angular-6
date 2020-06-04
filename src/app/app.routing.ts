@@ -8,6 +8,8 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
+
+//auth
 import { RoleGuard } from './views/auth/role.guard';
 //Error component
 import { P500Component, P404Component } from './views/error/';

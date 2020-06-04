@@ -2,7 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { Md5 } from 'ts-md5/dist/md5';
-import { LoginService } from '../login/login.service'
+import { LoginService } from '../login/login.service';
+import { Router } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +15,8 @@ export class LoginComponent implements OnInit {
    loginForm : FormGroup; 
    rememberMe: any;
    
-  constructor(private fb: FormBuilder) { }
+  constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router,
+    private http: HttpClientModule) { }
 
   ngOnInit() {
     this.createForm();
@@ -48,6 +51,8 @@ export class LoginComponent implements OnInit {
       const pwd = md5.appendStr(this.loginForm.value.password).end();
       const dat = { 'Email': this.loginForm.value.email, 'Password': pwd };
       console.log(dat);
+
+
 
      }     
    }

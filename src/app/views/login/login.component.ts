@@ -12,14 +12,23 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-   loginForm : FormGroup; 
-   rememberMe: any;
+  loginForm : FormGroup; 
+  UserName = '';
+  Password = '';
+  rememberMe: any;
+  isloggedIn: boolean;
    
   constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router,
     private http: HttpClientModule) { }
 
   ngOnInit() {
     this.createForm();
+    this.UserName = localStorage.getItem('username');
+    this.Password = localStorage.getItem('password');
+    if (JSON.parse(localStorage.getItem('RememberMe')) !== null) {
+      this.rememberMe = JSON.parse(localStorage.getItem('RememberMe'));
+    }
+   debugger
   }
 
   createForm(){

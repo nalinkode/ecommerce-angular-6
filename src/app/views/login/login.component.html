@@ -14,18 +14,18 @@
   	<form [formGroup] = "loginForm" (ngSubmit) = "loginForm.valid && onSubmit()"      class="col s12 white" >
 				
        <div class="form-group">
-									<label for="email">E-mail</label>
+									<label for="userName">E-mail</label>
 									<input type="email" 
                   class="form-control" 
-                  formControlName="email" 
-                  id="email" 
-                  placeholder="Enter Email"
-                  [ngClass]="{'is-invalid':loginForm.get('email').touched && loginForm.get('email').invalid}"/>
+                  formControlName="userName" 
+                  id="userName" 
+                  placeholder="Enter Email or username"
+                  [ngClass]="{'is-invalid':loginForm.get('userName').touched && loginForm.get('userName').invalid}"/>
 									
-                  <div *ngIf="loginForm.get('email').touched &&         loginForm.get('email').invalid" class="invalid-feedback">
-									<div *ngIf="loginForm.get('email').errors.required">Email is required 
+                  <div *ngIf="loginForm.get('userName').touched &&         loginForm.get('userName').invalid" class="invalid-feedback">
+									<div *ngIf="loginForm.get('userName').errors.required">Email is required 
                   </div>
-									<div *ngIf="loginForm.get('email').errors.email">
+									<div *ngIf="loginForm.get('userName').errors.email">
                   Email must be valid email address                          </div>
 									</div>
 								</div>

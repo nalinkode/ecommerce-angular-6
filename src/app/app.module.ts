@@ -6,6 +6,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { SidebarModule } from 'ng-sidebar';
 import { FormsModule } from '@angular/forms';
+import { BlockUIModule } from 'ng-block-ui';
 
 //routing module
 import { routing } from './app.routing';
@@ -43,7 +44,7 @@ import { FooterComponent } from './container/footer/footer.component';
     routing,
     SidebarModule.forRoot(),
     JwtModule.forRoot({}),
-
+    BlockUIModule.forRoot()
 
   ],
   declarations: [

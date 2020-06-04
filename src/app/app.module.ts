@@ -58,7 +58,7 @@ import { AuthInterceptortsService } from './views/auth/auth-interceptorts.servic
   bootstrap: [ AppComponent ],
   providers: [
     
-  AuthInterceptortsService]
+  ]
 })
 export class AppModule { }
 

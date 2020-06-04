@@ -26,6 +26,7 @@ import { OrderComponent } from './admin/order/order.component';
 //Error component
 import { P500Component, P404Component  } from './views/error';
 import { AuthInterceptortsService } from './views/auth/auth-interceptorts.service';
+import { AuthInterceptorService } from './views/auth/auth-interceptor.service';
 
 
 @NgModule({
@@ -58,7 +59,7 @@ import { AuthInterceptortsService } from './views/auth/auth-interceptorts.servic
   bootstrap: [ AppComponent ],
   providers: [
     
-  ]
+  AuthInterceptorService]
 })
 export class AppModule { }
 

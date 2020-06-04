@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
        if (this.loginForm.value.rememberMe) {
         localStorage.setItem('username', this.loginForm.value.email);
         localStorage.setItem('password', this.loginForm.value.password);
-        localStorage.setItem('RememberMe', JSON.stringify(this.rememberMe));
+        localStorage.setItem('RememberMe', JSON.stringify(this.loginForm.value.rememberMe));
         debugger
       } else {
         localStorage.removeItem('username');

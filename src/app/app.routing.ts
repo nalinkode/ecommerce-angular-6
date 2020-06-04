@@ -11,6 +11,7 @@ import { OrderComponent } from './admin/order/order.component';
 
 //auth
 import { RoleGuard } from './views/auth/role.guard';
+import { AuthGuard } from './views/auth/auth.guard.
 //Error component
 import { P500Component, P404Component } from './views/error/';
 

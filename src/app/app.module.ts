@@ -28,7 +28,7 @@ import { P500Component, P404Component  } from './views/error';
 
 
 //auth
-import { AuthInterceptorService } from './views/auth/auth-interceptor.service';
+import { AuthInterceptor } from './views/auth/AuthInterceptor';
 
 
 @NgModule({

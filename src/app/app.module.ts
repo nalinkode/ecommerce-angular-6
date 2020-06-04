@@ -60,8 +60,7 @@ import { AuthInterceptorService } from './views/auth/auth-interceptor.service';
   ],
   bootstrap: [ AppComponent ],
   providers: [
-    
-  AuthInterceptorService]
+  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
 })
 export class AppModule { }
 

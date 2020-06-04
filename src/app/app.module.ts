@@ -29,6 +29,7 @@ import { P500Component, P404Component  } from './views/error';
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { DefaultLayoutComponent } from './container/default-layout/default-layout.component';
+import { HeaderComponent } from './container/header/header.component';
 
 
 @NgModule({
@@ -57,7 +58,8 @@ import { DefaultLayoutComponent } from './container/default-layout/default-layou
     CategoryComponent,
     P500Component,
     P404Component,
-    DefaultLayoutComponent
+    DefaultLayoutComponent,
+    HeaderComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [

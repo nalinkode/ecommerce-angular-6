@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
       this.rememberMe = JSON.parse(localStorage.getItem('RememberMe'));
     }
    debugger
-  }
+     }
 
   createForm(){
    //forms controll
@@ -60,10 +60,12 @@ export class LoginComponent implements OnInit {
       const pwd = md5.appendStr(this.loginForm.value.password).end();
       const dat = { 'userName': this.loginForm.value.userName, 'Password': pwd };
       console.log(dat);
-      this.loginService.login(dat).subscribe((res: any) => {
-      debugger
+      this.loginService.abc().subscribe(data => console.log(data));
+     // this.loginService.login(dat).subscribe((res: any) => {
+     // debugger
+    //  console.log(res);
      
-      });
+    //  });
      }     
    }
 

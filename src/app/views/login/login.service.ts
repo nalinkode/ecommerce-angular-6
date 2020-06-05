@@ -10,13 +10,19 @@ import { UserlistComponent } from '../../admin/userlist/userlist.component';
 export class LoginService {
 
   constructor(private http: HttpClient) { }
-
+/*
   login(data){
+  debugger
+    return this.http.post(environment.BASE_URL + 'authenticate', data).pipe(map(res => res));
+
+  }
+*/
+
+  a(){
   debugger
     return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(map(res => res));
 
   }
-
 
 
 

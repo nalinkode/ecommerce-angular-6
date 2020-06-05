@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule }    from '@angular/forms';
-import { JwtModule,JwtHelperService } from '@auth0/angular-jwt';
+import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
 import { SidebarModule } from 'ng-sidebar';
@@ -43,7 +42,6 @@ import { FooterComponent } from './container/footer/footer.component';
     NgbModule,
     routing,
     SidebarModule.forRoot(),
-    JwtModule.forRoot({}),
     BlockUIModule.forRoot()
 
   ],

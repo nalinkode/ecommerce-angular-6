@@ -23,6 +23,9 @@ export class LoginComponent implements OnInit {
     private http: HttpClientModule) { }
 
   ngOnInit() {
+   this.loginService.abc().subscribe(data => console.log(data));
+   this.toaster.infoToastr('Please enter valid Email and password.');
+      
     this.createForm();
     this.UserName = localStorage.getItem('username');
     this.Password = localStorage.getItem('password');
@@ -61,10 +64,10 @@ export class LoginComponent implements OnInit {
       const pwd = md5.appendStr(this.loginForm.value.password).end();
       const dat = { 'userName': this.loginForm.value.userName, 'Password': pwd };
       console.log(dat);
-      //this.loginService.abc().subscribe(data => console.log(data));
+      
       this.loginService.login(dat).subscribe((res: any) => {
       debugger
-      this.toaster.infoToastr('Please enter valid Email and password.');
+      
 
       console.log(res);
       if (res.Success) {

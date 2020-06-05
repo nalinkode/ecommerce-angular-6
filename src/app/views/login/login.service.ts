@@ -14,13 +14,12 @@ export class LoginService {
   login(data){
   debugger
     return this.http.post(environment.BASE_URL + 'authenticate', data).pipe(map(res => res));
-
   }
 
 
   abc(){
   debugger
-    return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(map(res => res));
+    return this.http.get('https://jsonplaceholder.typicode.com/posts');
 
   }
 

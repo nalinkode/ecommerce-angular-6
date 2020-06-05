@@ -30,7 +30,9 @@
     "tslib": "1.13.0",
     "zone.js": "0.8.26",
     "ng2-cookies": "^1.0.12",
-    "ng-block-ui": "^2.1.5"
+    "ng-block-ui": "^2.1.5",
+    "ng6-toastr-notifications": "^1.0.4"
+
   },
   "scripts": {
     "ng": "ng",

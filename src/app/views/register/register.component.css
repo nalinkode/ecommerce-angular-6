@@ -1,19 +1,17 @@
-
-
 .custom-bg{
     background-color:#1aff1a;
   }
-  
-  body {
+
+body {
     background-image: url('wp5058126.jpg');
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
-  }
-  .margin{
+}
+.margin{
     margin-top: 50%;
-  }
-  .custom-margin{
+}
+.custom-margin{
    margin-top: 20vh;
-  }
+}
   

@@ -33,6 +33,7 @@ import { DefaultLayoutComponent } from './container/default-layout/default-layou
 import { HeaderComponent } from './container/header/header.component';
 import { FooterComponent } from './container/footer/footer.component';
 
+import { LoginService } from './views/login/login.service';
 
 @NgModule({
   imports: [
@@ -66,6 +67,7 @@ import { FooterComponent } from './container/footer/footer.component';
   ],
   bootstrap: [ AppComponent ],
   providers: [
+    LoginService,
   { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
 })
 export class AppModule { }

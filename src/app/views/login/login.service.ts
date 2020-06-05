@@ -18,9 +18,8 @@ export class LoginService {
 
 
   abc(){
+  return this.http.get('https://jsonplaceholder.typicode.com/posts');
   debugger
-    return this.http.get('https://jsonplaceholder.typicode.com/posts');
-
   }
 
 

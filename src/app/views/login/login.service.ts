@@ -18,7 +18,7 @@ export class LoginService {
   }
 */
 
-  ab(){
+  abc(){
   debugger
     return this.http.get('https://jsonplaceholder.typicode.com/users').pipe(map(res => res));
 

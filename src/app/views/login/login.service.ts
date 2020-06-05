@@ -10,13 +10,13 @@ import { UserlistComponent } from '../../admin/userlist/userlist.component';
 export class LoginService {
 
   constructor(private http: HttpClient) { }
-/*
+
   login(data){
   debugger
     return this.http.post(environment.BASE_URL + 'authenticate', data).pipe(map(res => res));
 
   }
-*/
+
 
   abc(){
   debugger

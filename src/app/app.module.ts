@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { SidebarModule } from 'ng-sidebar';
 import { FormsModule } from '@angular/forms';
 import { BlockUIModule } from 'ng-block-ui';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ToastrModule } from 'ng6-toastr-notifications';
 
 //routing module
@@ -40,8 +39,7 @@ import { FooterComponent } from './container/footer/footer.component';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    FontAwesomeModule,
-    ToastrModule,
+      ToastrModule,
     HttpClientModule,
     NgbModule,
     routing,

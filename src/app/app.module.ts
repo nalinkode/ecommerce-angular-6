@@ -41,7 +41,7 @@ import { FooterComponent } from './container/footer/footer.component';
     ReactiveFormsModule,
     FormsModule,
     FontAwesomeModule,
-    
+    ToastrModule,
     HttpClientModule,
     NgbModule,
     routing,

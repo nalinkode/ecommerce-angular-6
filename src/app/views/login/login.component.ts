@@ -5,6 +5,7 @@ import { Md5 } from 'ts-md5/dist/md5';
 import { LoginService } from '../login/login.service';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,7 @@ export class LoginComponent implements OnInit {
   rememberMe: any;
   isloggedIn: boolean;
    
-  constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router,
+  constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router, private toaster: ToastrManager, 
     private http: HttpClientModule) { }
 
   ngOnInit() {
@@ -60,10 +61,17 @@ export class LoginComponent implements OnInit {
       const pwd = md5.appendStr(this.loginForm.value.password).end();
       const dat = { 'userName': this.loginForm.value.userName, 'Password': pwd };
       console.log(dat);
-      this.loginService.abc().subscribe(data => console.log(data));
-     // this.loginService.login(dat).subscribe((res: any) => {
-     // debugger
-    //  console.log(res);
+      //this.loginService.abc().subscribe(data => console.log(data));
+      this.loginService.login(dat).subscribe((res: any) => {
+      debugger
+     console.log(res);
+     if (res.Success) {
+     
+     }
+     else{
+
+     }
+
      
     //  });
      }     

@@ -39,7 +39,7 @@ import { FooterComponent } from './container/footer/footer.component';
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
-    ToastrModule.forRoot,
+    ToastrModule.forRoot(),
     HttpClientModule,
     NgbModule,
     routing,

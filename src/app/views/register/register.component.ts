@@ -42,7 +42,6 @@ export class RegisterComponent implements OnInit {
    });
   }
 
-
   onSubmit(){
     console.log('registerForm', this.registerForm.value);
       if (this.registerForm.invalid) {
@@ -52,15 +51,23 @@ export class RegisterComponent implements OnInit {
     this.registerForm.value.password = md5.appendStr     (this.registerForm.value.password).end();
     this.blockedUI(true); 
    
-   this.registerService.test().subscribe((data:any) => {
-     
-     console.log(data)
-   
+   this.registerService.test().subscribe((data:any) => {  
+     console.log(data);
    });
-   this.blockedUI(false); 
-   
-   
-  
+    
+   this.registerService.register(this.registerForm.value).subscribe((res: any) => {
+      this.blockedUI(false);
+      if (res.EmailExist) {
+        this.toastr.errorToastr('Email already exist.');
+      } else if (res.Success) {
+        Cookie.set('Register', 'true');
+        this.router.navigate(['check-mail']);
+      } else {
+        this.toastr.errorToastr('Please enter valid data.');
+      }
+    }, err => {
+      this.blockedUI(false);
+    }); 
   }
 
    blockedUI(value) {

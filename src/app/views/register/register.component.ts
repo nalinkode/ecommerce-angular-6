@@ -49,8 +49,17 @@ export class RegisterComponent implements OnInit {
             return;
       }
     const md5 = new Md5();
-    this.registerForm.value.password = md5.appendStr(this.registerForm.value.password).end();
+    this.registerForm.value.password = md5.appendStr     (this.registerForm.value.password).end();
     this.blockedUI(true); 
+    
+    this.registerService.register(this.registerForm.value).subscribe((res: any)=> {
+
+
+
+    }, err => {
+      this.blockedUI(false);
+    });
+  
   }
 
    blockedUI(value) {

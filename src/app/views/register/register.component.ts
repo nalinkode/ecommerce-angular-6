@@ -49,13 +49,16 @@ export class RegisterComponent implements OnInit {
             return;
       }
     const md5 = new Md5();
-    this.registerForm.value.passw= md5.appendStr(this.registerForm.value.password).end();
-    this.blockedUI(true);
-       
-       
-
+    this.registerForm.value.password = md5.appendStr(this.registerForm.value.password).end();
+    this.blockedUI(true); 
   }
 
-
+   blockedUI(value) {
+     if (value) {
+       this.blockUI.start(''); // Start blocking
+     } else {
+      this.blockUI.stop(); // Stop blocking
+     }
+  }
 
 }

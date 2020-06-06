@@ -36,6 +36,7 @@ import { FooterComponent } from './container/footer/footer.component';
 
 import { LoginService } from './views/login/login.service';
 import { RegisterService } from './views/register/register.service';
+import { AboutUsComponent } from './views/about-us/about-us.component';
 
 @NgModule({
   imports: [
@@ -65,7 +66,8 @@ import { RegisterService } from './views/register/register.service';
     P404Component,
     DefaultLayoutComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    AboutUsComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [

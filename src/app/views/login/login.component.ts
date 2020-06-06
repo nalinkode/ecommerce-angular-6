@@ -6,6 +6,7 @@ import { LoginService } from '../login/login.service';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +15,7 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 })
 export class LoginComponent implements OnInit {
   loginForm : FormGroup; 
+  @BlockUI() blockUI: NgBlockUI;
   UserName = '';
   Password = '';
   rememberMe: any;
@@ -64,11 +66,10 @@ export class LoginComponent implements OnInit {
       const pwd = md5.appendStr(this.loginForm.value.password).end();
       const dat = { 'userName': this.loginForm.value.userName, 'Password': pwd };
       console.log(dat);
-      
+      this.blockedUI(true);
       this.loginService.login(dat).subscribe((res: any) => {
       debugger
-      
-
+    
       console.log(res);
       if (res.Success) {
      
@@ -76,16 +77,24 @@ export class LoginComponent implements OnInit {
       else{
 
       }
-
-     
-      });
-     }     
-   }
+      }, err => {
+        this.blockedUI(false);
+      }); 
+    }     
+  }
 
   SetRememberMe(event: any) {
     if (event === 0) {
       this.rememberMe = false;
       localStorage.removeItem('RememberMe');
     }
+  }
+
+   blockedUI(value) {
+     if (value) {
+       this.blockUI.start(''); // Start blocking
+     } else {
+      this.blockUI.stop(); // Stop blocking
+     }
   }
 }

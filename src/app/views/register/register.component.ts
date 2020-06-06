@@ -45,10 +45,12 @@ export class RegisterComponent implements OnInit {
 
   onSubmit(){
     console.log('registerForm', this.registerForm.value);
-      
       if (this.registerForm.invalid) {
             return;
       }
+    const md5 = new Md5();
+    this.registerForm.value.passw= md5.appendStr(this.registerForm.value.password).end();
+    this.blockedUI(true);
        
        
 

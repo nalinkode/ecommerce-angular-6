@@ -7,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderNavComponent implements OnInit {
    opened = false;
-   routes = [
-    {linkName:'Login', url:'login'},
-    {linkName:'Register', url:'register'}
-  ]
-
+  
   constructor() { }
 
   ngOnInit() {

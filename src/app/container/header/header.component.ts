@@ -6,6 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+   routes = [
+    {linkName:'Login', url:'login'},
+    {linkName:'Register', url:'register'}
+  ]
 
   constructor() { }
 

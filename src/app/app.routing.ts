@@ -7,6 +7,7 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
+import { AboutUsComponent } from './views/about-us/about-us.component';
 
 //auth
 import { RoleGuard } from './views/auth/role.guard';
@@ -43,6 +44,11 @@ const appRoutes: Routes = [
         path: 'register', 
         component: RegisterComponent 
     },
+     { 
+        path: 'about-us', 
+        component: AboutUsComponent 
+    },
+
     // ERROR 
     { 
       path: '404',

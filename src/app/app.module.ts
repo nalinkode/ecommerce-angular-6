@@ -24,7 +24,7 @@ import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
-
+import { AboutUsComponent } from './views/about-us/about-us.component';
 //Error component
 import { P500Component, P404Component  } from './views/error';
 
@@ -36,7 +36,7 @@ import { FooterComponent } from './container/footer/footer.component';
 
 import { LoginService } from './views/login/login.service';
 import { RegisterService } from './views/register/register.service';
-import { AboutUsComponent } from './views/about-us/about-us.component';
+
 
 @NgModule({
   imports: [

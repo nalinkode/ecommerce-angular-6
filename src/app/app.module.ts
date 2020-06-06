@@ -34,6 +34,8 @@ import { HeaderComponent } from './container/header/header.component';
 import { FooterComponent } from './container/footer/footer.component';
 
 import { LoginService } from './views/login/login.service';
+import { RegisterserviceService } from './views/register/registerservice.service';
+import { RegisterService } from './views/register/register.service';
 
 @NgModule({
   imports: [
@@ -68,7 +70,7 @@ import { LoginService } from './views/login/login.service';
   bootstrap: [ AppComponent ],
   providers: [
     LoginService,
-  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }]
+  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true, providers: [RegisterserviceService], providers: [RegisterService] }]
 })
 export class AppModule { }
 

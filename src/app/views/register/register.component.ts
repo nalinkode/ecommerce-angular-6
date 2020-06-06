@@ -2,7 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
-
+import { Md5 } from 'ts-md5';
+import { ToastrManager } from 'ng6-toastr-notifications';
+import { Cookie } from 'ng2-cookies/ng2-cookies';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
 
 @Component({
@@ -12,9 +15,15 @@ import { first } from 'rxjs/operators';
 })
 export class RegisterComponent implements OnInit {
   registerForm : FormGroup; 
+  @BlockUI() blockUI: NgBlockUI;
+  UserPassword: any;
+ 
+ 
   constructor(
      private fb: FormBuilder,
-     private router: Router 
+     private router: Router,
+     private Service: RegisterService, 
+     private toastr: ToastrManager 
   ) 
   { }
 

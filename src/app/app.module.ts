@@ -54,7 +54,7 @@ import { RegisterService } from './views/register/register.service';
   declarations: [
     AppComponent,
     HomeComponent,
-    HeaderNavComponent,
+    
     RegisterComponent,
     LoginComponent,
     AdminComponent,

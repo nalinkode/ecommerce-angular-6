@@ -68,7 +68,7 @@ import { RegisterService } from './views/register/register.service';
   ],
   bootstrap: [ AppComponent ],
   providers: [
-    LoginService,
+    ,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true, }
   ]
 })

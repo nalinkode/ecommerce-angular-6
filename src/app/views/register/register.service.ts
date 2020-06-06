@@ -9,8 +9,8 @@ export class RegisterService {
   constructor(private http: HttpClient) { }
 
   register(data){
-
-    console.log(d);
+debugger
+    console.log(data);
   } 
   
 }

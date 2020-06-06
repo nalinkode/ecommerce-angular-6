@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppComponent } from './app.component';
@@ -11,7 +13,7 @@ import { ToastrModule } from 'ng6-toastr-notifications';
 //routing module
 import { routing } from './app.routing';
 import { Router ,RouterModule, Routes } from '@angular/router';
-import { HttpClientModule, HTTP_INTERCEPTORS, HttpClient } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 //custom component
 import { RegisterComponent } from './views/register/register.component';
@@ -39,6 +41,7 @@ import { RegisterService } from './views/register/register.service';
 @NgModule({
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
     ToastrModule.forRoot(),
@@ -68,8 +71,8 @@ import { RegisterService } from './views/register/register.service';
   ],
   bootstrap: [ AppComponent ],
   providers: [
-    ,
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true, }
+
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true,}
   ]
 })
 export class AppModule { }

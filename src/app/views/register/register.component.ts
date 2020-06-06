@@ -53,7 +53,7 @@ export class RegisterComponent implements OnInit {
     this.blockedUI(true); 
    
    this.registerService.test().subscribe(data => console.log(data));
-   this.blockedUI(f); 
+   this.blockedUI(false); 
    
    
   

@@ -72,7 +72,7 @@ import { RegisterService } from './views/register/register.service';
   bootstrap: [ AppComponent ],
   providers: [
 
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true,}
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ]
 })
 export class AppModule { }

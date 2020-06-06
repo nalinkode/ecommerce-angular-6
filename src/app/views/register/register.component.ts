@@ -6,7 +6,7 @@ import { Md5 } from 'ts-md5';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import { RegisterService } from './viewregister/register.service';
+import { RegisterService } from '../register/register.service';
 
 @Component({
   selector: 'app-register',
@@ -22,7 +22,7 @@ export class RegisterComponent implements OnInit {
   constructor(
      private fb: FormBuilder,
      private router: Router,
-     private Service: RegisterService, 
+     private registerService: RegisterService, 
      private toastr: ToastrManager 
   ) 
   { }

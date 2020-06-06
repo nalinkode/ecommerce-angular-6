@@ -6,7 +6,7 @@ import { Md5 } from 'ts-md5';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { Cookie } from 'ng2-cookies/ng2-cookies';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-
+import { RegisterService } from './viewregister/register.service';
 
 @Component({
   selector: 'app-register',

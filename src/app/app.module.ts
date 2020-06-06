@@ -19,7 +19,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
 import { HomeComponent } from './home/home.component';
-import { HeaderNavComponent } from './header-nav/header-nav.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { ProductComponent } from './admin/product/product.component';

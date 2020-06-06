@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header-nav.component.css']
 })
 export class HeaderNavComponent implements OnInit {
+   opened = false;
    routes = [
     {linkName:'Login', url:'login'},
     {linkName:'Register', url:'register'}
@@ -16,4 +17,8 @@ export class HeaderNavComponent implements OnInit {
   ngOnInit() {
   }
 
+toggleSidebar(){
+    this.opened = !this.opened;
+
+  }
 }

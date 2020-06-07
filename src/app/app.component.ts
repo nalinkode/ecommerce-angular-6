@@ -8,8 +8,12 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 })
 export class AppComponent  {
 // Wires up BlockUI instance
-  @BlockUI() blockUI: NgBlockUI;
-
+  @BlockUI('root') blockUI: NgBlockUI;
+  
+  constructor(){
+    this.blockUI.start();
+    /this.blockUI.stop();
+  }
   
 }
 

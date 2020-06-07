@@ -68,7 +68,8 @@ import { RegisterService } from './views/register/register.service';
     DefaultLayoutComponent,
     HeaderComponent,
     FooterComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    
   ],
   bootstrap: [ AppComponent ],
   providers: [

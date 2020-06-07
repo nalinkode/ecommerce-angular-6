@@ -12,7 +12,7 @@ export class AppComponent  {
   
   constructor(){
     this.blockUI.start();
-    /this.blockUI.stop();
+    this.blockUI.stop();
   }
   
 }

@@ -9,6 +9,7 @@ import { SidebarModule } from 'ng-sidebar';
 import { FormsModule } from '@angular/forms';
 import { BlockUIModule } from 'ng-block-ui';
 import { ToastrModule } from 'ng6-toastr-notifications';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
 
 //routing module
 import { routing } from './app.routing';
@@ -51,8 +52,8 @@ import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
     NgbModule,
     routing,
     SidebarModule.forRoot(),
-    BlockUIModule.forRoot()
-
+    BlockUIModule.forRoot(),
+    FontAwesomeModule
   ],
   declarations: [
     AppComponent,

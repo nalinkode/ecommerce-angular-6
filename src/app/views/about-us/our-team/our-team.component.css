@@ -55,7 +55,9 @@
   height: 90px;
   border-radius: 50%;
   position: absolute;
-  top: -50px
+  top: -50px;
+  left: 50%;
+  
 }
 
 .team .team_member .team_image img {

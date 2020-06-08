@@ -29,5 +29,7 @@
 .team .team_member {
   background: #fff;
   margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
   
 }

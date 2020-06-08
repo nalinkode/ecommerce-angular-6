@@ -5,12 +5,12 @@
 }
 
 .body {
-  background: #80b3ff;
- 
+  background: #3f51b5;
 }
 
 .wrapper {
    margin-top: 10%;
+   padding: 6px;
 }
 
 .wrapper h1 {
@@ -24,6 +24,7 @@
   text-align: center;
   width: auto;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .team .team_member {
@@ -38,13 +39,13 @@
 }
 
 .team .team_member h3 {
-  color: #81c644;
+  color: #3f51b5;
   font-size: 26px;
   margin-top: 50px;
 
 }
 .team .team_member p.role {
-  color: #ccc;
+  color: #00;
   font-size: 12px;
   text-transform: uppercase;
   margin: 12px 0;
@@ -57,11 +58,11 @@
   position: absolute;
   top: -50px;
   left: 50%;
-  
+  transform: translateX(-50%);
 }
 
 .team .team_member .team_image img {
     width: 100px;
     height: 100px;
-    padding: 10
+    padding: 10px;
 }

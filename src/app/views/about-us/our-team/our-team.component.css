@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Jura&family=Oswald&display=swap');
 * {
   margin: 0;
   padding: 0;
@@ -56,6 +56,9 @@
 
 .team .team_member p.desc {
    padding: 10px 5px;
+   font-family: 'Dancing Script', cursive;
+  font-family: 'Jura', sans-serif;
+  font-family: 'Oswald', sans-serif;
 }
 
 .team .team_member .team_image {

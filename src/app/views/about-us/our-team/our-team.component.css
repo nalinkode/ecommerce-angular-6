@@ -55,11 +55,11 @@
   height: 90px;
   border-radius: 50%;
   position: absolute;
-
+  top: -50px
 }
 
 .team .team_member .team_image img {
     width: 100px;
     height: 100px;
-    
+
 }

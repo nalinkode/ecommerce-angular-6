@@ -1,6 +1,20 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
 
+.body {
+  background: #80b3ff;
+ 
+}
+
+.wrapper {
+   margin-top: 10%;
+}
+
+.wrapper h1 {
+  font-size: 50px;
+  margin-bottom: 60px;
+  text-align: c
 }

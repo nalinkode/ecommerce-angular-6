@@ -16,5 +16,9 @@
 .wrapper h1 {
   font-size: 50px;
   margin-bottom: 60px;
-  text-align: c
+  text-align: center;
+}
+
+.team {
+  display: flex
 }

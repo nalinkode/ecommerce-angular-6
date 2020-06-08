@@ -8,6 +8,7 @@ import { ProductComponent } from './admin/product/product.component';
 import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
+import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
 
 //auth
 import { RoleGuard } from './views/auth/role.guard';
@@ -46,7 +47,7 @@ const appRoutes: Routes = [
     },
      { 
         path: 'about-us', 
-        component: AboutUsComponent 
+        component: OurTeamComponent 
     },
 
     // ERROR 

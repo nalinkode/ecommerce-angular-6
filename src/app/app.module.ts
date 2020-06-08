@@ -37,6 +37,7 @@ import { FooterComponent } from './container/footer/footer.component';
 
 import { LoginService } from './views/login/login.service';
 import { RegisterService } from './views/register/register.service';
+import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
 
 
 @NgModule({
@@ -69,6 +70,7 @@ import { RegisterService } from './views/register/register.service';
     HeaderComponent,
     FooterComponent,
     AboutUsComponent,
+    OurTeamComponent,
     
   ],
   bootstrap: [ AppComponent ],

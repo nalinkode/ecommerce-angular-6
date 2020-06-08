@@ -24,5 +24,10 @@
   text-align: center;
   width: auto;
   justify-content: center;
+}
 
+.team .team_member {
+  background: #fff;
+  margin: 5px;
+  
 }

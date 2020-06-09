@@ -43,6 +43,7 @@ import { HomeHeaderComponent } from './container/home-layout/home-header/home-he
 import { HomeFooterComponent } from './container/home-layout/home-footer/home-footer.component';
 import { HomeSidebarComponent } from './container/home-layout/home-sidebar/home-sidebar.component';
 import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
+import { ContactUsComponent } from './views/contact-us/contact-us.component';
 
 
 @NgModule({
@@ -80,6 +81,7 @@ import { HomeLayoutComponent } from './container/home-layout/home-layout/home-la
     HomeFooterComponent,
     HomeSidebarComponent,
     HomeLayoutComponent,
+    ContactUsComponent,
     
   ],
   bootstrap: [ AppComponent ],

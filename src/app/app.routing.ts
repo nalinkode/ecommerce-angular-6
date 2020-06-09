@@ -9,6 +9,7 @@ import { CategoryComponent } from './admin/category/category.component';
 import { OrderComponent } from './admin/order/order.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
+import { ContactUsComponent } from './views/contact-us/contact-us.component';
 
 //auth
 import { RoleGuard } from './views/auth/role.guard';
@@ -45,9 +46,14 @@ const appRoutes: Routes = [
         path: 'register', 
         component: RegisterComponent 
     },
-     { 
+    { 
         path: 'about-us', 
         component: OurTeamComponent 
+    },
+
+    { 
+        path: 'contact-us', 
+        component: ContactUsComponent 
     },
 
     // ERROR 

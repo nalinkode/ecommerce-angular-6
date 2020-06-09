@@ -39,6 +39,10 @@ import { FooterComponent } from './container/footer/footer.component';
 import { LoginService } from './views/login/login.service';
 import { RegisterService } from './views/register/register.service';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
+import { HomeHeaderComponent } from './container/home-layout/home-header/home-header.component';
+import { HomeFooterComponent } from './container/home-layout/home-footer/home-footer.component';
+import { HomeSidebarComponent } from './container/home-layout/home-sidebar/home-sidebar.component';
+import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
 
 
 @NgModule({
@@ -72,6 +76,10 @@ import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
     FooterComponent,
     AboutUsComponent,
     OurTeamComponent,
+    HomeHeaderComponent,
+    HomeFooterComponent,
+    HomeSidebarComponent,
+    HomeLayoutComponent,
     
   ],
   bootstrap: [ AppComponent ],

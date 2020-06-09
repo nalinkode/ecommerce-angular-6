@@ -10,7 +10,7 @@ import { OrderComponent } from './admin/order/order.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
-
+import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
 //auth
 import { RoleGuard } from './views/auth/role.guard';
 import { AuthGuard } from './views/auth/auth.guard';
@@ -21,7 +21,7 @@ import { P500Component, P404Component } from './views/error/';
 const appRoutes: Routes = [
     {
         path: '',
-        component: HomeComponent
+        component: HomeLayoutComponent
     },
      {
         path: 'home',

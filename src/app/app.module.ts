@@ -29,6 +29,9 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
 import { LoginService } from './views/login/login.service';
 import { RegisterService } from './views/register/register.service';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
+import { DefaultLayoutComponent } from './container/default-layout/default-layout.component';
+import { HeaderComponent } from './container/header/header.component';
+import { FooterComponent } from './container/footer/footer.component';
 import { HomeHeaderComponent } from './container/home-layout/home-header/home-header.component';
 import { HomeFooterComponent } from './container/home-layout/home-footer/home-footer.component';
 import { HomeSidebarComponent } from './container/home-layout/home-sidebar/home-sidebar.component';
@@ -42,9 +45,7 @@ import { P500Component, P404Component  } from './views/error';
 
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
-import { DefaultLayoutComponent } from './container/default-layout/default-layout.component';
-import { HeaderComponent } from './container/header/header.component';
-import { FooterComponent } from './container/footer/footer.component';
+
 
 
 

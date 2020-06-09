@@ -11,14 +11,14 @@ navbar-dark custom-bg">
         <a class="nav-link collapse" routerLink="home">Home <span class="sr-only">(current)</span></a>
       </li>
       <li  class="nav-item active">
-        <a class="nav-link collapse" routerLink ="about-us" >About</a>
+        <a class="nav-link " routerLink ="about-us" >About</a>
       </li>
       <li class="nav-item active">
-        <a class="nav-link collapse" routerLink = "product">Products</a>
+        <a class="nav-link" routerLink = "product">Products</a>
       </li>
     
       <li *ngFor="let route of routes" class="nav-item active">
-        <a class="nav-link collapse" [routerLink]="route.url">{{route.linkName}}</a>
+        <a class="nav-link" [routerLink]="route.url">{{route.linkName}}</a>
       </li>
 
       <li  class="nav-item active">
@@ -26,7 +26,7 @@ navbar-dark custom-bg">
       </li>
 
       <li  class="nav-item active">
-        <a class="nav-link " routerLink = "admin">Admin</a>
+        <a class="nav-link" routerLink = "admin">Admin</a>
       </li>
 
     </ul>

@@ -66,6 +66,7 @@ export class LoginComponent implements OnInit {
       this.loginService.login(dat).subscribe((res: any) => {
               
       if (res.userName === dat.userName && res.password === dat.Password ) {
+         debugger
          this.isloggedIn = true;
          Cookie.set('isLoggedIn', 'true');
          Cookie.set('userId', res.userId);

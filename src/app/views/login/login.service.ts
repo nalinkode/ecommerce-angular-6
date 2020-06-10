@@ -13,7 +13,7 @@ export class LoginService {
 
   login(data){
   debugger
-    return this.http.post('/assets/users.json',data).pipe(map(res => res));
+    return this.http.post('/assets/user.json',data).pipe(map(res => res));
   }
 
 

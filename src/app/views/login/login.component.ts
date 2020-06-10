@@ -67,12 +67,21 @@ export class LoginComponent implements OnInit {
       const dat = { 'userName': this.loginForm.value.userName, 'Password': pwd };
       console.log(dat);
       this.blockedUI(true);
-      this.loginService.login(dat).subscribe((res: any) => {
-      
-
-      console.log(res);
-      if (res.Success) {
      
+      this.loginService.login(dat).subscribe((res: any) => {
+      debugger
+      console.log(res);
+      if (res) {
+         this.isloggedIn = true;
+         Cookie.set('isLoggedIn', 'true');
+         Cookie.set('userId', res.userId);
+          Cookie.set('UserName', res.firstName + ' ' + res.lastName); 
+          if (res.userRole) {
+            Cookie.set('userRole', res.userRole);
+             if (res.userRole === 'Admin') {
+              this.router.navigate(['admin']);
+            }
+          }
       } 
       else{
 

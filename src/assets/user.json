@@ -4,6 +4,7 @@
     "lastName":"kode",
     "userRole": "Admin",
     "email": "nalinkode35@gmail.com",
-    "password":"abc"
+    "password":"abc",
+    "success": true
 }
 

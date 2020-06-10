@@ -1,4 +1,4 @@
-{{
+{
     "userId": 1,
     "firstName": "Nalin",
     "lastName":"kode",
@@ -7,4 +7,3 @@
     "password":"abc"
 }
 
-}

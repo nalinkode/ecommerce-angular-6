@@ -68,8 +68,8 @@ export class LoginComponent implements OnInit {
       console.log(dat);
       this.blockedUI(true);
       this.loginService.login(dat).subscribe((res: any) => {
-      debugger
-    
+      
+
       console.log(res);
       if (res.Success) {
      

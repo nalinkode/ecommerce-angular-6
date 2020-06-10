@@ -1,17 +1,10 @@
-[{
+{{
     "userId": 1,
     "firstName": "Nalin",
     "lastName":"kode",
     "userRole": "Admin",
     "email": "nalinkode35@gmail.com",
     "password":"abc"
-},
-{
-    "userId": 2,
-    "firstName": "chetan",
-    "lastName":"bendkule",
-    "userRole": "User",
-    "email": "chetan35@gmail.com",
-    "password":"abc"
 }
-]
+
+}

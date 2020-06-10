@@ -11,8 +11,7 @@ export class LoginService {
 
   constructor(private http: HttpClient) { }
 
-  login(data){
-  debugger
+  login(data){ 
     return this.http.get('/assets/user.json').pipe(map(res => res));
   }
 

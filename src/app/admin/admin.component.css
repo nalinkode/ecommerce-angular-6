@@ -1,5 +1,6 @@
 ng-sidebar-container {
   height: 100vh;
+  flex-wrap: 
 }
 
 ::ng-deep .ng-sidebar {

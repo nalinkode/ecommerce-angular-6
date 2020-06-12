@@ -41,6 +41,10 @@
   cursor: pointer;
   border: 2px solid #fff;
   color: #fff;
-  
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: auto auto;
 }
 

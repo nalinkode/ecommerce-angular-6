@@ -48,3 +48,30 @@
   grid-template-columns: auto auto;
 }
 
+.form-info {
+  font-size: 16px;
+  font-style: italic;
+  letter-spacing: 2px;
+}
+
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
+  background-color: rgba(136, 133, 133, 0.5);
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+textarea {
+  padding: 10px;
+  margin: 10px;
+  width: 70%;
+  background-color: rgba(136, 133, 133, 0.5);
+  color: #fff;
+  border: none;
+  outline: none;
+}
+
+

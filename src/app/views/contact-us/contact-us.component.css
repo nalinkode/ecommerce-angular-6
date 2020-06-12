@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Jura&family=Oswald&display=swap');
+
 .contact-body {
   padding: 0px;
   margin: 0px;
@@ -24,6 +27,7 @@
   text-underline-position: under;
   color: rgb(0, 0, 0);
   letter-spacing: 2px;
+  
 }
 
 .contact-form i.fa {

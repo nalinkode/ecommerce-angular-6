@@ -1,5 +1,12 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.contact-body {
+  padding: 0px;
+  margin: 0px;
+  font-family: sans-serif;
+}
+
+
+.container {
+   width: 90%;
+   margin: auto;
+   overflow: hidden
 }

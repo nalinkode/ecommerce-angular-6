@@ -27,7 +27,8 @@
   text-underline-position: under;
   color: rgb(0, 0, 0);
   letter-spacing: 2px;
-  
+  font-family: 'Dancing Script', cursive;
+
 }
 
 .contact-form i.fa {
@@ -57,5 +58,24 @@
   font-style: italic;
   letter-spacing: 2px;
 }
+
+@media (max-width: 768px){
+  .contact-section .contact-form {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .contact-section .submit {
+    width: 60
+  }
+ 
+}
+
+
+
+
+
+
 
 

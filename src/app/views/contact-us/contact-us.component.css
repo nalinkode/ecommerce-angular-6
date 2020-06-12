@@ -4,9 +4,16 @@
   font-family: sans-serif;
 }
 
-
 .container {
-   width: 90%;
-   margin: auto;
-   overflow: hidden
+  width: 90%;
+  margin: auto;
+  overflow: hidden
+}
+
+.contact-section {
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 2%;
 }

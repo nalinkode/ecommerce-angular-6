@@ -17,3 +17,11 @@
   width: 100%;
   padding-bottom: 2%;
 }
+
+.contact-section .container h2 {
+  text-align: center;
+  text-decoration: underline;
+  text-underline-position: under;
+  color: rgb(238, 238, 238);
+  letter-spacing: 2px;
+}

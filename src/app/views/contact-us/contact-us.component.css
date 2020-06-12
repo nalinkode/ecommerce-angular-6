@@ -25,3 +25,14 @@
   color: rgb(238, 238, 238);
   letter-spacing: 2px;
 }
+
+.contact-form i.fa {
+  font-size: 22px;
+  padding: 3%;
+  background-color: none;
+  margin: 2%;
+  cursor: pointer;
+  border: 2px solid rgb(190, 190, 190);
+  color: rgb
+
+}

@@ -22,7 +22,7 @@
   text-align: center;
   text-decoration: underline;
   text-underline-position: under;
-  color: rgb(238, 238, 238);
+  color: rgb(0, 0, 0);
   letter-spacing: 2px;
 }
 
@@ -33,14 +33,14 @@
   border-radius: 80%;
   margin: 2%;
   cursor: pointer;
-  border: 2px solid rgb(190, 190, 190);
-  color: rgb(190, 190, 190);
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
 }
 
 .contact-form i.fa:hover {
   cursor: pointer;
-  border: 2px solid #fff;
-  color: #fff;
+  border: 2px solid #3f51b5;
+  color: #3f51b5;
 }
 
 .contact-form {

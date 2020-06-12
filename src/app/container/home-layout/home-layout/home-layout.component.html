@@ -1,4 +1,12 @@
-<app-home-header></app-home-header>
-<app-home-sidebar></app-home-sidebar>
-<router-outlet></router-outlet>
+<block-ui>
+<div id="wrapper">
+  <app-home-sidebar></app-home-sidebar>
+  <div id="content-wrapper" class="d-flex flex-column">
+    <div id="content">
+     <app-home-header></app-home-header>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
 <app-home-footer></app-home-footer>
+</block-ui>

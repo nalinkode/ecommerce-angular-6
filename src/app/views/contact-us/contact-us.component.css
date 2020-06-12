@@ -30,9 +30,10 @@
   font-size: 22px;
   padding: 3%;
   background-color: none;
+  border-radius: 80%
   margin: 2%;
   cursor: pointer;
   border: 2px solid rgb(190, 190, 190);
-  color: rgb
+  color: rgb(190, 190, 190);
 
 }

@@ -33,7 +33,7 @@
                   name="lastName" 
                   class="form-control"  
                   formControlName="lastName"
-                  placeholder="Enter full name" id="lastName"
+                  placeholder="Enter lastname" id="lastName"
                    [ngClass]="{'is-invalid':registerForm.get('lastName').touched && registerForm.get('lastName').invalid}"/>
 									
                   <div *ngIf="registerForm.get('lastName').touched &&        registerForm.get('lastName').invalid"   class="invalid-feedback">
@@ -82,8 +82,8 @@
               Please enter a message in the textarea.
               </div>
               </div>      
-              
-        <button type="submit" class="btn btn-primary"> Submit</button>
+
+             <button type="submit" class="btn btn-primary"> Submit</button>
       </form>
     </div> 
 

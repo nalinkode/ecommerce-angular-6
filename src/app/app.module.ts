@@ -45,6 +45,7 @@ import { P500Component, P404Component  } from './views/error';
 
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
@@ -86,6 +87,7 @@ import { AuthInterceptor } from './views/auth/AuthInterceptor';
     HomeSidebarComponent,
     HomeLayoutComponent,
     ContactUsComponent,
+    DashboardComponent,
     
   ],
   bootstrap: [ AppComponent ],

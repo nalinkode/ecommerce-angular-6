@@ -11,7 +11,10 @@ import { AboutUsComponent } from './views/about-us/about-us.component';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
+import { DashboardComponent } from './admin/dashboard/dashboard.component';
+
 //auth
+
 import { RoleGuard } from './views/auth/role.guard';
 import { AuthGuard } from './views/auth/auth.guard';
 
@@ -32,7 +35,9 @@ const appRoutes: Routes = [
         component: AdminComponent,
         canActivate: [RoleGuard], data: {role: 'Admin'},
         children: [
-        {path:'user', component: UserlistComponent },
+        {path:'', component: DashboardComponent },
+        {path:'dashboard', component: DashboardComponent },  
+        {path:'user', component: UserlistComponent},
         {path:'order', component: OrderComponent },
         {path:'product', component: ProductComponent },
         {path:'category', component: CategoryComponent }

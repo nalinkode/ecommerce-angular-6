@@ -9,7 +9,8 @@ import { SidebarModule } from 'ng-sidebar';
 import { FormsModule } from '@angular/forms';
 import { BlockUIModule } from 'ng-block-ui';
 import { ToastrModule } from 'ng6-toastr-notifications';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome'
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { MaterialModule } from './material-module';
 
 //routing module
 import { routing } from './app.routing';
@@ -50,7 +51,6 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
 
 
 
-
 @NgModule({
   imports: [
     BrowserModule,
@@ -63,7 +63,8 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
     routing,
     SidebarModule.forRoot(),
     BlockUIModule.forRoot(),
-    FontAwesomeModule
+    FontAwesomeModule,
+    MaterialModule
   ],
   declarations: [
     AppComponent,

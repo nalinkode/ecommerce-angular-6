@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   constructor(private productService : ProductService) { }
   
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static:}) paginator: MatPaginator;
    
   ngOnInit() {
     this.dataSource.paginator = this.paginator;

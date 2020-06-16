@@ -63,7 +63,7 @@ import { ProductService } from './admin/product/product.service';
     SidebarModule.forRoot(),
     BlockUIModule.forRoot(),
     FontAwesomeModule,
-    MaterialModule
+    MaterialModule,
   ],
   declarations: [
     AppComponent,

@@ -11,7 +11,7 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   public getAllProduct(){
-    
+    debugger
     return this.http.get('/assets/product.json');
   }
 

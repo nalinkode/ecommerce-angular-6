@@ -4,9 +4,12 @@ import {MatTableDataSource} from '@angular/material/table';
 import { ProductService } from '../product/product.service';
 
 export interface Product {
+  productId: number;
   name: string;
+  categroy: string;
   price: number;
   imgUrl: string;
+  description: string;
  }
 
 @Component({
@@ -16,7 +19,7 @@ export interface Product {
 })
 export class ProductComponent implements OnInit {
   ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['name','imgUrl','price'];
+  displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   constructor(private productService : ProductService) { }
 

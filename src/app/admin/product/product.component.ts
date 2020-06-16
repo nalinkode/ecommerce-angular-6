@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   constructor(private productService : ProductService) { }
   
-  @ViewChild(MatPaginator, {static: }) paginator: MatPaginator;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
    
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
@@ -33,6 +33,11 @@ export class ProductComponent implements OnInit {
   public getAllProduct(){
     let response = this.productService.getAllProduct()
     response.subscribe(list =>this.dataSource.data = list as Product[]);
+  }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
 }

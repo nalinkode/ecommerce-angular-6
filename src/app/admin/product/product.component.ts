@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
+import { MatSort } from '@angular/material/sort';
 import { ProductService } from '../product/product.service';
 
 export interface Product {
@@ -24,9 +25,10 @@ export class ProductComponent implements OnInit {
   constructor(private productService : ProductService) { }
   
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-   
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
     this.getAllProduct();
   }
 

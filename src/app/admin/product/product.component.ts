@@ -1,30 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatTableDataSource} from '@angular/material/table';
+import { ProductService } from '../product/produt';
 
-@Component({
-  selector: 'app-product',
-  templateUrl: './product.component.html',
-  styleUrls: ['./product.component.css']
-})
-export class ProductComponent implements OnInit {
-  displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  constructor() { }
-
-  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
-
-  @ViewChild(MatPaginator) paginator: MatPaginator;
-
-  ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-  } 
-}
-
- export interface PeriodicElement {
+export interface PeriodicElement {
   name: string;
-  position: number;
-  weight: number;
-  symbol: string;
+  price: number;
+  imgUrl: string;
  }
 const ELEMENT_DATA: PeriodicElement[] = [
   {position: 1, name: 'Hydrogen', weight: 1.0079, symbol: 'H'},
@@ -51,3 +33,26 @@ const ELEMENT_DATA: PeriodicElement[] = [
 
 
 
+
+
+@Component({
+  selector: 'app-product',
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.css']
+})
+export class ProductComponent implements OnInit {
+  displayedColumns: string[] = ['name', 'price', 'imgUrl'];
+  
+  
+  constructor(private productService :) { }
+
+  dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
+
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+
+  ngOnInit() {
+    this.dataSource.paginator = this.paginator;
+  } 
+}
+
+ 

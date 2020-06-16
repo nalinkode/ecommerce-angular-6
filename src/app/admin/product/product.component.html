@@ -1,8 +1,13 @@
-
+<!--
  <mat-form-field>
    <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium">
-</mat-form-field>
+</mat-form-field> -->
+
+<form class="form-inline">
+    <i class="fa fa-search" style="font-size:20px"></i>
+    <input class="form-control mr-sm-5" (keyup)="applyFilter($event.target.value)" style="width:450px; margin-left: 5px" type="search" placeholder="Search" aria-label="Search">
+</form>
 
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">

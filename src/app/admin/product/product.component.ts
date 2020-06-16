@@ -9,7 +9,6 @@ export interface Product {
   imgUrl: string;
  }
 
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -22,9 +21,10 @@ export class ProductComponent implements OnInit {
   constructor(private productService : ProductService) { }
 
   ngOnInit() {
+    this.getAllProduct();
   }
 
-  public getAllproduct(){
+  public getAllProduct(){
     let response = this.productService.getAllProduct()
     response.subscribe(list =>this.dataSource.data = list as Product[]);
   }

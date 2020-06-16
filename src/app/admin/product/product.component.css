@@ -1,16 +1,12 @@
 
 table {
   width: 100%;
-}
-*/
-table {
-  width: 100%;
   table-layout: fixed;
 }
 
 th, td {
   overflow: hidden;
-  width: 200px;
+  width: 00px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

@@ -35,9 +35,8 @@ export class ProductComponent implements OnInit {
     response.subscribe(list =>this.dataSource.data = list as Product[]);
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
+  applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
 
 }

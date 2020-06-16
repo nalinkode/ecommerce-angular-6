@@ -11,9 +11,7 @@ th, td {
   white-space: nowrap;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  min-width: 300px;
+th.mat-sort-header-sorted {
+  color: black;
 }
 

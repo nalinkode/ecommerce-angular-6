@@ -6,7 +6,7 @@ table {
 
 th, td {
   overflow: hidden;
-  width: 00px;
+  width: 100px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }

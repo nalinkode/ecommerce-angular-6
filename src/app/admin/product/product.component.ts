@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatTableDataSource} from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatTableDataSource } from '@angular/material/table';
 import { ProductService } from '../product/product.service';
 
 export interface Product {
@@ -22,9 +22,13 @@ export class ProductComponent implements OnInit {
   displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   constructor(private productService : ProductService) { }
-
+  
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+   
   ngOnInit() {
+    this.dataSource.paginator = this.paginator;
     this.getAllProduct();
+
   }
 
   public getAllProduct(){

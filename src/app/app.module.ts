@@ -47,6 +47,7 @@ import { P500Component, P404Component  } from './views/error';
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ProductService } from './admin/product/product.service';
 
 
 @NgModule({
@@ -93,7 +94,7 @@ import { DashboardComponent } from './admin/dashboard/dashboard.component';
   providers: [
 
    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
-  ]
+  ProductService]
 })
 export class AppModule { }
 

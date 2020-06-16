@@ -1,6 +1,6 @@
 <form class="form-inline">
     <i class="fa fa-search fafaicon"></i>
-    <input class="form-control mr-sm-5  " (keyup)="applyFilter($event.target.value)" style="" type="search" placeholder="Search" aria-label="Search">
+    <input class="form-control mr-sm-5 search-bar" (keyup)="applyFilter($event.target.value)" style="" type="search" placeholder="Search" aria-label="Search">
 </form>
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
@@ -33,6 +33,18 @@
     <th mat-header-cell *matHeaderCellDef> Description </th>
     <td mat-cell *matCellDef="let element"> {{element.description}} </td>
   </ng-container>
+
+  <ng-container matColumnDef="actions">
+  <th mat-header-cell *matHeaderCellDef>Actions </th>
+  <td mat-cell *matCellDef="let row">
+    <button mat-icon-button matTooltip="Click to Edit" class="iconbutton" color="primary">
+        <mat-icon aria-label="Edit">edit</mat-icon>
+      </button>
+    <button mat-icon-button matTooltip="Click to Delete" class="iconbutton" color="warn">
+        <mat-icon aria-label="Delete">delete</mat-icon>
+      </button>
+  </ma>
+</ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>

@@ -20,7 +20,7 @@ export interface Product {
 })
 export class ProductComponent implements OnInit {
   ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description'];
+  displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description', 'actions'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   constructor(private productService : ProductService) { }
   

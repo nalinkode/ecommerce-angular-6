@@ -47,6 +47,7 @@ import { P500Component, P404Component  } from './views/error';
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductService } from './admin/product/product.service';
+import { AddProductComponent } from './admin/product/add-product/add-product.component';
 
 
 @NgModule({
@@ -87,6 +88,7 @@ import { ProductService } from './admin/product/product.service';
     HomeLayoutComponent,
     ContactUsComponent,
     DashboardComponent,
+    AddProductComponent,
     
   ],
   bootstrap: [ AppComponent ],

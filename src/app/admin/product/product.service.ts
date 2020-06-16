@@ -11,7 +11,8 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   public getAllProduct(){
-    return this.http.get('https://my-json-server.typicode.com/jubs16/Products/Products');
+    
+    return this.http.get('/assets/product.json');
   }
 
 }

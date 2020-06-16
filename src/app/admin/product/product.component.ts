@@ -27,8 +27,7 @@ export class ProductComponent implements OnInit {
    
   ngOnInit() {
     this.dataSource.paginator = this.paginator;
-    this.getAllProduct();
-
+    this.getAllProduct()
   }
 
   public getAllProduct(){

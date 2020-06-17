@@ -40,11 +40,9 @@ export class ProductComponent implements OnInit {
     response.subscribe(list =>this.dataSource.data = list as Product[]);
   }
 
-  applyFilter(filterValue: string) {
+   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
-
-
 
 }
 

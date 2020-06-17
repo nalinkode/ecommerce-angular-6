@@ -1,7 +1,12 @@
-<form class="form-inline">
+<!--<form class="form-inline">
     <i class="fa fa-search fafaicon"></i>
     <input class="form-control mr-sm-5 search-bar" (keyup)="applyFilter($event.target.value)" style="" type="search" placeholder="Search" aria-label="Search">
 </form>
+-->
+<mat-form-field>
+  <mat-label>Filter</mat-label>
+  <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium">
+</mat-form-field> 
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
   <ng-container matColumnDef="productId">

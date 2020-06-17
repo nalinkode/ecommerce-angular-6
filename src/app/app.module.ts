@@ -48,6 +48,7 @@ import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductService } from './admin/product/product.service';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
+import { ProductDialogComponent } from './admin/product/product-dialog/product-dialog.component';
 
 
 @NgModule({
@@ -89,6 +90,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
     ContactUsComponent,
     DashboardComponent,
     AddProductComponent,
+    ProductDialogComponent,
     
   ],
   bootstrap: [ AppComponent ],

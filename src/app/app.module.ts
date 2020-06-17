@@ -87,7 +87,7 @@ import { ProductService } from './admin/product/product.service';
     HomeLayoutComponent,
     ContactUsComponent,
     DashboardComponent,
-   
+    
   ],
   bootstrap: [ AppComponent ],
   providers: [

@@ -47,8 +47,6 @@ import { P500Component, P404Component  } from './views/error';
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductService } from './admin/product/product.service';
-import { AddProductComponent } from './admin/product/add-product/add-product.component';
-import { ProductDialogComponent } from './admin/product/product-dialog/product-dialog.component';
 
 
 @NgModule({
@@ -89,9 +87,7 @@ import { ProductDialogComponent } from './admin/product/product-dialog/product-d
     HomeLayoutComponent,
     ContactUsComponent,
     DashboardComponent,
-    AddProductComponent,
-    ProductDialogComponent,
-    
+   
   ],
   bootstrap: [ AppComponent ],
   providers: [

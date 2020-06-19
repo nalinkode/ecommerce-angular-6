@@ -1,8 +1,4 @@
-<!--<form class="form-inline">
-    <i class="fa fa-search fafaicon"></i>
-    <input class="form-control mr-sm-5 search-bar" (keyup)="applyFilter($event.target.value)" style="" type="search" placeholder="Search" aria-label="Search">
-</form>
--->
+
 <mat-form-field>
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium">
@@ -52,5 +48,5 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
 
-<mat-paginator [pageSizeOptions]="[10, 15, 20]"></mat-paginator>
+<mat-paginator [pageSizeOptions]="[1, 15, 20]"></mat-paginator>
 

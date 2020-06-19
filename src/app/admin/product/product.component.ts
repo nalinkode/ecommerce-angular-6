@@ -41,7 +41,7 @@ export class ProductComponent implements OnInit {
   
   public addProduct(){
     const dialogRef = this.dialog.open(AddProductComponent,{
-    data: 
+    data: {} 
     });
   }
 

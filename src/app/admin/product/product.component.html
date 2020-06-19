@@ -1,4 +1,12 @@
-<button mat-button (click)="addProduct()" mat-flat-button color="primary">Add Product</button>
+<mat-card>
+  <mat-card-header>
+    <mat-toolbar class="toolbar">
+    <mat-card-title>Product List</mat-card-title>
+    <span class="tootbar-spacer"></span>
+    <mat-icon (click)="addProduct()">a</mat-icon>
+    </mat-toolbar>
+  </mat-card-header>
+</mat-card>
 
 <mat-form-field>
   <mat-label>Filter</mat-label>

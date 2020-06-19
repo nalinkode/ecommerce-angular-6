@@ -20,6 +20,7 @@ export interface Product {
   templateUrl: './product.component.html',
   styleUrls: ['./product.component.css']
 })
+
 export class ProductComponent implements OnInit {
   ELEMENT_DATA : Product[];
   displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description', 'action'];

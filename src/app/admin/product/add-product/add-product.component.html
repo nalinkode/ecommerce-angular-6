@@ -1,4 +1,4 @@
-<mat-card>
+
 <mat-card-header>
   <mat-toolbar class="custoolbar">
     <mat-card-title>Add Product</mat-card-title>
@@ -6,6 +6,7 @@
     <mat-icon (click)="onNoClick()">cancel</mat-icon>
   </mat-toolbar>
 </mat-card-header>
+
 
 <mat-card-content>
   <div class="container">
@@ -26,12 +27,12 @@
     </div>
 
     <div class="row">
-      <div class="col-md-">
+      <div class="col-md-4">
       <label>Price</label>
       <input type="text" formControlName="price" class="form-control">
       </div>
 
-      <div class="col-md-6">
+      <div class="col-md-4">
       <label>Description</label>
       <input type="text" formControlName="description" class="form-control">
       </div>
@@ -45,4 +46,6 @@
      </form>
   </div>
 </mat-card-content>
-</mat-card>
+
+
+

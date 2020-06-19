@@ -39,13 +39,12 @@ import { HomeLayoutComponent } from './container/home-layout/home-layout/home-la
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductService } from './admin/product/product.service';
-import { DialogboxComponent } from './admin/dialogbox/dialogbox.component';
-
 
 //Error component
 import { P500Component, P404Component  } from './views/error';
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
+import { AddProductComponent } from './admin/product/add-product/add-product.component';
 
 
 @NgModule({
@@ -86,8 +85,8 @@ import { AuthInterceptor } from './views/auth/AuthInterceptor';
     HomeLayoutComponent,
     ContactUsComponent,
     DashboardComponent,
-    DialogboxComponent,
-    
+    AddProductComponent,
+ 
   ],
   bootstrap: [ AppComponent ],
   providers: [

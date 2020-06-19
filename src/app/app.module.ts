@@ -62,6 +62,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
     FontAwesomeModule,
     MaterialModule,
   ],
+  entryComponents:[AddProductComponent],
   declarations: [
     AppComponent,
     HomeComponent,

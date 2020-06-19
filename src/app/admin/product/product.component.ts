@@ -7,7 +7,6 @@ import { ProductService } from '../product/product.service';
 import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
 
-
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',

@@ -5,7 +5,7 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
 import { Product } from '../product/product';
-import { AddProductComponent } from '../product/add-product/add-product.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 @Component({

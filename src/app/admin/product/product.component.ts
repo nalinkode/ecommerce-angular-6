@@ -37,46 +37,7 @@ export class ProductComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
   
-  openDialog(action,obj) {
-    obj.action = action;
-    const dialogRef = this.dialog.open(DialogboxComponent, {
-      width: '250px',
-      data:obj
-    });
 
-    dialogRef.afterClosed().subscribe(result => {
-      if(result.event == 'Add'){
-        this.addRowData(result.data);
-      }else if(result.event == 'Update'){
-        this.updateRowData(result.data);
-      }else if(result.event == 'Delete'){
-        this.deleteRowData(result.data);
-      }
-    });
-  }
-
-  public addRowData(row_obj){
-    var d = new Date();
-    this.dataSource.push({
-      id:d.getTime(),
-      name:row_obj.name
-    });
-    this.table.renderRows();
-    
-  }
-  public updateRowData(row_obj){
-    this.dataSource = this.dataSource.filter((value,key)=>{
-      if(value.id == row_obj.id){
-        value.name = row_obj.name;
-      }
-      return true;
-    });
-  }
-  public deleteRowData(row_obj){
-    this.dataSource = this.dataSource.filter((value,key)=>{
-      return value.id != row_obj.id;
-    });
-  }
  
 
 }

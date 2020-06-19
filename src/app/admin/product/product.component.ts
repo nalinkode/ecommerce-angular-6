@@ -18,6 +18,8 @@ export class ProductComponent implements OnInit {
   displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   
+  isPopupOpen = false;
+
   constructor(private productService : ProductService, private dialog? : MatDialog) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -39,12 +41,16 @@ export class ProductComponent implements OnInit {
   }
   
   public addProduct(){
+    this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
     data: {} 
     });
-  }
-
- 
+    dialogRef.afterClosed().subscribe(result =>{
+    this.isPopupOpen = false;
+  });
+   }
+  
+  
 
 }
 

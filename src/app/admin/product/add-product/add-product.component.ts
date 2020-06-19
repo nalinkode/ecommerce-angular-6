@@ -41,7 +41,7 @@ export class AddProductComponent implements OnInit {
 
   onSubmit(){
     this.productService.addProduct(this.productForm.value);
-    this.dialogRef.close
+    this.dialogRef.close();
   }
    
   

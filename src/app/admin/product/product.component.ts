@@ -5,6 +5,8 @@ import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
 import { Product } from '../product/product';
+import { AddProductComponent } from '../product/add-product/add-product.component';
+
 
 @Component({
   selector: 'app-product',
@@ -16,7 +18,8 @@ export class ProductComponent implements OnInit {
   ELEMENT_DATA : Product[];
   displayedColumns: string[] = ['productId','name','categroy','imgUrl','price','description', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
-  constructor(private productService : ProductService, private dialog : MatDialog) { }
+  
+  constructor(private productService : ProductService, private dialog? : MatDialog) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -36,6 +39,11 @@ export class ProductComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
   
+  public addProduct(){
+    const dialogRef = this.dialog.open(AddProductComponent,{
+    data: 
+    });
+  }
 
  
 

@@ -4,17 +4,13 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
+
+
+import { Product } from '../product/product;
 import { DialogboxComponent } from '../dialogbox/dialogbox.component';
 
 
-export interface Product {
-  productId: number;
-  name: string;
-  categroy: string;
-  price: number;
-  imgUrl: string;
-  description: string;
- }
+
 
 @Component({
   selector: 'app-product',

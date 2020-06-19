@@ -6,7 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
 
 
-import { Product } from '../product/product;
+import { Product } from '../product/product';
 import { DialogboxComponent } from '../dialogbox/dialogbox.component';
 
 

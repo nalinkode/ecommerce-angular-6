@@ -1,17 +1,17 @@
-<mat-card>
-  <mat-card-header>
-    <mat-toolbar class="toolbar">
-    <mat-card-title>Product List</mat-card-title>
-    <span class="tootbar-spacer"></span>
-    <mat-icon (click)="addProduct()">a</mat-icon>
-    </mat-toolbar>
-  </mat-card-header>
-</mat-card>
 
 <mat-form-field>
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium">
 </mat-form-field> 
+
+
+ <button mat-raised-button
+        matTooltip="Click To Add Product"
+        matTooltipClass="example-tooltip-red"
+        
+        class="example-button"
+        (click)="addProduct()"> Add Product
+</button>
 
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
   <ng-container matColumnDef="productId">

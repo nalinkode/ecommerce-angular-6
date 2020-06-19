@@ -23,3 +23,12 @@ th.mat-sort-header-sorted {
   width: 450px; 
   margin-left: 5px;
 }
+
+.example-button {
+  margin-top: 16px;
+  margin-left: 650px; 
+}
+
+.example-tooltip-red {
+  background: #b71c1c;
+}

@@ -13,7 +13,7 @@ th, td {
 
 div.static {
   position: static;
-  border: 2px solid #818181;
+  border: px solid #818181;
   width: 820px;
   overflow: auto;
   max-width: 100%;

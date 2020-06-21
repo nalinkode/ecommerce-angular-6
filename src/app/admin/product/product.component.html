@@ -5,13 +5,12 @@
 </mat-form-field> 
 
 
- <button mat-raised-button
-        matTooltip="Click To Add Product"
-        matTooltipClass="example-tooltip-red"
-        
-        class="example-button"
-        (click)="addProduct()"> Add Product
-</button>
+    <mat-toolbar class="toolbar">
+    <mat-card-title>Product</mat-card-title>
+    <span class="toolbar-spacer"></span>
+    <mat-icon (click)="addProduct()">add</mat-icon>
+    </mat-toolbar>
+
 
 <div class="static">
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">

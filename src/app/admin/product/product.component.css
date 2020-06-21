@@ -1,15 +1,15 @@
-/*
-table {
-  width: 100%;
-  table-layout: fixed;
+
+.toolbar{
+  background-color: #480082;
+  color: white; 
+  width: 100% !important;
+    margin-bottom: 2px;
 }
 
-th, td {
-  overflow: hidden;
-  width: 100px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-} */
+.toolbar-spacer{
+  flex: 1 1 auto;
+}
+
 
 div.static {
   position: static;
@@ -29,7 +29,6 @@ div.static {
 }
 .mat-header-cell, .mat-cell {
     min-width: 150px;
-   
 }
 
 .mat-row, .mat-header-row {
@@ -50,11 +49,3 @@ th.mat-sort-header-sorted {
   margin-left: 5px;
 }
 
-.example-button {
-  margin-top: 16px;
-  margin-left: 650px; 
-}
-
-.example-tooltip-red {
-  background: #b71c1c;
-}

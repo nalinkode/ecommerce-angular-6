@@ -15,7 +15,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 
 export class ProductComponent implements OnInit {
   ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['productId', 'name',' categroy','subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
+  displayedColumns: string[] = ['productId', 'name', 'categroy', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   
   isPopupOpen = false;

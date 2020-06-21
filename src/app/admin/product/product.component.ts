@@ -6,6 +6,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
 import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
+import { find } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product',
@@ -50,11 +51,11 @@ export class ProductComponent implements OnInit {
   });
   }
   
-   public editProduct(id : Product){
+   public editProduct(id : number){
     this.isPopupOpen = true;
-    const product = this.productService.getAllProduct
+    //const product = this.productService.getAllProduct().find(prod => prod.productId === id );
     const dialogRef = this.dialog.open(AddProductComponent,{
-    data: product
+    //data: product
     });
     
     dialogRef.afterClosed().subscribe(result =>{

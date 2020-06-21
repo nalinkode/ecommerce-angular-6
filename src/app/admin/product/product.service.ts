@@ -15,7 +15,7 @@ export class ProductService {
 
   public getAllProduct(){
     debugger
-    return this.http.get('/assets/product.json');
+    return this.http.get('/assets/product.json').pipe(map(res => res));
   }
   
   public addProduct(product:Product){

@@ -32,9 +32,15 @@ div.static {
     min-width: 150px;
 }
 
+.mat-header-cell{
+  font-size: 14px;
+  font-weight: bold;
+}
+
 .mat-row, .mat-header-row {
     min-width: 2800px;
     width: 100%;
+    font-size: 30px;
 }
 
 th.mat-sort-header-sorted {

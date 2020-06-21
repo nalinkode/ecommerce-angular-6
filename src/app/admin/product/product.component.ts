@@ -53,9 +53,12 @@ export class ProductComponent implements OnInit {
   
    public editProduct(id : number){
     this.isPopupOpen = true;
-    const product = this.productService.getAllProduct().find(prod => prod.productId === id );
+    let product = this.productService.getAllProduct();
+    product.subscribe(list => list as Product[]
+ 
+    );
     const dialogRef = this.dialog.open(AddProductComponent,{
-    //data: product
+    data: product
     });
     
     dialogRef.afterClosed().subscribe(result =>{

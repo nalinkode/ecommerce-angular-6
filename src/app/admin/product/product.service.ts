@@ -22,7 +22,11 @@ export class ProductService {
     debugger
   }
 
-  public removeProduct(){
+  public editProduct(product:Product){
+    debugger
+  }
+    
+  public deleteProduct(){
     debugger  
   }
  

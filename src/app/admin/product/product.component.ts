@@ -50,6 +50,17 @@ export class ProductComponent implements OnInit {
   });
   }
   
+   public editProduct(id : Product){
+    this.isPopupOpen = true;
+    const product = this.productService.getAllProduct.fin  (prod => prod.productId === id );
+    const dialogRef = this.dialog.open(AddProductComponent,{
+    data: product
+    });
+    
+    dialogRef.afterClosed().subscribe(result =>{
+    this.isPopupOpen = false;
+  });
+  }
   
 
 }

@@ -13,7 +13,7 @@ th, td {
 
 div.static {
   position: static;
-  border: px solid #818181;
+  border: 1px solid #818181;
   width: 820px;
   overflow: auto;
   max-width: 100%;
@@ -26,11 +26,10 @@ div.static {
     overflow: auto;   
     width: 1123px;
     max-height: 500px;
-    border: 0;
-
 }
 .mat-header-cell, .mat-cell {
     min-width: 150px;
+   
 }
 
 .mat-row, .mat-header-row {

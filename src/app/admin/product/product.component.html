@@ -1,15 +1,14 @@
 
 <mat-form-field>
-  <mat-label>Filter</mat-label>
+  <mat-label>Search</mat-label>
   <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Ex. ium">
 </mat-form-field> 
 
-
-    <mat-toolbar class="toolbar">
+  <mat-toolbar class="toolbar">
     <mat-card-title>Product</mat-card-title>
     <span class="toolbar-spacer"></span>
     <mat-icon (click)="addProduct()">add</mat-icon>
-    </mat-toolbar>
+  </mat-toolbar>
 
 
 <div class="static">

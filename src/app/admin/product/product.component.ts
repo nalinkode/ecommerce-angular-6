@@ -52,7 +52,7 @@ export class ProductComponent implements OnInit {
   
    public editProduct(id : Product){
     this.isPopupOpen = true;
-    const product = this.productService.getAllProduct.find(prod => prod.productId === id );
+    const product = this.productService.getAllProduct
     const dialogRef = this.dialog.open(AddProductComponent,{
     data: product
     });

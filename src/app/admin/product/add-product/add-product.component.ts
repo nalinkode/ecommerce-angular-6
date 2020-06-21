@@ -17,7 +17,7 @@ export class AddProductComponent implements OnInit {
     private dialogRef : MatDialogRef<AddProductComponent>,
     @Inject(MAT_DIALOG_DATA) public data:any,
     private fb: FormBuilder,
-    private toastr: ToastrManager 
+    private toaster: ToastrManager 
   ) { }
 
   ngOnInit() {
@@ -41,6 +41,7 @@ export class AddProductComponent implements OnInit {
 
   onSubmit(){
     this.productService.addProduct(this.productForm.value);
+    this.toaster.successToastr('Product added successfully .');  
     this.dialogRef.close();
   }
    

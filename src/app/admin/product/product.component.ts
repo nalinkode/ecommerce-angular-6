@@ -51,11 +51,12 @@ export class ProductComponent implements OnInit {
   });
   }
   
-   public editProduct(eproduct : Product){
+   public editProduct(eproduct : Product[]){
     this.isPopupOpen = true;
+    debugger
     let product = this.productService.getAllProduct();
     product.subscribe(list => list as Product[]);
-    
+
     const dialogRef = this.dialog.open(AddProductComponent,{
     data: eproduct
     });

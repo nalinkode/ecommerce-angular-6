@@ -30,11 +30,12 @@ div.static {
 }
 .mat-header-cell, .mat-cell {
     min-width: 150px;
+    flex-wrap: wrap;
 }
 
 .mat-header-cell{
   font-size: 14px;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .mat-row, .mat-header-row {

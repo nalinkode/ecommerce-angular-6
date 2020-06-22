@@ -8,7 +8,7 @@ import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
 import { find } from 'rxjs/operators';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import { DialogService } from './shared/dialog.service';
+import { DialogService } from '../shared/dialog.service';
 
 @Component({
   selector: 'app-product',
@@ -26,7 +26,7 @@ export class ProductComponent implements OnInit {
 
   constructor(private productService : ProductService, 
              private dialog? : MatDialog,
-             priavte dialogService: DialogService) { }
+             private dialogService: DialogService) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;

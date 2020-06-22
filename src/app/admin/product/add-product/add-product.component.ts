@@ -11,6 +11,8 @@ import { ProductService } from '../product.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
+  Category: any = ['Men', 'Women', 'Kids', 'Fashion']
+  Subcategory:any = ['shoes','watches']
   public productForm : FormGroup; 
   constructor(
     private productService : ProductService,
@@ -22,15 +24,26 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit() {
      this.createProductForm();
-     
   }
 
+  changeCategory(e) {
+    this.data.category.setValue(e.target.value, {
+      onlySelf: true
+    })
+  }
+
+  changeSubcategory(e) {
+    this.data.subCategory.setValue(e.target.value, {
+      onlySelf: true
+    })
+  }
 
   createProductForm(){
    //forms controll
    this.productForm = this.fb.group({
      productName: [this.data.name, Validators.required],
      category: [this.data.category, Validators.required],
+     subCategory: [this.data.subCategory, Validators.required],
      price: [this.data.price, Validators.required],
      description: [this.data.description, Validators.required]
    });

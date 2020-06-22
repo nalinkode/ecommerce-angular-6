@@ -45,7 +45,6 @@ import { P500Component, P404Component  } from './views/error';
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
-import { DeleteProductComponent } from './admin/product/delete-product/delete-product.component';
 
 
 @NgModule({
@@ -63,7 +62,7 @@ import { DeleteProductComponent } from './admin/product/delete-product/delete-pr
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, DeleteProductComponent],
+  entryComponents:[AddProductComponent, ],
   declarations: [
     AppComponent,
     HomeComponent,

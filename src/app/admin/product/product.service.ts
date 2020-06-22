@@ -14,11 +14,11 @@ export class ProductService {
   constructor(private http: HttpClient) { }
 
   public getAllProduct():Observable<Product[]>{
-    debugger
     return this.http.get('/assets/product.json').pipe(map(res => res));
   }
   
   public addProduct(product:Product){
+    console.log(produ)
     debugger
   }
 

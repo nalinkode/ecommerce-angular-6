@@ -11,8 +11,8 @@ import { ProductService } from '../product.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  Category: any = ['Men', 'Women', 'Kids', 'Fashion']
-  Subcategory:any = ['hoes','watches']
+  Category: any = ['Men', 'Women', 'Kids', 'Fashion'];
+  subCategory: any = ['Shoes','watches'];
   public productForm : FormGroup; 
   constructor(
     private productService : ProductService,

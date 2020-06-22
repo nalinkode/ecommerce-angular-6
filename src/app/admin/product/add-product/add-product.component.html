@@ -31,7 +31,7 @@
    <div class="col-md-3">
     <select class="custom-select" (change)="changeSubcategory($event)" formControlName="subCategory">
        <option value="" disabled >Choose your Subcategory</option>
-      <option *ngFor="let subCategory of Subcategory" [ngValue]="subCategory">{{subCategory}}</option>
+      <option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
     </select>
       </div>
 

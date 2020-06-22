@@ -9,6 +9,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 import { find } from 'rxjs/operators';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { DialogService } from './shared/dialog.service';
+
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
@@ -24,7 +25,7 @@ export class ProductComponent implements OnInit {
   isPopupOpen = false;
 
   constructor(private productService : ProductService, private dialog? : MatDialog,
-      priavte ialogService: DialogService) { }
+      priavte dialogService: DialogService) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
@@ -65,6 +66,10 @@ export class ProductComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
   });
+  }
+
+  public deleteProduct(eproduct : Product[]){
+     
   }
 
   

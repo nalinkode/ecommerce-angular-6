@@ -45,7 +45,8 @@ import { P500Component, P404Component  } from './views/error';
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
-import { ConfirmedDialogComponent } from './shared/confirmed-dialog/confirmed-dialog.component';
+
+import { DialogConfirmedComponent } from './dialog-confirmed/dialog-confirmed.component';
 
 
 @NgModule({
@@ -88,14 +89,16 @@ import { ConfirmedDialogComponent } from './shared/confirmed-dialog/confirmed-di
     ContactUsComponent,
     DashboardComponent,
     AddProductComponent,
-    ConfirmedDialogComponent,
+    DialogConfirmedComponent
  
   ],
   bootstrap: [ AppComponent ],
   providers: [
 
    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
-  ProductService]
+  ProductService,
+
+   DialogService]
 })
 export class AppModule { }
 

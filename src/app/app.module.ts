@@ -87,7 +87,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
     ContactUsComponent,
     DashboardComponent,
     AddProductComponent,
-    DeleteProductComponent,
+  ,
  
   ],
   bootstrap: [ AppComponent ],

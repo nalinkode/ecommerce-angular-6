@@ -4,7 +4,7 @@
     "name": "Sport Shoes",
     "price": 110,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -13,7 +13,7 @@
     "name": "Red SNEAKER",
     "price": 91,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -22,7 +22,7 @@
     "name": "Sport Shoes Women",
     "price": 94,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -31,7 +31,7 @@
     "name": "Winter boots children",
     "price": 143,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "kids",
+    "category": "kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -40,7 +40,7 @@
     "name": "Sports shoes Red-White",
     "price": 150,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -49,7 +49,7 @@
     "name": "Black leather shoes",
     "price": 250,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -58,7 +58,7 @@
     "name": "Shoes Canvas",
     "price": 50,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -67,7 +67,7 @@
     "name": "Shoes White",
     "price": 85,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -85,7 +85,7 @@
     "name": "Sport Shoes",
     "price": 110,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -94,7 +94,7 @@
     "name": "Red SNEAKER",
     "price": 91,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -112,7 +112,7 @@
     "name": "Winter boots children",
     "price": 143,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "kids",
+    "category": "kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -130,7 +130,7 @@
     "name": "Black leather shoes",
     "price": 250,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -139,7 +139,7 @@
     "name": "Shoes Canvas",
     "price": 50,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -148,7 +148,7 @@
     "name": "Shoes White",
     "price": 85,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -157,7 +157,7 @@
     "name": "Sneakers Yellow",
     "price": 125,
     "description":"Extremely smooth to run enjoy the life",
-    "categroy":"Kids",
+    "category":"Kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -167,7 +167,7 @@
     "name": "Sport Shoes",
     "price": 110,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -176,7 +176,7 @@
     "name": "Red SNEAKER",
     "price": 91,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -185,7 +185,7 @@
     "name": "Sport Shoes Women",
     "price": 94,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -194,7 +194,7 @@
     "name": "Winter boots children",
     "price": 143,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "kids",
+    "category": "kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -203,7 +203,7 @@
     "name": "Sports shoes Red-White",
     "price": 150,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -212,7 +212,7 @@
     "name": "Black leather shoes",
     "price": 250,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -221,7 +221,7 @@
     "name": "Shoes Canvas",
     "price": 50,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -230,7 +230,7 @@
     "name": "Shoes White",
     "price": 85,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -239,7 +239,7 @@
     "name": "Sneakers Yellow",
     "price": 125,
     "description":"Extremely smooth to run enjoy the life",
-    "categroy":"Kids",
+    "category":"Kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -257,7 +257,7 @@
     "name": "Red SNEAKER",
     "price": 91,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -266,7 +266,7 @@
     "name": "Sport Shoes Women",
     "price": 94,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -275,7 +275,7 @@
     "name": "Winter boots children",
     "price": 143,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "kids",
+    "category": "kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -284,7 +284,7 @@
     "name": "Sports shoes Red-White",
     "price": 150,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -293,7 +293,7 @@
     "name": "Black leather shoes",
     "price": 250,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -302,7 +302,7 @@
     "name": "Shoes Canvas",
     "price": 50,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Men",
+    "category": "Men",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -311,7 +311,7 @@
     "name": "Shoes White",
     "price": 85,
     "description": "Extremely smooth to run enjoy the life",
-    "categroy": "Women",
+    "category": "Women",
     "subCategory": "Shoes",
     "offerPrice": 40
   },
@@ -320,7 +320,7 @@
     "name": "Sneakers Yellow",
     "price": 125,
     "description":"Extremely smooth to run enjoy the life",
-    "categroy":"Kids",
+    "category":"Kids",
     "subCategory": "Shoes",
     "offerPrice": 40
   }

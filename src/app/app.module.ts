@@ -47,8 +47,6 @@ import { P500Component, P404Component  } from './views/error';
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
 
-import { DialogConfirmedComponent } from './dialog-confirmed/dialog-confirmed.component';
-
 
 @NgModule({
   imports: [
@@ -65,7 +63,7 @@ import { DialogConfirmedComponent } from './dialog-confirmed/dialog-confirmed.co
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, DialogConfirmedComponent],
+  entryComponents:[AddProductComponent, ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -90,7 +88,7 @@ import { DialogConfirmedComponent } from './dialog-confirmed/dialog-confirmed.co
     ContactUsComponent,
     DashboardComponent,
     AddProductComponent,
-    DialogConfirmedComponent
+    
  
   ],
   bootstrap: [ AppComponent ],

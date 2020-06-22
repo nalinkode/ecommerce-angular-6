@@ -15,13 +15,13 @@
     
 
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
       <label>Product Name </label>
       <input type="text" formControlName="productName" class="form-control">
       </div>
       
-      <div class="col-md-4">
-    <select class="custom-select " (change)="changeCategory($event)" formControlName="category">
+      <div class="col-md-3">
+    <select class="custom-select drop-down" (change)="changeCategory($event)" formControlName="category">
        <option value="" disabled >Choose your category</option>
       <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
     </select>
@@ -39,18 +39,18 @@
     </div>
 
     <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-3">
       <label>Price</label>
       <input type="text" formControlName="price" class="form-control">
       </div>
 
       
-      <div class="col-md-4">
+      <div class="col-md-3">
       <label>Offer Price</label>
       <input type="text" formControlName="offerprice" class="form-control">
       </div>
 
-      <div class="col-md-4">
+      <div class="col-md-3">
       <label for="validationTextarea">Description</label>
         <textarea class="form-control" id="validationTextarea" formControlName="description"  placeholder="Description" required></textarea>
       </div>

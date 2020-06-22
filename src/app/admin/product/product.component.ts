@@ -7,6 +7,7 @@ import { ProductService } from '../product/product.service';
 import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
 import { find } from 'rxjs/operators';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
 @Component({
   selector: 'app-product',
@@ -15,6 +16,7 @@ import { find } from 'rxjs/operators';
 })
 
 export class ProductComponent implements OnInit {
+  @BlockUI('prodlist') blockUI: NgBlockUI;
   ELEMENT_DATA : Product[];
   displayedColumns: string[] = ['productId', 'name', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
@@ -33,8 +35,10 @@ export class ProductComponent implements OnInit {
   }
 
   public getAllProduct(){
+    this.blockUI.start();
     let response = this.productService.getAllProduct()
     response.subscribe(list =>this.dataSource.data = list as Product[]);
+    this.blockUI.stop();
   }
 
    public applyFilter(filterValue: string) {

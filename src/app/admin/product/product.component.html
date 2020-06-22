@@ -11,8 +11,7 @@
   </mat-toolbar>
 
 
-<div class="static">
-  <block-ui>
+<div class="static" *blockUI="'prodlist'">
 <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
   <ng-container matColumnDef="productId">
     <th mat-header-cell mat-sort-header *matHeaderCellDef> Product Id </th>

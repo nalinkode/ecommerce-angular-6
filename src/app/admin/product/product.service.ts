@@ -18,7 +18,7 @@ export class ProductService {
   }
   
   public addProduct(product:Product){
-    console.log(produ)
+    console.log(product)
     debugger
   }
 

@@ -64,7 +64,7 @@ import { DialogConfirmedComponent } from './dialog-confirmed/dialog-confirmed.co
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent],
+  entryComponents:[AddProductComponent,],
   declarations: [
     AppComponent,
     HomeComponent,

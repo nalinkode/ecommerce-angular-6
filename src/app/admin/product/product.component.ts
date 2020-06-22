@@ -24,8 +24,7 @@ export class ProductComponent implements OnInit {
   isPopupOpen = false;
 
   constructor(private productService : ProductService, 
-             private dialog? : MatDialog,
-            ) { }
+             private dialog? : MatDialog) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;

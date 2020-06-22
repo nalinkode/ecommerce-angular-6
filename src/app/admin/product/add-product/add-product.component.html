@@ -28,7 +28,7 @@
       </div>
 
 
-   <div class="col-md-4">
+   <div class="col-md-3">
     <select class="custom-select" (change)="changeSubcategory($event)" formControlName="subCategory">
        <option value="" disabled >Choose your Subcategory</option>
       <option *ngFor="let subCategory of Subcategory" [ngValue]="subCategory">{{subCategory}}</option>
@@ -42,6 +42,12 @@
       <div class="col-md-4">
       <label>Price</label>
       <input type="text" formControlName="price" class="form-control">
+      </div>
+
+      
+      <div class="col-md-4">
+      <label>Offer Price</label>
+      <input type="text" formControlName="offerprice" class="form-control">
       </div>
 
       <div class="col-md-4">

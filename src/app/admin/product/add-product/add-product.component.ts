@@ -45,6 +45,7 @@ export class AddProductComponent implements OnInit {
      category: [this.data.category, Validators.required],
      subCategory: [this.data.Subcategory, Validators.required],
      price: [this.data.price, Validators.required],
+     offerprice:[this.data.offerPrice , Validators.required],
      description: [this.data.description, Validators.required]
    });
   }   

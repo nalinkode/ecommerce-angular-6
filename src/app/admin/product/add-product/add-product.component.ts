@@ -12,7 +12,7 @@ import { ProductService } from '../product.service';
 })
 export class AddProductComponent implements OnInit {
   Category: any = ['Men', 'Women', 'Kids', 'Fashion']
-  Subcategory:any = ['shoes','watches']
+  Subcategory:any = ['hoes','watches']
   public productForm : FormGroup; 
   constructor(
     private productService : ProductService,

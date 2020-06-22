@@ -6,7 +6,6 @@ import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
 import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
-import { DeleteProductComponent } from './delete-product/delete-product.component';
 import { find } from 'rxjs/operators';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
@@ -67,16 +66,6 @@ export class ProductComponent implements OnInit {
   });
   }
 
-   public deleteProduct(eproduct : Product[]){
-    this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(DeleteProductComponent,{
-    data: eproduct
-    });
-    
-    dialogRef.afterClosed().subscribe(result =>{
-    this.isPopupOpen = false;
-  });
-  }
   
 
 }

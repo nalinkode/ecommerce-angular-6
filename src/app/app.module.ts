@@ -62,7 +62,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, ],
+  entryComponents:[AddProductComponent ],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -87,7 +87,6 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
     ContactUsComponent,
     DashboardComponent,
     AddProductComponent,
-  ,
  
   ],
   bootstrap: [ AppComponent ],

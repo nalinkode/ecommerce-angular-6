@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 import { MatDialog } from '@angular/material/dialog';
 import { ProductService } from '../product/product.service';
+import { DialogService } from '../../shared/dialog.service';
 import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
 import { find } from 'rxjs/operators';
@@ -24,7 +25,7 @@ export class ProductComponent implements OnInit {
   isPopupOpen = false;
 
   constructor(private productService : ProductService,
-             private dialogSer     
+             private dialogService:      
              private dialog? : MatDialog) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;

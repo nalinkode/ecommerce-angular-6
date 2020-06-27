@@ -25,7 +25,7 @@ export class ProductComponent implements OnInit {
   isPopupOpen = false;
 
   constructor(private productService : ProductService,
-             private dialogService:      
+             private dialogService: DialogService,     
              private dialog? : MatDialog) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -71,6 +71,7 @@ export class ProductComponent implements OnInit {
 
   public deleteProduct(eproduct : Product[]){
      console.log(eproduct);
+     this.dialogService.openConfirmedDialog
   }
 
   

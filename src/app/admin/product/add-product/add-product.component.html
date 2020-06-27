@@ -19,43 +19,62 @@
       <label>Product Name </label>
       <input type="text" formControlName="productName" class="form-control">
       </div>
-      
+    </div>
+    <div class="row">
       <div class="col-md-3">
     <select class="custom-select drop-down" (change)="changeCategory($event)" formControlName="category">
        <option value="" disabled >Choose your category</option>
       <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
     </select>
       </div>
+    </div>
 
-
+<div class="row">
    <div class="col-md-3">
     <select class="custom-select drop-down" (change)="changeSubcategory($event)" formControlName="subCategory">
        <option value="" disabled >Choose your Subcategory</option>
-      <option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
+       <option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
     </select>
-      </div>
-
-
     </div>
-
-    <div class="row">
-      <div class="col-md-3">
+</div>
+<div class="row">
+    <div class="col-md-3">
       <label>Price</label>
       <input type="text" formControlName="price" class="form-control">
-      </div>
+    </div>
+</div>
 
-      
+    <div class="row">
       <div class="col-md-3">
       <label>Offer Price</label>
       <input type="text" formControlName="offerprice" class="form-control">
       </div>
-
+    </div>
+    <div class="row">
       <div class="col-md-3">
       <label for="validationTextarea">Description</label>
         <textarea class="form-control" id="validationTextarea" formControlName="description"  placeholder="Description" required></textarea>
       </div>
-      
     </div>
+    <div class="row">
+       <div class="col-md-3">
+        <label for="file">File</label>
+        <input 
+            formControlName="file"
+            id="file" 
+            type="file" 
+            class="form-control"
+            multiple="" 
+            (change)="onFileChange($event)">
+
+        <div *ngIf="f.file.touched && f.file.invalid" class="alert alert-danger">
+            <div *ngIf="f.file.errors.required">File is required.</div>
+        </div>
+
+    </div>
+    </div>
+
+    <img *ngFor='let url of images' [src]="url" height="150" width="200px" style="margin: 3px;"> <br/>
 
     <div class="row">
       <button type="submit" claas="btn btn-success"><mat-icon>save</mat-icon></button>

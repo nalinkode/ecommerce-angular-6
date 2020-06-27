@@ -7,8 +7,8 @@ import { ProductService } from '../product/product.service';
 import { DialogService } from '../../shared/dialog.service';
 import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
-import { find } from 'rxjs/operators';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
   selector: 'app-product',
@@ -25,7 +25,8 @@ export class ProductComponent implements OnInit {
   isPopupOpen = false;
 
   constructor(private productService : ProductService,
-             private dialogService: DialogService,     
+             private dialogService : DialogService,
+             private toastr : ToastrManager,     
              private dialog? : MatDialog) { }
 
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -74,12 +75,13 @@ export class ProductComponent implements OnInit {
      .afterClosed().subscribe(res => {
         if(res){
           this.productService.deleteProduct(eproduct);
+          this.toastr.successToastr('Product deleted successfully.');;
+
         }
      });
   }
 
   
-
 }
 
  

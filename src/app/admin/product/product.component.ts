@@ -52,7 +52,7 @@ export class ProductComponent implements OnInit {
   public addProduct(){
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
-     width: "" 
+    width: "490px", 
     data: {} 
     });
     dialogRef.afterClosed().subscribe(result =>{
@@ -63,6 +63,7 @@ export class ProductComponent implements OnInit {
    public editProduct(eproduct : Product[]){
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
+    width: "490px",
     data: eproduct
     });
     

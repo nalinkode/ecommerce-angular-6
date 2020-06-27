@@ -97,7 +97,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ProductService,
 
-   DialogService]
+  DialogService]
 })
 export class AppModule { }
 

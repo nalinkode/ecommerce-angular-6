@@ -15,13 +15,13 @@
     
 
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
       <label>Product Name </label>
       <input type="text" formControlName="productName" class="form-control">
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
     <select class="custom-select drop-down" (change)="changeCategory($event)" formControlName="category">
        <option value="" disabled >Choose your category</option>
       <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
@@ -30,7 +30,7 @@
     </div>
 
 <div class="row">
-   <div class="col-md-3">
+   <div class="col-md-4">
     <select class="custom-select drop-down" (change)="changeSubcategory($event)" formControlName="subCategory">
        <option value="" disabled >Choose your Subcategory</option>
        <option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
@@ -38,33 +38,33 @@
     </div>
 </div>
 <div class="row">
-    <div class="col-md-3">
+    <div class="col-md-4">
       <label>Price</label>
       <input type="text" formControlName="price" class="form-control">
     </div>
 </div>
 
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
       <label>Offer Price</label>
       <input type="text" formControlName="offerprice" class="form-control">
       </div>
     </div>
     <div class="row">
-      <div class="col-md-3">
+      <div class="col-md-4">
       <label for="validationTextarea">Description</label>
         <textarea class="form-control" id="validationTextarea" formControlName="description"  placeholder="Description" required></textarea>
       </div>
     </div>
     <div class="row">
-       <div class="col-md-3">
+       <div class="col-md-4">
         <label for="file">File</label>
         <input formControlName="file" id="file" type="file" class="form-control" multiple="" 
         (change)="onFileChange($event)">
     </div>
     </div>
 
-    <img *ngFor='let url of images' [src]="url" height="100" width="150px" style="margin: 3px;"> <br/>
+    <img *ngFor='let url of images' [src]="url" height="100" width="10px" style="margin: 3px;"> <br/>
 
     <div class="row">
       <button type="submit" claas="btn btn-success"><mat-icon>save</mat-icon></button>

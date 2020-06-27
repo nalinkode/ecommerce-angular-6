@@ -71,7 +71,10 @@ export class ProductComponent implements OnInit {
 
   public deleteProduct(eproduct : Product[]){
      console.log(eproduct);
-     this.dialogService.openConfirmedDialog("Are you sure to delete this record ?");
+     this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
+     .afterClosed().subscribe(res => {
+        console.log(res);
+     });
   }
 
   

@@ -10,7 +10,7 @@ export class DialogService {
   constructor(private dialog: MatDialog ) { }
 
   openConfirmedDialog(msg){
-    rethis.dialog.open(ConfirmedDialogComponent, {
+    return this.dialog.open(ConfirmedDialogComponent, {
       width: '390px',
       panelClass: 'confirm-dialog-container',
       disableClose: true,

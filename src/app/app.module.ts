@@ -46,6 +46,7 @@ import { P500Component, P404Component  } from './views/error';
 //auth
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
+import { ConfirmedDialogComponent } from './confirmed-dialog/confirmed-dialog.component';
 
 
 @NgModule({
@@ -88,6 +89,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
     ContactUsComponent,
     DashboardComponent,
     AddProductComponent,
+    ConfirmedDialogComponent,
     
  
   ],

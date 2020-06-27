@@ -15,7 +15,7 @@ export class DialogService {
       panelClass: 'confirm-dialog-container',
       disableClose: true,
       data: {
-        message :
+        message : msg
       }
     });
   }

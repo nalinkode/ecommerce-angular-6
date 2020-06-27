@@ -26,8 +26,9 @@ export class ProductService {
     debugger
   }
     
-  public deleteProduct(){
-    debugger  
+  public deleteProduct(product:Product){
+    console.log('The product to delete .....');
+    console.log(product);
   }
  
   

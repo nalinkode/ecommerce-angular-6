@@ -69,11 +69,13 @@ export class ProductComponent implements OnInit {
   });
   }
 
-  public deleteProduct(eproduct : Product[]){
-     console.log(eproduct);
+  public deleteProduct(eproduct){
+     
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
-        console.log(res);
+        if(res){
+          this.productService.deleteProduct(eproduct);
+        }
      });
   }
 

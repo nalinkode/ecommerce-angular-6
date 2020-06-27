@@ -52,6 +52,7 @@ export class ProductComponent implements OnInit {
   public addProduct(){
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
+     width: "" 
     data: {} 
     });
     dialogRef.afterClosed().subscribe(result =>{

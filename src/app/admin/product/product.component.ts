@@ -71,7 +71,7 @@ export class ProductComponent implements OnInit {
 
   public deleteProduct(eproduct : Product[]){
      console.log(eproduct);
-     this.dialogService.openConfirmedDialog
+     this.dialogService.openConfirmedDialog();
   }
 
   

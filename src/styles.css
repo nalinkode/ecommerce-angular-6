@@ -174,9 +174,6 @@
   }
 }
 
-
-
-
 /* Confirmed Dialog delete*/
 
  .btn-dialog-close{
@@ -216,7 +213,7 @@ border-radius: 0px;
 .confirm-dialog-container #yes-button{
     height: 50px;
     width: 50%;
-    background-color: #b6bece;
+    background-color: #e64242;
     color:white;
     border-radius: 0px;
 }

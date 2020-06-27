@@ -1,5 +1,5 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProductService } from '../product.service';
@@ -14,6 +14,8 @@ export class AddProductComponent implements OnInit {
   Category: any = ['Men', 'Women', 'Kids', 'Fashion'];
   subCategory: any = ['Shoes','watches'];
   public productForm : FormGroup; 
+  images = [];
+
   constructor(
     private productService : ProductService,
     private dialogRef : MatDialogRef<AddProductComponent>,
@@ -46,10 +48,29 @@ export class AddProductComponent implements OnInit {
      subCategory: [this.data.subCategory, Validators.required],
      price: [this.data.price, Validators.required],
      offerprice: [this.data.offerPrice , Validators.required],
-     description: [this.data.description, Validators.required]
+     description: [this.data.description, Validators.required],
+     file: new FormControl('', [Validators.required]),
+     fileSource: new FormControl('', [Validators.required])
    });
   }   
   
+   onFileChange(event) {
+    if (event.target.files && event.target.files[0]) {
+        var filesAmount = event.target.files.length;
+        for (let i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+                reader.onload = (event:any) => {
+                  console.log(event.target.result);
+                   this.images.push(event.target.result); 
+                   this.productForm.patchValue({
+                      fileSource: this.images
+                   });
+                }
+                reader.readAsDataURL(event.target.files[i]);
+        }
+    }
+  }
+
   onNoClick(){
     this.dialogRef.close();
   }

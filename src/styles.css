@@ -205,7 +205,7 @@ cursor: pointer;
 .confirm-dialog-container #no-button{
 height: 50px;
 width: 50%;
-background-color: #fc7169;
+background-color: #f75048;
 color:white;
 border-radius: 0px;
 }
@@ -213,7 +213,7 @@ border-radius: 0px;
 .confirm-dialog-container #yes-button{
     height: 50px;
     width: 50%;
-    background-color: #e64242;
+    background-color: #f75048;
     color:white;
     border-radius: 0px;
 }

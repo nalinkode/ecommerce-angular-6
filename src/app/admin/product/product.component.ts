@@ -70,7 +70,6 @@ export class ProductComponent implements OnInit {
   }
 
   public deleteProduct(eproduct){
-     
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
         if(res){

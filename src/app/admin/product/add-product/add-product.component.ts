@@ -11,10 +11,12 @@ import { ProductService } from '../product.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  Category: any = ['Men', 'Women', 'Kids', 'Fashion'];
+  category: any = ['Men', 'Women', 'Kids', 'Fashion'];
   subCategory: any = ['Shoes','watches'];
   public productForm : FormGroup; 
   images = [];
+  
+  
 
   constructor(
     private productService : ProductService,

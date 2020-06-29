@@ -49,22 +49,11 @@ export class ProductComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
   
-  public addProduct(){
+   public editAddProduct(eproduct : Product[]){
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
-    position: { top : "70px"},
-    data: {} 
-    });
-    dialogRef.afterClosed().subscribe(result =>{
-    this.isPopupOpen = false;
-  });
-  }
-  
-   public editProduct(eproduct : Product[]){
-    this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddProductComponent,{
-    width: "450px", 
+    height: "80%",
     position: { top : "70px"},
     data: eproduct
     });

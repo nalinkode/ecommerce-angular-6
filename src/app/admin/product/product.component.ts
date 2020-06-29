@@ -53,7 +53,6 @@ export class ProductComponent implements OnInit {
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
-    height: "80%",
     position: { top : "70px"},
     data: eproduct
     });
@@ -73,6 +72,12 @@ export class ProductComponent implements OnInit {
         }
      });
   }
+
+  addProductImage(product){
+
+
+  }
+
 }
 
  

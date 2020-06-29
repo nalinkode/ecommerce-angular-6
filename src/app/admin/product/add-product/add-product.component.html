@@ -20,7 +20,7 @@
     <label for="productName" class="col-sm-4 col-form-label">Category</label>
     <div class="col-sm-8">
      <select class="custom-select drop-down" (change)="changeCategory($event)"   formControlName="category">
-       <option value="0" disabled >Choose your category</option>
+       <option  disabled >Choose your category</option>
        <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
      </select>
     </div>
@@ -30,7 +30,7 @@
     <label for="productName" class="col-sm-4 col-form-label">Sub-category</label>
     <div class="col-sm-8">
       <select class="custom-select drop-down" (change)="changeSubcategory($event)" formControlName="subCategory">
-       <option value="0" disabled >Choose your Subcategory</option>
+       <option disabled >Choose your Subcategory</option>
        <option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
     </select>
     </div>

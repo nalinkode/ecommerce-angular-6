@@ -16,7 +16,6 @@ export class AddProductComponent implements OnInit {
   public productForm : FormGroup; 
   images = [];
   
-  
 
   constructor(
     private productService : ProductService,

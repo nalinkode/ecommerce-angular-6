@@ -1,78 +1,76 @@
-
-
- <div class="modal-header">
-  <h5 class="modal-title" mat-dialog-title>Add Product</h5>
-  <button type="button" (click)="onNoClick()" class="close" aria-label="Close">
+<div class="modal-header">
+	<h5 class="modal-title" mat-dialog-title>Add Product</h5>
+	<button type="button" (click)="onNoClick()" class="close" aria-label="Close">
    <span aria-hidden="true">&times;</span>
   </button>
- </div>
- 
- <mat-dialog-content>
-  <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-   <div class="form-group row">
-    <label for="productName" class="col-sm-4 col-form-label">Product Name</label>
-    <div class="col-sm-8">
-     <input type="text" class="form-control" formControlName="productName" id="productName">
+</div>
+
+<mat-dialog-content>
+	<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
+		<div class="form-group row">
+			<label for="productName" class="col-sm-4 col-form-label">Product Name</label>
+			<div class="col-sm-8">
+				<input type="text" class="form-control" formControlName="productName" id="productName">
     </div>
-   </div>
-  
-   <div class="form-group row">
-    <label for="productName" class="col-sm-4 col-form-label">Category</label>
-    <div class="col-sm-8">
-     <select class="custom-select drop-down" (change)="changeCategory($event)"   formControlName="category">
+			</div>
+
+			<div class="form-group row">
+				<label for="productName" class="col-sm-4 col-form-label">Category</label>
+				<div class="col-sm-8">
+					<select class="custom-select drop-down" (change)="changeCategory($event)"   formControlName="category">
        <option  disabled >Choose your category</option>
        <option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
      </select>
-    </div>
-   </div>
+				</div>
+			</div>
 
-   <div class="form-group row">
-    <label for="productName" class="col-sm-4 col-form-label">Sub-category</label>
-    <div class="col-sm-8">
-      <select class="custom-select drop-down" (change)="changeSubcategory($event)" formControlName="subCategory">
+			<div class="form-group row">
+				<label for="productName" class="col-sm-4 col-form-label">Sub-category</label>
+				<div class="col-sm-8">
+					<select class="custom-select drop-down" (change)="changeSubcategory($event)" formControlName="subCategory">
        <option disabled >Choose your Subcategory</option>
        <option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
     </select>
-    </div>
-   </div>
-   
-   <div class="form-group row">
-    <label for="price" class="col-sm-4 col-form-label">Price</label>
-    <div class="col-sm-8">
-     <input type="text" class="form-control" formControlName="price" id="price">
-    </div>
-   </div>
+				</div>
+			</div>
 
-   <div class="form-group row">
-    <label for="offerprice" class="col-sm-4 col-form-label">Offer Price</label>
-    <div class="col-sm-8">
-     <input type="text" class="form-control" formControlName="offerprice" id="offerprice">
+			<div class="form-group row">
+				<label for="price" class="col-sm-4 col-form-label">Price</label>
+				<div class="col-sm-8">
+					<input type="text" class="form-control" formControlName="price" id="price">
     </div>
-   </div>
+				</div>
 
-
-   <div class="form-group row">
-    <label for="description" class="col-sm-4 col-form-label">Description</label>
-    <div class="col-sm-8">
-     <textarea class="form-control" formControlName="description" id="description"></textarea>
+				<div class="form-group row">
+					<label for="offerprice" class="col-sm-4 col-form-label">Offer Price</label>
+					<div class="col-sm-8">
+						<input type="text" class="form-control" formControlName="offerprice" id="offerprice">
     </div>
-   </div>
+					</div>
 
-   <div class="form-group row">
-    <label for="file" class="col-sm-4 col-form-label">Upload images</label>
-    <div class="col-sm-8">
-     <input type="file" class="form-control" formControlName="file" id="file" multiple="" 
+
+					<div class="form-group row">
+						<label for="description" class="col-sm-4 col-form-label">Description</label>
+						<div class="col-sm-8">
+							<textarea class="form-control" formControlName="description" id="description"></textarea>
+						</div>
+					</div>
+
+					<div class="form-group row">
+						<label for="file" class="col-sm-4 col-form-label">Upload images</label>
+						<div class="col-sm-8">
+							<input type="file" class="form-control" formControlName="file" id="file" multiple=""
       (change)="onFileChange($event)">
     </div>
+						</div>
+
+						<div class="row">
+							<img *ngFor='let url of images' [src]="url" height="100" width="100px" style="margin: 3px;"><br/>
    </div>
- 
-   <div class="row">
-      <img *ngFor='let url of images' [src]="url" height="100" width="100px" style="margin: 3px;"><br/>
-   </div>
-  
-   <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="onNoClick()">Close</button>
-    <button type="submit" class="btn btn-primary">Save changes</button>
-   </div>
- </form>
- </mat-dialog-content>
+
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" (click)="onNoClick()">Close</button>
+								<button type="submit" class="btn btn-primary">Save changes</button>
+							</div>
+	</form>
+</mat-dialog-content>

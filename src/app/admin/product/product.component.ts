@@ -9,6 +9,9 @@ import { Product } from '../product/product';
 import { AddProductComponent } from './add-product/add-product.component';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-product',
@@ -26,6 +29,8 @@ export class ProductComponent implements OnInit {
 
   constructor(private productService : ProductService,
              private dialogService : DialogService,
+             private router: Router,
+             private route : ActivatedRoute,
              private toastr : ToastrManager,     
              private dialog? : MatDialog) { }
 
@@ -85,8 +90,8 @@ export class ProductComponent implements OnInit {
      });
   }
 
-  addProductImage(product){
-
+  addProductImage(id : number){
+     this.router.navigate(['/admin/product/upload_image',id])
 
   }
 

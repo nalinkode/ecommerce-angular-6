@@ -47,7 +47,7 @@ import { P500Component, P404Component  } from './views/error';
 import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
 import { ConfirmedDialogComponent } from './confirmed-dialog/confirmed-dialog.component';
-import { ProductImageComponent } from './admin/product/product-image/product-image.component';
+import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
 
 
 @NgModule({
@@ -91,7 +91,7 @@ import { ProductImageComponent } from './admin/product/product-image/product-ima
     DashboardComponent,
     AddProductComponent,
     ConfirmedDialogComponent,
-    ProductImageComponent,
+    AddProductImageComponent,
     
  
   ],

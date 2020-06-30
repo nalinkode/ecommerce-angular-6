@@ -12,6 +12,7 @@ import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
 
 //auth
 
@@ -39,7 +40,10 @@ const appRoutes: Routes = [
         {path:'dashboard', component: DashboardComponent },  
         {path:'user', component: UserlistComponent},
         {path:'order', component: OrderComponent },
-        {path:'product', component: ProductComponent },
+        {path:'product', component: ProductComponent, 
+        children:[
+              {path:'upload_image/:id', component: AddProductImageComponent}
+          ]},
         {path:'category', component: CategoryComponent }
         ]
     },

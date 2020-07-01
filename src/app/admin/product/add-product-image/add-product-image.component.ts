@@ -20,7 +20,7 @@ export class AddProductImageComponent implements OnInit {
   }
 
   product(){
-    this.router.navigate.(['admin/product']);
+    this.router.navigate(['admin/product']);
   }
 
 }

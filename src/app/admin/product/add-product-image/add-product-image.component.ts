@@ -17,11 +17,10 @@ export class AddProductImageComponent implements OnInit {
       const productId = params.get('id');
       console.log(productId);
     });
+  }
 
-    public product(){
-     this.router.navigate(['admin/product']);
-    }
-
+  product(){
+    this.router.navigate.(['admin/product']);
   }
 
 }

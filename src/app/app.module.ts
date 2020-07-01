@@ -48,6 +48,7 @@ import { AuthInterceptor } from './views/auth/AuthInterceptor';
 import { AddProductComponent } from './admin/product/add-product/add-product.component';
 import { ConfirmedDialogComponent } from './confirmed-dialog/confirmed-dialog.component';
 import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
+import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
 
 
 @NgModule({
@@ -92,6 +93,7 @@ import { AddProductImageComponent } from './admin/product/add-product-image/add-
     AddProductComponent,
     ConfirmedDialogComponent,
     AddProductImageComponent,
+    AdminSidebarComponent,
     
  
   ],

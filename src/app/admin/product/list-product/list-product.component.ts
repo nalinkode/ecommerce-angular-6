@@ -92,7 +92,7 @@ export class ListProductComponent implements OnInit {
   }
 
   addProductImage(id : number){
-     this.router.navigate(['/admin/product/upload_image',id])
+     this.router.navigate(['/admin/product/upload',id])
 
   }
 

@@ -13,6 +13,8 @@ import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
+import { ListProductComponent } from './admin/product/list-product/list-product.component';
+
 
 //auth
 
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
         {path:'order', component: OrderComponent },
         {path:'product', component: ProductComponent, 
         children:[
-              {path:'upload_image/:id', component: AddProductImageComponent}
+               {path:'', component: ListProductComponent},   
+               {path:'upload/:id', component: AddProductImageComponent}
           ]},
         {path:'category', component: CategoryComponent }
         ]

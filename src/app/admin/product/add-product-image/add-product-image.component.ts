@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute , Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-add-product-image',
@@ -8,13 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AddProductImageComponent implements OnInit {
 
-  constructor(private route : ActivatedRoute ) { }
+  constructor(private route : ActivatedRoute,
+  private router : Router ) { }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params =>{
       const productId = params.get('id');
       console.log(productId);
     });
+
+    public product(){
+     this.router.navigate(['admin/product']);
+    }
 
   }
 

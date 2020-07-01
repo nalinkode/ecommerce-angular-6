@@ -20,81 +20,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 
 export class ProductComponent implements OnInit {
-  @BlockUI('prodlist') blockUI: NgBlockUI;
-  ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['productId', 'name', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
-  dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
-  
-  isPopupOpen = false;
 
-  constructor(private productService : ProductService,
-             private dialogService : DialogService,
-             private router: Router,
-             private route : ActivatedRoute,
-             private toastr : ToastrManager,     
-             private dialog? : MatDialog) { }
-
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  constructor() { }
 
   ngOnInit() {
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-    this.getAllProduct();
-  }
-
-  public getAllProduct(){
-    this.blockUI.start();
-    let response = this.productService.getAllProduct()
-    response.subscribe(list =>this.dataSource.data = list as Product[]);
-    this.blockUI.stop();
-  }
-
-   public applyFilter(filterValue: string) {
-    this.dataSource.filter = filterValue.trim().toLowerCase(); 
-  }
   
-  public addProduct(){
-    this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddProductComponent,{
-    width: "450px", 
-    position: { top : "70px"},
-    data: {}
-    });
-        dialogRef.afterClosed().subscribe(result =>{
-    this.isPopupOpen = false;
-  });
   }
-
-   public editProduct(eproduct : Product[]){
-    this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddProductComponent,{
-    width: "450px", 
-    position: { top : "70px"},
-    data: eproduct
-    });
-    
-    dialogRef.afterClosed().subscribe(result =>{
-    this.isPopupOpen = false;
-  });
-  }
-
-  public deleteProduct(eproduct){
-     this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
-     .afterClosed().subscribe(res => {
-        if(res){
-          this.productService.deleteProduct(eproduct);
-          this.toastr.successToastr('Product deleted successfully.');;
-
-        }
-     });
-  }
-
-  addProductImage(id : number){
-     this.router.navigate(['/admin/product/upload_image',id])
-
-  }
-
 }
 
  

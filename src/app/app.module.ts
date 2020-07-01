@@ -49,6 +49,7 @@ import { AddProductComponent } from './admin/product/add-product/add-product.com
 import { ConfirmedDialogComponent } from './confirmed-dialog/confirmed-dialog.component';
 import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
 import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
+import { ListProductComponent } from './admin/product/list-product/list-product.component';
 
 
 @NgModule({
@@ -94,6 +95,7 @@ import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.compo
     ConfirmedDialogComponent,
     AddProductImageComponent,
     AdminSidebarComponent,
+    ListProductComponent,
     
  
   ],

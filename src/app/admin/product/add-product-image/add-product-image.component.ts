@@ -15,6 +15,7 @@ export class AddProductImageComponent implements OnInit {
       const productId = params.get('id');
       console.log(productId);
     });
+
   }
 
 }

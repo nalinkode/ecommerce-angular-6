@@ -100,7 +100,10 @@ export class LoginComponent implements OnInit {
      if (value) {
        this.blockUI.start(''); // Start blocking
      } else {
-      this.blockUI.stop(); // Stop blocking
+       setTimeout(() =>{
+         this.blockUI.stop()
+       },200);
+     // this.blockUI.stop(); // Stop blocking
      }
   }
 }

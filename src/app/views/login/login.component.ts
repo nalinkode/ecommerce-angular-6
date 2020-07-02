@@ -102,7 +102,7 @@ export class LoginComponent implements OnInit {
      } else {
        setTimeout(() =>{
          this.blockUI.stop()
-       },200);
+       },2000);
      // this.blockUI.stop(); // Stop blocking
      }
   }

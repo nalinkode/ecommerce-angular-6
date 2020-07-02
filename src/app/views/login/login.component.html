@@ -1,73 +1,30 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<div class="panel panel-default" style="border-color: rgb(133, 133, 247)">
-				<div class="panel">
-					<div class="text-center">
-				<h3>
-					<i class="fa fa-user-o" style="font-size:36px"></i>
-				</h3>
-				<h2 class="text-center">Sign In </h2>
-				<div class="panel">
-	
-  
-  	<form [formGroup] = "loginForm" (ngSubmit) = "loginForm.valid && onSubmit()"      class="col s12 white" >
-				
-       <div class="form-group">
-									<label for="userName">E-mail</label>
-									<input type="email" 
-                  class="form-control" 
-                  formControlName="userName" 
-                  id="userName" 
-                  placeholder="Enter Email or username"
-                  [ngClass]="{'is-invalid':loginForm.get('userName').touched && loginForm.get('userName').invalid}"/>
-									
-                  <div *ngIf="loginForm.get('userName').touched &&         loginForm.get('userName').invalid" class="invalid-feedback">
-									<div *ngIf="loginForm.get('userName').errors.required">Email is required 
-                  </div>
-									<div *ngIf="loginForm.get('userName').errors.email">
-                  Email must be valid email address                          </div>
-									</div>
-								</div>
-
-			     <div class="form-group">
-						<label for="password">Password</label>
-						<input type="password" 
-            formControlName="password" 
-            class="form-control"
-            id="password" 
-            placeholder="Enter Password"  
-            [ngClass]="{'is-invalid':loginForm.get('password').touched && loginForm.get('password').invalid}"/>
-						<div *ngIf="loginForm.get('password').touched &&         loginForm.get('password').invalid" class="invalid-feedback">
-						<div *ngIf="loginForm.get('password').errors.required">Password is required 
-            </div>
-						<div *ngIf="loginForm.get('password').errors.minlength">
-            password must be at least 6 characters</div>
-						</div>
-								</div>
-
-                   <div class="form-group">
-           <div class="form-check">
-           <label class="form-check-label"
-           for="customCheckLogin"> <span>Remember me </span></label>
-           <input class="form-check-input" 
-           id="customCheckLogin"
-           type="checkbox" 
-           name="rememberMe"
-           style="margin: 4px;"
-           formControlName="rememberMe"
-           (change)="SetRememberMe(rememberMe?'1':'0')">
-            </div>
-          </div>
-              
-			<button type="submit" [disabled]= "!loginForm.valid" class="btn btn-primary btn-block"> Submit</button>
-		</form> 
-					<a [routerLink]="['/register']" class="btn btn-link">Sign-up</a>
-					<a (click)="gotoforgotpassword()" class="btn btn-link">Forget Password</a>
-			</div>
-			</div>
+<div class="body text-center mt-15">
+	<form class="form-signin justify-content-center" [formGroup]="loginForm" (ngSubmit)="loginForm.valid && onSubmit()"> 
+    <img class="mb-4" src="../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+		<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+		
+    <label for="inputEmail" class="sr-only">Email address</label>
+		<input type="email" id="inputEmail" class="form-control" placeholder="Email address" formControlName="userName" [ngClass]="{'is-invalid':loginForm.get('userName').touched && loginForm.get('userName').invalid}" required autofocus>
+		<div *ngIf="loginForm.get('userName').touched && loginForm.get('userName').invalid" class="invalid-feedback">
+			<div *ngIf="loginForm.get('userName').errors.required">Email is required </div>
+			<div *ngIf="loginForm.get('userName').errors.email"> Email must be valid email address </div>
 		</div>
-	</div>
-	</div>
-	</div>
+		
+    <label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" class="form-control" placeholder="Password" formControlName="password" required [ngClass]="{'is-invalid':loginForm.get('password').touched && loginForm.get('password').invalid}">
+		<div *ngIf="loginForm.get('password').touched && loginForm.get('password').invalid" class="invalid-feedback">
+			<div *ngIf="loginForm.get('password').errors.required">Password is required </div>
+			<div *ngIf="loginForm.get('password').errors.minlength"> password must be at least 6 characters</div>
+		</div>
+		
+    <div class="checkbox mb-3">
+			<label>
+				<input type="checkbox" value="remember-me" formControlName="rememberMe" (change)="SetRememberMe(rememberMe?'1':'0')"> Remember me </label>
+		</div>
+		
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="!loginForm.valid">Sign in</button> 
+    <a [routerLink]="['/register']" class="btn btn-link">Sign-up</a> 
+    <a (click)="gotoforgotpassword()" class="btn btn-link">Forget Password</a>
+		<p class="mt-5 mb-3 text-muted">&copy; 2019-2020</p>
+	</form>
 </div>

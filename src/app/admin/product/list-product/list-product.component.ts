@@ -28,6 +28,7 @@ export class ListProductComponent implements OnInit {
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   
   isPopupOpen = false;
+  isLoading = true;
 
   constructor(private productService : ProductService,
              private dialogService : DialogService,
@@ -46,13 +47,12 @@ export class ListProductComponent implements OnInit {
   }
 
   public getAllProduct(){
-    this.blockedUI(true);
     let response = this.productService.getAllProduct()
     response.subscribe(list =>{
-      this.dataSource.data = list as Product[]
-      this.blockedUI(false);
+      this.dataSource.data = list as Product[];
+      this.isLoading = false;
       }, err =>{
-         this.blockedUI(false);   
+        this.isLoading = false; 
       });
   }
 
@@ -104,7 +104,7 @@ export class ListProductComponent implements OnInit {
    blockedUI(value) {
      debugger
      if (value) {
-       this.blockUI.start('Loading...'); // Start blocking
+       this.blockUI.start(''); // Start blocking
      } else {
       this.blockUI.stop(); // Stop blocking
      }

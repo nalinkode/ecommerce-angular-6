@@ -62,7 +62,8 @@ export class LoginComponent implements OnInit {
       const md5 = new Md5();
       const pwd = md5.appendStr(this.loginForm.value.password).end();
       const dat = { 'userName': this.loginForm.value.userName, 'Password': pwd };
-      console.log(dat);   
+      console.log(dat);
+      this.blockedUI(true);   
       this.loginService.login(dat).subscribe((res: any) => {
               
       if (res.userName === dat.userName && res.password === dat.Password ) {
@@ -76,11 +77,12 @@ export class LoginComponent implements OnInit {
              if (res.userRole === 'Admin') {
              this.router.navigate(['admin']);
              }
-          }
+          } 
       } 
       else{
            this.toaster.infoToastr('Please enter valid Email and password.');
       }
+      this.blockedUI(false);  
       }, err => {
         this.blockedUI(false);
       }); 

@@ -21,15 +21,13 @@ export class AppComponent  {
         if(event['url'] == '/login') {
          this.showHead = false;
          this.showFooter = false;
+        } else if(event['url'] == '/admin') {
+          this.showHead = true;
+          this.showFooter = false;
         } else {
           this.showHead = true;
-          this.showFooter = true;
+          this.showFooter = true; 
         }
-      }
-      if(event instanceof NavigationStart) {
-        if(event['url'] == '/admin') {
-         this.showFooter = false;
-        } 
       }
     });
   }

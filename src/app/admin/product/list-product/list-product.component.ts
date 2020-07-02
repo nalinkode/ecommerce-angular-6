@@ -21,7 +21,8 @@ import { AddProductComponent } from '../add-product/add-product.component';
 })
 export class ListProductComponent implements OnInit {
 
-  @BlockUI('prodlist') blockUI: NgBlockUI;
+  @BlockUI() blockUI: NgBlockUI;
+
   ELEMENT_DATA : Product[];
   displayedColumns: string[] = ['productId', 'name', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
@@ -45,10 +46,14 @@ export class ListProductComponent implements OnInit {
   }
 
   public getAllProduct(){
-    this.blockUI.start();
+    this.blockedUI(true);
     let response = this.productService.getAllProduct()
-    response.subscribe(list =>this.dataSource.data = list as Product[]);
-    this.blockUI.stop();
+    response.subscribe(list =>{
+      this.dataSource.data = list as Product[]
+      this.blockedUI(false);
+      }, err =>{
+         this.blockedUI(false);   
+      });
   }
 
    public applyFilter(filterValue: string) {
@@ -95,5 +100,15 @@ export class ListProductComponent implements OnInit {
      this.router.navigate(['/admin/product/upload',id])
 
   }
+
+   blockedUI(value) {
+     debugger
+     if (value) {
+       this.blockUI.start('Loading...'); // Start blocking
+     } else {
+      this.blockUI.stop(); // Stop blocking
+     }
+  }
+
 
 }

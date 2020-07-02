@@ -21,7 +21,6 @@ export class AppComponent  {
         if(event['url'] == '/login') {
          this.showHead = false;
          this.showFooter = false;
-
         } else {
           this.showHead = true;
           this.showFooter = true; 

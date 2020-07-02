@@ -1,5 +1,5 @@
 <div *blockUI="'root'">
    <app-header *ngIf="showHead"></app-header>
    <router-outlet></router-outlet>
-   <app-footer *ngIf=" showFooter ||(!router.url.includes('admin'))"></app-footer>
+   <app-footer *ngIf=" showFooter |(!router.url.includes('admin'))"></app-footer>
 </div>

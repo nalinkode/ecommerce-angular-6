@@ -26,6 +26,11 @@ export class AppComponent  {
           this.showFooter = true;
         }
       }
+      if(event instanceof NavigationStart) {
+        if(event['url'] == '/admin') {
+         this.showFooter = false;
+        } 
+      }
     });
   }
 }

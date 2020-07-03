@@ -16,6 +16,11 @@ export class ProductService {
   public getAllProduct():Observable<Product[]>{
     return this.http.get('/assets/product.json').pipe(map(res => res));
   }
+
+
+  public getProductById(productId : number): Observable<Product[]>{
+    return this.http.get<Product>('/assets/product.json/'${productId});
+  }
   
   public addProduct(product:Product){
     console.log(product)

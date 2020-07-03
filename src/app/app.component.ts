@@ -28,7 +28,7 @@ export class AppComponent  {
       }
     });
 
-    if(router.url.includes('/admin')
+    if(router.url.includes('/admin'))
    { 
       this.showFooter = false;
     }

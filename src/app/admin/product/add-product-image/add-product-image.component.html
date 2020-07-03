@@ -3,8 +3,9 @@
   <a href="#">product images</a> 
 </nav>
 
+<div class="static">
 <form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-  <div class="static">
+  
 		<div class="form-group row">
 			<div class="col-sm-5">
 				<input type="file" class="form-control" formControlName="file" id="file" multiple="" (change)="onFileChange($event)"> </div>
@@ -13,6 +14,6 @@
 		</div>
 		<div class="row"> <img *ngFor='let url of images' [src]="url" height="100" width="100px" style="margin: 3px;">
 			<br/> </div>
-      </di
+      
 	</form>
-  
+  </div

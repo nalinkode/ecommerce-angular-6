@@ -27,6 +27,11 @@ export class AppComponent  {
         }
       }
     });
+
+    if(router.url.includes('/admin')
+   { 
+      this.showFooter = false;
+    }
   }
 }
 

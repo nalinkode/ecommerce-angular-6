@@ -25,13 +25,13 @@ export class AppComponent  {
           this.showHead = true;
           this.showFooter = true; 
         }
+        if(event['url'].includes('/admin'))
+        {
+          this.showFooter = false;
+        }
+    
       }
     });
-
-    if(router.url.includes('/admin'))
-   { 
-      this.showFooter = false;
-    }
   }
 }
 

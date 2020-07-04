@@ -25,8 +25,7 @@ export class AddProductComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-     this.createProductForm();
-    
+    this.createProductForm();
   }
 
   changeCategory(e) {

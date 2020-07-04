@@ -7,7 +7,7 @@
 </mat-toolbar>
 
 <div class="static">
-   
+    
 	<table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8">
 			<ng-container matColumnDef="productId">
 				<th mat-header-cell mat-sort-header *matHeaderCellDef> Product Id </th>
@@ -53,11 +53,12 @@
 			<tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
 			<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 	</table>
+     
+	<mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+         <mat-progress-spinner diameter="50" color="primary" mode="indeterminate">
+         </mat-progress-spinner>
+        </mat-card>
 </div>
 <mat-paginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
 
 
-<mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
-  <mat-progress-spinner color="primary" mode="indeterminate">
-  </mat-progress-spinner>
-</mat-card>

@@ -76,7 +76,6 @@ export class AddProductImageComponent implements OnInit {
   }
 
    blockedUI(value) {
-     debugger
      if (value) {
        this.blockUI.start(''); // Start blocking
      } else {

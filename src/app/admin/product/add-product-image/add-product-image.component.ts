@@ -18,7 +18,9 @@ export class AddProductImageComponent implements OnInit {
 
   constructor(private route : ActivatedRoute,
   private router : Router,
-  private productService : ProductService ) { }
+  private productService : ProductService,
+  private fb: FormBuilder,
+  private toaster: ToastrManager  ) { }
 
   ngOnInit() {
      this.getByProductId();
@@ -40,7 +42,7 @@ export class AddProductImageComponent implements OnInit {
                 reader.onload = (event:any) => {
                   console.log(event.target.result);
                    this.images.push(event.target.result); 
-                   this.productForm.patchValue({
+                   this.productImageForm.patchValue({
                       fileSource: this.images
                    });
                 }

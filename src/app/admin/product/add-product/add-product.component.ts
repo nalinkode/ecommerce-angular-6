@@ -15,7 +15,7 @@ export class AddProductComponent implements OnInit {
   subCategory: any = ['Shoes','watches'];
   public productForm : FormGroup; 
   images = [];
-  message: string = this.data.message 
+  
 
   constructor(
     private productService : ProductService,

@@ -65,7 +65,7 @@ export class ListProductComponent implements OnInit {
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
     position: { top : "70px"},
-    data: { message: "Add product" }
+    data: { message:"Add product"}
     });
         dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;

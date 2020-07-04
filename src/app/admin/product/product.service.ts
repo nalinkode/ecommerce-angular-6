@@ -27,6 +27,12 @@ export class ProductService {
     debugger
   }
 
+  public addProductImage(product,productId){
+    console.log(product)
+    debugger
+  }
+
+
   public editProduct(product:Product){
     debugger
   }

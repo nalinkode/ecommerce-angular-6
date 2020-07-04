@@ -71,7 +71,18 @@ export class AddProductImageComponent implements OnInit {
       }
     });
   }
-  
+
+  onSubmit(){
+    this.route.paramMap.subscribe(params =>{
+      const productId = +params.get('id');
+      if(productId) {
+          debugger
+          this.productService.addProductImage(this.productImageForm.value,productId);
+          this.toaster.successToastr('Product added successfully .');  
+       }
+  });
+  }
+   
   goToProduct(){
     this.router.navigate(['admin/product']);
   }

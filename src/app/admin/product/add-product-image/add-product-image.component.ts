@@ -3,6 +3,9 @@ import { ActivatedRoute , Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { DialogService } from '../../../shared/dialog.service';
 import { Product } from '../product';
+import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
+import { ToastrManager } from 'ng6-toastr-notifications';
+
 
 @Component({
   selector: 'app-add-product-image',
@@ -10,6 +13,8 @@ import { Product } from '../product';
   styleUrls: ['./add-product-image.component.css']
 })
 export class AddProductImageComponent implements OnInit {
+  public productImageForm : FormGroup; 
+  images = [];
 
   constructor(private route : ActivatedRoute,
   private router : Router,
@@ -17,6 +22,31 @@ export class AddProductImageComponent implements OnInit {
 
   ngOnInit() {
      this.getByProductId();
+     this.createProductImageForm();
+  }
+
+  createProductImageForm(){
+    this.productImageForm = this.fb.group({
+      file: new FormControl('', [Validators.required]),
+      fileSource: new FormControl('', [Validators.required])
+   });
+  }
+
+   onFileChange(event) {
+    if (event.target.files && event.target.files[0]) {
+        var filesAmount = event.target.files.length;
+        for (let i = 0; i < filesAmount; i++) {
+                var reader = new FileReader();
+                reader.onload = (event:any) => {
+                  console.log(event.target.result);
+                   this.images.push(event.target.result); 
+                   this.productForm.patchValue({
+                      fileSource: this.images
+                   });
+                }
+                reader.readAsDataURL(event.target.files[i]);
+        }
+    }
   }
 
   getByProductId(){

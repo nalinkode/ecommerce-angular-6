@@ -17,6 +17,7 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 export class AddProductImageComponent implements OnInit {
   public productImageForm : FormGroup; 
   images = [];
+  isLoading = true;
   @BlockUI() blockUI: NgBlockUI;
   ELEMENT_DATA : Product[];
   displayedColumns: string[] = ['serialNumber','imgUrl', 'action'];
@@ -63,11 +64,11 @@ export class AddProductImageComponent implements OnInit {
       if(productId) {
          this.productService.getProductById(productId).subscribe(resp =>{
               this.dataSource.data = resp as Product[];
+              this.isLoading = false;
          }, err => {
-
+               this.isLoading = false;
          });
       }
-      console.log(productId);
     });
   }
   

@@ -3,15 +3,17 @@
   <a href="#">product images</a> 
 </nav>
 
-<div class="static">
+<div class="static mt-3">
 <form [formGroup]="productImageForm" (ngSubmit)="onSubmit()">
-  
-		<div class="form-group row">
-			<div class="col-sm-5">
-				<input type="file" class="form-control" formControlName="file" id="file" multiple="" (change)="onFileChange($event)"> </div>
+  <!--
+		<div class="form-group row mt-4">
+			<div class="col-sm-5 ml-2">
+				<input type="file" class="form-control" formControlName="file" id="file" multiple="" (change)="onFileChange($event)"> 
+        </div>
         <button type="submit" class="btn btn-primary">Upload </button>
 		</div>
-		<div class="row"> <img *ngFor='let url of images' [src]="url" height="100" width="100px" style="margin: 3px;">
+    >
+		<div class="row ml-2 img-thumbnail"> <img *ngFor='let url of images' [src]="url" height="100" width="100px" style="margin: 3px;">
 			<br/>
     </div>
       

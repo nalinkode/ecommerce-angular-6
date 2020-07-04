@@ -21,12 +21,15 @@ export class AppComponent  {
         if(event['url'] == '/login') {
          this.showHead = false;
          this.showFooter = false;
-        } else if(event['url'].includes('/admin')) {
-           this.showFooter = false;
-        } else{
+        } else {
           this.showHead = true;
           this.showFooter = true; 
         }
+        if(event['url'].includes('/admin'))
+      {
+          this.showFooter = false;
+        }
+    
       }
     });
   }

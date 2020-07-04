@@ -5,6 +5,8 @@ import { DialogService } from '../../../shared/dialog.service';
 import { Product } from '../product';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
+import { MatTableDataSource } from '@angular/material/table';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
 
 @Component({
@@ -15,6 +17,10 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 export class AddProductImageComponent implements OnInit {
   public productImageForm : FormGroup; 
   images = [];
+  @BlockUI() blockUI: NgBlockUI;
+  ELEMENT_DATA : Product[];
+  displayedColumns: string[] = ['serialNumber','imgUrl', 'action'];
+  dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
 
   constructor(private route : ActivatedRoute,
   private router : Router,
@@ -56,14 +62,26 @@ export class AddProductImageComponent implements OnInit {
       const productId = +params.get('id');
       if(productId) {
          this.productService.getProductById(productId).subscribe(resp =>{
-              console.log(resp)
+              this.dataSource.data = resp as Product[];
+         }, err => {
+
          });
       }
       console.log(productId);
     });
   }
+  
   goToProduct(){
     this.router.navigate(['admin/product']);
+  }
+
+   blockedUI(value) {
+     debugger
+     if (value) {
+       this.blockUI.start(''); // Start blocking
+     } else {
+      this.blockUI.stop(); // Stop blocking
+     }
   }
 
 }

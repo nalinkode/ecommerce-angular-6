@@ -81,7 +81,7 @@ export class ListProductComponent implements OnInit {
             message:"Edit product"
           }
     });
-      dialogRef.afterClosed().subscribe(result =>{
+    dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
   });
   }

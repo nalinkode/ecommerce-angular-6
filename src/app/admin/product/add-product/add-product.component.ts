@@ -15,7 +15,7 @@ export class AddProductComponent implements OnInit {
   subCategory: any = ['Shoes','watches'];
   public productForm : FormGroup; 
   images = [];
-  
+  message: string = this.data.message 
 
   constructor(
     private productService : ProductService,
@@ -49,7 +49,7 @@ export class AddProductComponent implements OnInit {
      subCategory: [this.data.eproduct.subCategory, Validators.required],
      price: [this.data.eproduct.price, Validators.required],
      offerprice: [this.data.eproduct.offerPrice , Validators.required],
-     description: [this.data.edescription, Validators.required],
+     description: [this.data.eproduct.description, Validators.required],
      file: new FormControl('', [Validators.required]),
      fileSource: new FormControl('', [Validators.required])
    });

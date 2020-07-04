@@ -78,7 +78,7 @@ export class ListProductComponent implements OnInit {
     width: "450px", 
     position: { top : "70px"},
     data: { eproduct,
-    message:"Edit p"
+    message:"Edit product"
      }
     });
     

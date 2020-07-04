@@ -44,12 +44,12 @@ export class AddProductComponent implements OnInit {
   createProductForm(){
    //forms controll
    this.productForm = this.fb.group({
-     productName: [this.data.name, Validators.required],
-     category: [this.data.category, Validators.required],
-     subCategory: [this.data.subCategory, Validators.required],
-     price: [this.data.price, Validators.required],
-     offerprice: [this.data.offerPrice , Validators.required],
-     description: [this.data.description, Validators.required],
+     productName: [this.data.eproduct.name, Validators.required],
+     category: [this.data.eproduct.category, Validators.required],
+     subCategory: [this.data.eproduct.subCategory, Validators.required],
+     price: [this.data.eproduct.price, Validators.required],
+     offerprice: [this.data.eproduct.offerPrice , Validators.required],
+     description: [this.data.edescription, Validators.required],
      file: new FormControl('', [Validators.required]),
      fileSource: new FormControl('', [Validators.required])
    });

@@ -1,3 +1,4 @@
+
 .static {
   position: static;
   border: 1px solid #818181;
@@ -5,3 +6,37 @@
   max-width: 100%;
   height: auto;
 }
+/* Mat Table*/
+
+.mat-table{
+    background-color: rgba(255, 255, 255, 0.959);
+    height : 100vh;
+    overflow: auto;   
+    width: 100%;
+    max-height: 500px;
+}
+.mat-header-cell, .mat-cell {
+    min-width: 150px;
+    flex-wrap: wrap;
+}
+
+.mat-header-cell{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mat-row, .mat-header-row {
+    min-width: 2800px;
+    width: 100%;
+    font-size: 30px;
+}
+
+th.mat-sort-header-sorted {
+  color: black;
+}
+
+.pointer-cursor{
+  cursor: pointer;
+}
+
+/*Mat Table*/

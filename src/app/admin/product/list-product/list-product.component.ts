@@ -7,7 +7,6 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { Router } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
-
 import { ProductService } from '../product.service';
 import { DialogService } from '../../../shared/dialog.service';
 import { Product } from '../product';
@@ -24,7 +23,7 @@ export class ListProductComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
 
   ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['productId', 'name', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
+  displayedColumns: string[] = ['productId', 'productName', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   
   isPopupOpen = false;
@@ -65,7 +64,7 @@ export class ListProductComponent implements OnInit {
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
     position: { top : "70px"},
-    data: { message:"Add product"}
+    data: { message:"Add product" }
     });
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
@@ -73,8 +72,7 @@ export class ListProductComponent implements OnInit {
   }
 
    public editProduct(eproduct : Product[]){
-
-     console.log(eproduct)
+    console.log(eproduct)
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
@@ -112,6 +110,4 @@ export class ListProductComponent implements OnInit {
       this.blockUI.stop(); // Stop blocking
      }
   }
-
-
 }

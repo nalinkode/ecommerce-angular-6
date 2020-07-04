@@ -16,7 +16,6 @@ export class AddProductComponent implements OnInit {
   public productForm : FormGroup; 
   images = [];
   
-
   constructor(
     private productService : ProductService,
     private dialogRef : MatDialogRef<AddProductComponent>,
@@ -27,6 +26,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit() {
      this.createProductForm();
+     console.log(this.data)
   }
 
   changeCategory(e) {
@@ -44,12 +44,12 @@ export class AddProductComponent implements OnInit {
   createProductForm(){
    //forms controll
    this.productForm = this.fb.group({
-     productName: [this.data.eproduct.name, Validators.required],
-     category: [this.data.eproduct.category, Validators.required],
-     subCategory: [this.data.eproduct.subCategory, Validators.required],
-     price: [this.data.eproduct.price, Validators.required],
-     offerprice: [this.data.eproduct.offerPrice , Validators.required],
-     description: [this.data.eproduct.description, Validators.required],
+     productName: ['', Validators.required],
+     category: ['', Validators.required],
+     subCategory: ['', Validators.required],
+     price: ['', Validators.required],
+     offerPrice: ['' , Validators.required],
+     description: ['', Validators.required],
      file: new FormControl('', [Validators.required]),
      fileSource: new FormControl('', [Validators.required])
    });

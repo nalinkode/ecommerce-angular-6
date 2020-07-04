@@ -65,7 +65,7 @@ export class ListProductComponent implements OnInit {
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
     position: { top : "70px"},
-    data: {}
+    data: { message: "Add product"}
     });
         dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
@@ -77,7 +77,9 @@ export class ListProductComponent implements OnInit {
     const dialogRef = this.dialog.open(AddProductComponent,{
     width: "450px", 
     position: { top : "70px"},
-    data: eproduct
+    data: { eproduct,
+    message:"Edit p"
+     }
     });
     
     dialogRef.afterClosed().subscribe(result =>{

@@ -18,7 +18,7 @@ export class ProductService {
   }
 
 
-  public getProductById(productId : number): Observable<Product[]>{
+  public getProductById(productId : number): Observable<Product>{
     return this.http.get('/assets/product.json');
   }
   

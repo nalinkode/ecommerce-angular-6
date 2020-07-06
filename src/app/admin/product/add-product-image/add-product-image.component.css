@@ -8,6 +8,14 @@
   height: auto;
 }
 
+.static-form {
+  position: static;
+  border: 1px solid #818181;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
 
 .toolbar{
   background-color: #3f51b5;

@@ -3,6 +3,7 @@ import { ActivatedRoute , Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { DialogService } from '../../../shared/dialog.service';
 import { Product } from '../product';
+import { Image } from '../image';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatTableDataSource } from '@angular/material/table';
@@ -19,9 +20,9 @@ export class AddProductImageComponent implements OnInit {
   images = [];
   isLoading = true;
   @BlockUI() blockUI: NgBlockUI;
-  ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['serialNumber','imgUrl', 'action'];
-  dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
+  ELEMENT_DATA : Image[];
+  displayedColumns: string[] = ['serialNumber','imageId','location', 'action'];
+  dataSource = new MatTableDataSource<Image>(this.ELEMENT_DATA);
 
   constructor(private route : ActivatedRoute,
   private router : Router,
@@ -63,7 +64,9 @@ export class AddProductImageComponent implements OnInit {
       const productId = +params.get('id');
       if(productId) {
          this.productService.getProductById(productId).subscribe(resp =>{
-              this.dataSource.data = resp as Product[];
+              debugger
+              console.log(resp)
+              this.dataSource.data = resp.imgUrl as Image;
               this.isLoading = false;
          }, err => {
                this.isLoading = false;

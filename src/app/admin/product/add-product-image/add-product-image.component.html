@@ -9,7 +9,7 @@
 			<div class="col-sm-5 ml-2">
 				<input type="file" class="form-control-" formControlName="file" id="file" multiple="" (change)="onFileChange($event)"> 
         </div>
-        <button type="submit" class="btn btn-primary">Upload </button>
+        <button type="submit" class="btn btn-primary">Upload</button>
 		</div>
 		<div class="row ml-2 img-thumbnail"> <img *ngFor='let url of images' [src]="url" height="100" width="100px" style="margin: 3px;">
 			<br/>
@@ -17,11 +17,14 @@
 	</form>
   </div>
 
-  
-<div class="static mt-3">
+<mat-toolbar class="toolbar mt-3">
+	<h4>Product Images List</h4>
+</mat-toolbar>
+
+<div class="static">
 	<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 		
-    	                <ng-container matColumnDef="serialNumber">
+    	<ng-container matColumnDef="serialNumber">
 				<th mat-header-cell *matHeaderCellDef> SrNo. </th>
 				<td mat-cell *matCellDef="let element; let i = index;"> {{i+1}} </td>
 			</ng-container>
@@ -42,8 +45,8 @@
 			<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 	</table>
     
-       <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
-         <mat-progress-spinner diameter="50" color="primary" mode="indeterminate">
-         </mat-progress-spinner>
-       </mat-card>
+  <mat-card *ngIf="isLoading" style="display: flex; justify-content: center; align-items: center">
+    <mat-progress-spinner diameter="50" color="primary" mode="indeterminate">
+    </mat-progress-spinner>
+  </mat-card>
 </div>

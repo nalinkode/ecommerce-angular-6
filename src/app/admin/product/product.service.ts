@@ -19,7 +19,7 @@ export class ProductService {
 
 
   public getProductById(productId : number): Observable<Product>{
-    return this.http.get('/assets/product.json');
+    return this.http.get('/assets/productbyid.json');
   }
   
   public addProduct(product:Product){

@@ -12,7 +12,7 @@
         <button type="submit" class="btn btn-primary">Upload</button>
 		</div>
 		<div class="row ml-2 img-thumbnail" *ngFor='let url of images'> 
-			 <img [src]="url" height="100px" width="100px" style="margin: 4px;"><span class="delete-entry" style="cursor: pointer; padding: 12px; vertical-align: text-top;" (click)="deleteImage(url)">x</span>
+			 <img [src]="url" height="100px" width="100px" style="margin: 4px; vertical-align: text-top;"><span class="delete-entry" style="cursor: pointer; padding: 12px;" (click)="deleteImage(url)">x</span>
       <br/>
     </div>
 	</form>

@@ -14,6 +14,7 @@
   height: auto;
 }
 
+
 .toolbar{
   background-color: #3f51b5;
   color: white; 
@@ -44,10 +45,6 @@
     min-width: 2800px;
     width: 100%;
     font-size: 30px;
-}
-
-th.mat-sort-header-sorted {
-  color: black;
 }
 
 .pointer-cursor{

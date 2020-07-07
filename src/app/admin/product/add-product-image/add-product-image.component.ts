@@ -8,8 +8,6 @@ import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatTableDataSource } from '@angular/material/table';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import { DialogService } from '../../../shared/dialog.service';
-
 
 @Component({
   selector: 'app-add-product-image',
@@ -84,8 +82,7 @@ export class AddProductImageComponent implements OnInit {
      .afterClosed().subscribe(res => {
         if(res){
           this.productService.deleteProduct(productImage);
-          this.toaster.successToastr('Product image deleted successfully.');;
-
+          this.toaster.successToastr('Product image deleted successfully.');
         }
      });
 
@@ -104,6 +101,11 @@ export class AddProductImageComponent implements OnInit {
    
   goToProduct(){
     this.router.navigate(['admin/product']);
+  }
+
+  private deleteImage(url: any) {
+    debugger
+    this.url = this.url.filter((a) => a !== url);
   }
 
    blockedUI(value) {

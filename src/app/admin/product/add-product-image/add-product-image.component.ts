@@ -48,7 +48,6 @@ export class AddProductImageComponent implements OnInit {
         for (let i = 0; i < filesAmount; i++) {
                 var reader = new FileReader();
                 reader.onload = (event:any) => {
-                  console.log(event.target.result);
                    this.images.push(event.target.result); 
                    this.productImageForm.patchValue({
                       fileSource: this.images
@@ -105,7 +104,7 @@ export class AddProductImageComponent implements OnInit {
 
   private deleteImage(url: any) {
     debugger
-    this.url = this.url.filter((a) => a !== url);
+    this.images = this.images.filter((a) => a !== url);
   }
 
    blockedUI(value) {
@@ -115,5 +114,4 @@ export class AddProductImageComponent implements OnInit {
       this.blockUI.stop(); // Stop blocking
      }
   }
-
 }

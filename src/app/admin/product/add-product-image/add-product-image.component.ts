@@ -8,6 +8,7 @@ import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatTableDataSource } from '@angular/material/table';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { DialogService } from '../../../shared/dialog.service';
 
 
 @Component({
@@ -27,6 +28,7 @@ export class AddProductImageComponent implements OnInit {
   constructor(private route : ActivatedRoute,
   private router : Router,
   private productService : ProductService,
+  private dialogService : DialogService,
   private fb: FormBuilder,
   private toaster: ToastrManager  ) { }
 
@@ -66,13 +68,27 @@ export class AddProductImageComponent implements OnInit {
          this.productService.getProductById(productId).subscribe(resp =>{
               debugger
               console.log(resp)
-              this.dataSource.data = resp.imgUrl as Image;
+              this.dataSource.data = resp.imgUrl as Image[];
               this.isLoading = false;
          }, err => {
                this.isLoading = false;
          });
       }
     });
+  }
+
+
+  deleteProductImage(productImage){
+    console.log(productImage)
+    this.dialogService.openConfirmedDialog('Are you sure to delete this product image ?')
+     .afterClosed().subscribe(res => {
+        if(res){
+          this.productService.deleteProduct(productImage);
+          this.toaster.successToastr('Product image deleted successfully.');;
+
+        }
+     });
+
   }
 
   onSubmit(){

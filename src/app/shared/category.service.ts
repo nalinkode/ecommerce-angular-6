@@ -9,7 +9,8 @@ export class CategoryService {
 
   constructor(private http: HttpClient) { }
 
-  getAllCategory(){
-    return this.http.get('/assets/category.json').pipe(map(res => res));
-  } 
+
+ getAllCategory(){
+    return this.http.get('/assets/category.json');
+ }
 }

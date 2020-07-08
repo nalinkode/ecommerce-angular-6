@@ -27,6 +27,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit() {
      this.createProductForm();
+     this.getAllCategory();
   }
 
   changeCategory(e) {
@@ -73,8 +74,8 @@ export class AddProductComponent implements OnInit {
   }
   
   getAllCategory(){
-    this.categoryService.getAllCategory.subscribe(resp => {
-
+    this.categoryService.getAllCategory().subscribe(resp => {
+       console.log(resp)
     });
   }
 
@@ -87,8 +88,4 @@ export class AddProductComponent implements OnInit {
     this.toaster.successToastr('Product added successfully .');  
     this.dialogRef.close();
   }
-   
-  
-
-
 }

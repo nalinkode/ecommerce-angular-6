@@ -41,7 +41,9 @@ export class ProductService {
     console.log('The product to delete .....');
     console.log(product);
   }
- 
-  
+
+
+  public deleteProductImage(id){
     
+  }  
 }

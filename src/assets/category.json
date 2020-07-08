@@ -1,3 +1,130 @@
-
-  
-
+[
+   {
+      "categoryId":1,
+      "categoryName":"Fashion",
+      "subCategory":[
+         {
+            "subCategoryId":1,
+            "subCategoryName":"Men"
+         },
+         {
+            "subCategoryId":2,
+            "subCategoryName":"Women"
+         },
+         {
+            "subCategoryId":3,
+            "subCategoryName":"Kids"
+         }
+      ]
+   },
+   {
+      "categoryId":2,
+      "categoryName":"Mobiles",
+      "subCategory":[
+         {
+            "subCategoryId":4,
+            "subCategoryName":"Samsung"
+         },
+         {
+            "subCategoryId":5,
+            "subCategoryName":"iPhone"
+         },
+         {
+            "subCategoryId":6,
+            "subCategoryName":"Vivo"
+         },
+         {
+            "subCategoryId":7,
+            "subCategoryName":"Oppo"
+         },
+         {
+            "subCategoryId":8,
+            "subCategoryName":"iPhone"
+         },
+         {
+            "subCategoryId":9,
+            "subCategoryName":"Charger"
+         }
+      ]
+   },
+   {
+      "categoryId":3,
+      "categoryName":"Electronics",
+      "subCategory":[
+         {
+            "subCategoryId":10,
+            "subCategoryName":"Laptops"
+         },
+         {
+            "subCategoryId":11,
+            "subCategoryName":"Headphones"
+         },
+         {
+            "subCategoryId":12,
+            "subCategoryName":"Tablets"
+         },
+         {
+            "subCategoryId":13,
+            "subCategoryName":"Data Storage"
+         },
+         {
+            "subCategoryId":14,
+            "subCategoryName":"Smart Wearbles"
+         },
+         {
+            "subCategoryId":15,
+            "subCategoryName":"Power Banks"
+         },
+         {
+            "subCategoryId":16,
+            "subCategoryName":"Laptop Accessories"
+         },
+         {
+            "subCategoryId":17,
+            "subCategoryName":"Computer Peripherals"
+         },
+         {
+            "subCategoryId":18,
+            "subCategoryName":"Cameras"
+         },
+         {
+            "subCategoryId":19,
+            "subCategoryName":"TVs"
+         },
+         {
+            "subCategoryId":20,
+            "subCategoryName":"Speakers"
+         }
+      ]
+   },
+   {
+      "categoryId":3,
+      "categoryName":"Home",
+      "subCategory":[
+         {
+            "subCategoryId":210,
+            "subCategoryName":"Kitchen & Dinning"
+         },
+         {
+            "subCategoryId":211,
+            "subCategoryName":"Home Furnishings"
+         },
+         {
+            "subCategoryId":212,
+            "subCategoryName":"Homee Decor"
+         },
+         {
+            "subCategoryId":213,
+            "subCategoryName":"Large Furnitures"
+         },
+         {
+            "subCategoryId":114,
+            "subCategoryName":"Lighting and More"
+         },
+         {
+            "subCategoryId":155,
+            "subCategoryName":"Tools & Utility"
+         }
+      ]
+   }
+]

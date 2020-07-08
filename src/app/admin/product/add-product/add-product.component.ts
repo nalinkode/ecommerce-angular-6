@@ -11,10 +11,11 @@ import { CategoryService } from '../../../shared/category.service';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent implements OnInit {
-  category: any = ['Men', 'Women', 'Kids', 'Fashion'];
-  subCategory: any = ['Shoes','watches'];
+
   public productForm : FormGroup; 
   images = [];
+  category = {};
+  subCategory = [];  
   
   constructor(
     private productService : ProductService,
@@ -31,6 +32,7 @@ export class AddProductComponent implements OnInit {
   }
 
   changeCategory(e) {
+    debugger
     this.data.category.setValue(e.target.value, {
       onlySelf: true
     })
@@ -40,6 +42,10 @@ export class AddProductComponent implements OnInit {
     this.data.subCategory.setValue(e.target.value, {
       onlySelf: true
     })
+  }
+
+  onChangeCategory(categoryId : number) {
+     console.log(categoryId);
   }
 
   createProductForm(){
@@ -75,7 +81,7 @@ export class AddProductComponent implements OnInit {
   
   getAllCategory(){
     this.categoryService.getAllCategory().subscribe(resp => {
-       console.log(resp)
+       this.category = resp;
     });
   }
 

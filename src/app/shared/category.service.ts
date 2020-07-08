@@ -7,7 +7,7 @@ import { map } from 'rxjs/operators';
 })
 export class CategoryService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   public getAllCategory(){
      return this.http.get('/assets/catgory.json').pipe(map(res => res));

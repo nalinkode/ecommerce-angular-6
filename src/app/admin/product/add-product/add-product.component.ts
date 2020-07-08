@@ -18,6 +18,7 @@ export class AddProductComponent implements OnInit {
   
   constructor(
     private productService : ProductService,
+    private categoryService : CategoryService,
     private dialogRef : MatDialogRef<AddProductComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,
@@ -69,6 +70,12 @@ export class AddProductComponent implements OnInit {
                 reader.readAsDataURL(event.target.files[i]);
         }
     }
+  }
+  
+  getAllCategory(){
+    this.categoryService.getAllCategory.subscribe(resp => {
+
+    });
   }
 
   onNoClick(){

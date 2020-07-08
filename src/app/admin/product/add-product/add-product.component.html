@@ -14,7 +14,7 @@
 			<label for="category" class="col-sm-4 col-form-label">Category</label>
 			<div class="col-sm-8">
 				<select class="form-control" style="height: auto;" (change)="changeCategory($event)" formControlName="category">
-					<option value="">Choose your category</option>
+					<option value="" disabled>Choose your category</option>
 					<option *ngFor="let category of Category" [ngValue]="category">{{category}}</option>
 				</select>
 			</div>
@@ -23,7 +23,7 @@
 			<label for="subcategroy" class="col-sm-4 col-form-label">Sub-category</label>
 			<div class="col-sm-8">
 				<select class="form-control" style="height: auto;" (change)="changeSubcategory($event)" formControlName="subCategory">
-					<option value="">Choose your Subcategory</option>
+					<option value="" disabled >Choose your Subcategory</option>
 					<option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
 				</select>
 			</div>

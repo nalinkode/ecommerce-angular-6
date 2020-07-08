@@ -50,6 +50,7 @@ import { ConfirmedDialogComponent } from './confirmed-dialog/confirmed-dialog.co
 import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
 import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
 import { ListProductComponent } from './admin/product/list-product/list-product.component';
+import { CategoryService } from './shared/category.service';
 
 
 @NgModule({
@@ -104,8 +105,8 @@ import { ListProductComponent } from './admin/product/list-product/list-product.
 
    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ProductService,
-
-  DialogService]
+  DialogService,
+  CategoryService]
 })
 export class AppModule { }
 

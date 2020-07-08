@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProductService } from '../product.service';
-
+import { CategoryService } from '../../../shared/category.service';
 
 @Component({
   selector: 'app-add-product',

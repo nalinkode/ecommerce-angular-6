@@ -38,4 +38,64 @@ export class CategoryListComponent implements OnInit {
   ngOnInit() {
   }
 
+  public getAllProduct(){
+    let response = this.categoryService.getAllProduct()
+    response.subscribe(list =>{
+      this.dataSource.data = list as Category[];
+      this.isLoading = false;
+      }, err =>{
+        this.isLoading = false; 
+      });
+  }
+
+   public applyFilter(filterValue: string) {
+    this.dataSource.filter = filterValue.trim().toLowerCase(); 
+  }
+  
+  public addProduct(){
+    this.isPopupOpen = true;
+    const dialogRef = this.dialog.open(AddProductComponent,{
+    width: "450px", 
+    position: { top : "70px"},
+    data: { message:"Add category" }
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+    this.isPopupOpen = false;
+  });
+  }
+
+   public editProduct(eCategory : Category[]){
+    console.log(eCategory)
+    this.isPopupOpen = true;
+    const dialogRef = this.dialog.open(AddProductComponent,{
+    width: "450px", 
+    position: { top : "70px"},
+    data: { eCategory,
+            message:"Edit category"
+          }
+    });
+    dialogRef.afterClosed().subscribe(result =>{
+    this.isPopupOpen = false;
+  });
+  }
+
+  public deleteCategory(eCategory){
+     this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
+     .afterClosed().subscribe(res => {
+        if(res){
+         
+          this.toastr.successToastr('Product deleted successfully.');;
+
+        }
+     });
+  }
+
+   blockedUI(value) {
+     debugger
+     if (value) {
+       this.blockUI.start(''); // Start blocking
+     } else {
+      this.blockUI.stop(); // Stop blocking
+     }
+  }
 }

@@ -225,3 +225,7 @@ border-radius: 0px;
 }
 
 /* Confirmed Dialog delete*/
+
+.mat-icon {
+  cursor: pointer;
+}

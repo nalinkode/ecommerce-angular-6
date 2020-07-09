@@ -56,7 +56,7 @@ export class CategoryListComponent implements OnInit {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
   
-  public addProduct(){
+  public addCategor(){
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 

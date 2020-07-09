@@ -51,6 +51,8 @@ import { AddProductImageComponent } from './admin/product/add-product-image/add-
 import { AdminSidebarComponent } from './admin/admin-sidebar/admin-sidebar.component';
 import { ListProductComponent } from './admin/product/list-product/list-product.component';
 import { CategoryService } from './shared/category.service';
+import { CategoryListComponent } from './admin/category/category-list/category-list.component';
+import { SubcategoryListComponent } from './admin/category/subcategory-list/subcategory-list.component';
 
 
 @NgModule({
@@ -97,6 +99,8 @@ import { CategoryService } from './shared/category.service';
     AddProductImageComponent,
     AdminSidebarComponent,
     ListProductComponent,
+    CategoryListComponent,
+    SubcategoryListComponent,
     
  
   ],

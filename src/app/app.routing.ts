@@ -55,7 +55,7 @@ const appRoutes: Routes = [
         {path:'category', component: CategoryComponent,
         children:[
                {path:'list', component: CategoryListComponent},   
-               {path:'subcategorylist', component: SubcategoryListComponent}
+               {path:'subcategory/list', component: SubcategoryListComponent}
           ] }
         ]
     },

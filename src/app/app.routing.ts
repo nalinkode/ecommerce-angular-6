@@ -4,16 +4,21 @@ import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
-import { ProductComponent } from './admin/product/product.component';
-import { CategoryComponent } from './admin/category/category.component';
+
+
 import { OrderComponent } from './admin/order/order.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { HomeLayoutComponent } from './container/home-layout/home-layout/home-layout.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
+import { ProductComponent } from './admin/product/product.component';
 import { AddProductImageComponent } from './admin/product/add-product-image/add-product-image.component';
 import { ListProductComponent } from './admin/product/list-product/list-product.component';
+import { CategoryComponent } from './admin/category/category.component';
+import { CategoryListComponent } from './admin/category/category-list/category-list.component';
+import { SubcategoryListComponent } from './admin/category/subcategory-list/subcategory-list.component';
+
 
 
 //auth
@@ -47,7 +52,11 @@ const appRoutes: Routes = [
                {path:'', component: ListProductComponent},   
                {path:'upload/:id', component: AddProductImageComponent}
           ]},
-        {path:'category', component: CategoryComponent }
+        {path:'category', component: CategoryComponent,
+        children:[
+               {path:'list', component: CategoryListComponent},   
+               {path:'subcategorylist', component: SubcategoryListComponent}
+          ] }
         ]
     },
     { 

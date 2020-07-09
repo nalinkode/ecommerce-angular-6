@@ -8,6 +8,8 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 import { Router } from '@angular/router';
 import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
+import { CategoryService } from '../../../shared/category.service';
+import { AddCategoryDialogComponent } from './add-category-dialog/add-category-dialog.component'
 
 @Component({
   selector: 'app-category-list',
@@ -26,6 +28,7 @@ export class CategoryListComponent implements OnInit {
   isLoading = true;
 
   constructor(
+             private categoryService : CategoryService,
              private dialogService : DialogService,
              private router: Router,
              private toastr : ToastrManager,     
@@ -36,10 +39,11 @@ export class CategoryListComponent implements OnInit {
 
 
   ngOnInit() {
+    this.getAllCategory();
   }
 
-  public getAllProduct(){
-    let response = this.categoryService.getAllProduct()
+  public getAllCategory(){
+    let response = this.categoryService.getAllCategory()
     response.subscribe(list =>{
       this.dataSource.data = list as Category[];
       this.isLoading = false;
@@ -54,7 +58,7 @@ export class CategoryListComponent implements OnInit {
   
   public addProduct(){
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddProductComponent,{
+    const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
     position: { top : "70px"},
     data: { message:"Add category" }
@@ -67,7 +71,7 @@ export class CategoryListComponent implements OnInit {
    public editProduct(eCategory : Category[]){
     console.log(eCategory)
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddProductComponent,{
+    const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
     position: { top : "70px"},
     data: { eCategory,

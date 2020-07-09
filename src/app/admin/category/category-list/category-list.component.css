@@ -1,0 +1,51 @@
+
+div.static {
+  position: static;
+  border: 1px solid #818181;
+  width: 100%;
+  overflow: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.toolbar{
+  background-color: #3f51b5;
+  color: white; 
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 2px;
+  height: 45px;
+}
+
+.toolbar-spacer{
+  flex: 1 1 auto;
+}
+
+/* Mat Table*/
+.mat-table{
+    background-color: rgba(255, 255, 255, 0.959);
+    height : 100vh;  
+    width: 100%;
+    max-height: 500px;
+}
+.mat-header-cell, .mat-cell {
+    min-width: 150px;
+    flex-wrap: wrap;
+}
+
+.mat-header-cell{
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mat-row, .mat-header-row {
+    min-width: 2800px;
+    width: 100%;
+    font-size: 30px;
+}
+
+.pointer-cursor{
+  cursor: pointer;
+}
+
+/*Mat Table*/

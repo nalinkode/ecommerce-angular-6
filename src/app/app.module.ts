@@ -39,7 +39,7 @@ import { HomeLayoutComponent } from './container/home-layout/home-layout/home-la
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductService } from './admin/product/product.service';
-import {DialogService} from './shared/dialog.service';
+import { DialogService} from './shared/dialog.service';
 
 //Error component
 import { P500Component, P404Component  } from './views/error';
@@ -53,7 +53,7 @@ import { ListProductComponent } from './admin/product/list-product/list-product.
 import { CategoryService } from './shared/category.service';
 import { CategoryListComponent } from './admin/category/category-list/category-list.component';
 import { SubcategoryListComponent } from './admin/category/subcategory-list/subcategory-list.component';
-import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
+import { CategoryDialogComponent } from './admin/category/category-dialog/category-dialog.component';
 
 
 @NgModule({
@@ -71,7 +71,7 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddCategoryDialogComponent],
+  entryComponents:[AddProductComponent, ConfirmedDialogComponent, CategoryDialogComponent],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -102,7 +102,7 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     ListProductComponent,
     CategoryListComponent,
     SubcategoryListComponent,
-    AddCategoryDialogComponent,
+    CategoryDialogComponent,
     
  
   ],

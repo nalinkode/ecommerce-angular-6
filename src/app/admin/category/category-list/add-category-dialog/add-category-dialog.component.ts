@@ -38,7 +38,8 @@ export class AddCategoryDialogComponent implements OnInit {
 
   editCategoryForm(){
     this.categoryForm.patchValue({
-      category: this.data.eCategory.category
+      category: this.data.eCategory.category,
+      isActivate: this.data.eCategory.status
     });
 
   }

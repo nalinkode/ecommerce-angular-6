@@ -2,6 +2,7 @@
    {
       "categoryId":1,
       "category":"Fashion",
+      "status": true,
       "subCategory":[
          {
             "subCategoryId":1,
@@ -20,6 +21,7 @@
    {
       "categoryId":2,
       "category":"Mobiles",
+      "status": true,
       "subCategory":[
          {
             "subCategoryId":4,
@@ -50,6 +52,7 @@
    {
       "categoryId":3,
       "category":"Electronics",
+      "status": true,
       "subCategory":[
          {
             "subCategoryId":10,
@@ -100,6 +103,7 @@
    {
       "categoryId":4,
       "category":"Home",
+      
       "subCategory":[
          {
             "subCategoryId":210,

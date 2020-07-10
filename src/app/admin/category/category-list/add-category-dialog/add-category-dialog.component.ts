@@ -3,23 +3,24 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
-import { CategoryService } from '../../../shared/category.service';
+import { CategoryService } from '../../../../shared/category.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-category-dialog',
-  templateUrl: './category-dialog.component.html',
-  styleUrls: ['./category-dialog.component.css']
+  selector: 'app-add-category-dialog',
+  templateUrl: './add-category-dialog.component.html',
+  styleUrls: ['./add-category-dialog.component.css']
 })
-export class CategoryDialogComponent implements OnInit {
-  categoryForm : FormGroup; 
+export class AddCategoryDialogComponent implements OnInit {
+
+   categoryForm : FormGroup; 
   @BlockUI() blockUI: NgBlockUI;
   isActivated : boolean;
   constructor(private fb: FormBuilder,
               private categoryService: CategoryService, 
               private toaster: ToastrManager, 
               private http: HttpClientModule,
-              private dialogRef : MatDialogRef<CategoryDialogComponent>,
+              private dialogRef : MatDialogRef<AddCategoryDialogComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
               ) { }
 
@@ -44,5 +45,4 @@ export class CategoryDialogComponent implements OnInit {
     })
     }
   }
-
 }

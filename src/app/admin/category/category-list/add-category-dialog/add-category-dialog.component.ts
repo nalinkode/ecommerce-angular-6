@@ -15,7 +15,7 @@ export class AddCategoryDialogComponent implements OnInit {
 
   categoryForm : FormGroup; 
   @BlockUI() blockUI: NgBlockUI;
-  isActivated : boolean;
+
   constructor(private fb: FormBuilder,
               private categoryService: CategoryService, 
               private toaster: ToastrManager, 
@@ -26,6 +26,7 @@ export class AddCategoryDialogComponent implements OnInit {
 
   ngOnInit() {
       this.createCategoryForm();
+      this.editCategoryForm();
   }
 
   createCategoryForm(){
@@ -33,6 +34,13 @@ export class AddCategoryDialogComponent implements OnInit {
      category: ['', Validators.required], 
      isActivate:['']
    });
+  }
+
+  editCategoryForm(){
+    this.categoryForm.patchValue({
+      category: this.data.eCategory.category
+    });
+
   }
 
   onNoClick(){

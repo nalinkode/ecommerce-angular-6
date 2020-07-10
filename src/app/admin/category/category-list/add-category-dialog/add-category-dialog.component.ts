@@ -35,4 +35,14 @@ export class AddCategoryDialogComponent implements OnInit {
    });
   }
 
+  onNoClick(){
+    this.dialogRef.close();
+  }
+
+  onSubmit(){
+    c(this.categoryForm.value);
+    this.toaster.successToastr('Product added successfully .');  
+    this.dialogRef.close();
+  }
+
 }

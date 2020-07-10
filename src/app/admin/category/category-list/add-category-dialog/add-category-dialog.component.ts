@@ -40,7 +40,7 @@ export class AddCategoryDialogComponent implements OnInit {
   }
 
   onSubmit(){
-    c(this.categoryForm.value);
+    console.log(this.categoryForm.value);
     this.toaster.successToastr('Product added successfully .');  
     this.dialogRef.close();
   }

@@ -13,7 +13,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 })
 export class AddCategoryDialogComponent implements OnInit {
 
-   categoryForm : FormGroup; 
+  categoryForm : FormGroup; 
   @BlockUI() blockUI: NgBlockUI;
   isActivated : boolean;
   constructor(private fb: FormBuilder,

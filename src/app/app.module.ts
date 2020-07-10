@@ -39,7 +39,7 @@ import { HomeLayoutComponent } from './container/home-layout/home-layout/home-la
 import { ContactUsComponent } from './views/contact-us/contact-us.component';
 import { DashboardComponent } from './admin/dashboard/dashboard.component';
 import { ProductService } from './admin/product/product.service';
-import { DialogService} from './shared/dialog.service';
+import { DialogService } from './shared/dialog.service';
 
 //Error component
 import { P500Component, P404Component  } from './views/error';

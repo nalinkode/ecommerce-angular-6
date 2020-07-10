@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { CategoryService } from '../../../shared/category.service';
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-category-dialog',
@@ -13,10 +14,13 @@ import { CategoryService } from '../../../shared/category.service';
 export class CategoryDialogComponent implements OnInit {
   categoryForm : FormGroup; 
   @BlockUI() blockUI: NgBlockUI;
+  isActivated : boolean;
   constructor(private fb: FormBuilder,
               private categoryService: CategoryService, 
               private toaster: ToastrManager, 
-              private http: HttpClientModule
+              private http: HttpClientModule,
+              private dialogRef : MatDialogRef<CategoryDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any,
               ) { }
 
   ngOnInit() {
@@ -27,8 +31,18 @@ export class CategoryDialogComponent implements OnInit {
      this.categoryForm = this.fb.group({
      category: ['', Validators.required], 
      subCategory: ['', Validators.required],
-     isActivated:[tr]
+     isActivate:[false]
    });
+  }
+
+  onChangeisActivate(event : number){
+    console.log(event)
+    if (event === 0) {
+        this.isActivated = true;
+        this.data.isActivate.setValue(this.isActivated, {
+      onlySelf: true
+    })
+    }
   }
 
 }

@@ -21,7 +21,6 @@ export class AddCategoryDialogComponent implements OnInit {
               private toaster: ToastrManager, 
               private http: HttpClientModule,
               private dialogRef : MatDialogRef<AddCategoryDialogComponent>,
-              @Inject(MAT_DIALOG_DATA) public data: any,
               ) { }
 
   ngOnInit() {
@@ -31,18 +30,8 @@ export class AddCategoryDialogComponent implements OnInit {
   createCategoryForm(){
      this.categoryForm = this.fb.group({
      category: ['', Validators.required], 
-     subCategory: ['', Validators.required],
-     isActivate:[false]
+     isActivate:['']
    });
   }
 
-  onChangeisActivate(event : number){
-    console.log(event)
-    if (event === 0) {
-        this.isActivated = true;
-        this.data.isActivate.setValue(this.isActivated, {
-      onlySelf: true
-    })
-    }
-  }
 }

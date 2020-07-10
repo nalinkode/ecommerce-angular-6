@@ -14,7 +14,7 @@
 		<div class="form-group row">
 			<label for="isActivate" class="col-sm-4 col-form-label">Status</label>
 			<div class="col-sm-8">
-				<select class="form-control" style="height: auto;" (change)="onChangeisActivate($event.target.value)" formControlName="isActivate" id ="isActivate">
+				<select class="form-control" style="height: auto;" formControlName="isActivate" id ="isActivate">
 					<option value="" disabled>select..</option>
 					<option [Value]="1">Active</option>
           <option [Value]="0">Deactive</option>

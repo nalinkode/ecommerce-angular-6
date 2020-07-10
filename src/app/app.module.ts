@@ -102,7 +102,6 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     ListProductComponent,
     CategoryListComponent,
     SubcategoryListComponent,
-    ,
     AddCategoryDialogComponent,
     
  

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ToastrManager } from 'ng6-toastr-notifications';
@@ -20,7 +20,8 @@ export class AddCategoryDialogComponent implements OnInit {
               private categoryService: CategoryService, 
               private toaster: ToastrManager, 
               private http: HttpClientModule,
-              private dialogRef : MatDialogRef<AddCategoryDialogComponent>,
+              @Inject(MAT_DIALOG_DATA) public data: any,
+              private dialogRef : MatDialogRef<AddCategoryDialogComponent>
               ) { }
 
   ngOnInit() {

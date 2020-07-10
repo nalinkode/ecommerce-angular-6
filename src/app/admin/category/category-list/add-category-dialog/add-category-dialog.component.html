@@ -8,7 +8,11 @@
 		<div class="form-group row">
 			<label for="category" class="col-sm-4 col-form-label">Category</label>
 			<div class="col-sm-8">
-				<input type="text" class="form-control" formControlName="category" id="category"> </div>
+				<input type="text" class="form-control" formControlName="category" id="category">
+         <div *ngIf="categoryForm.get('category').touched && categoryForm.get('category').invalid" class="invalid-feedback">
+			<div *ngIf="categoryForm.get('category').errors.required">Category is required </div>
+		</div>
+         </div>
 		</div>
 
 		<div class="form-group row">
@@ -16,8 +20,8 @@
 			<div class="col-sm-8">
 				<select class="form-control" style="height: auto;" formControlName="isActivate" id ="isActivate">
 					<option value="" disabled>select..</option>
-					<option [Value]="1">Active</option>
-          <option [Value]="0">Deactive</option>
+					<option [value]="1">Active</option>
+          <option [value]="0">Deactive</option>
 				</select>
 			</div>
 		</div>

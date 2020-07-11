@@ -28,6 +28,7 @@ export class AddProductComponent implements OnInit {
 
   ngOnInit() {
      this.createProductForm();
+     this.editProductForm();
      this.getAllCategory();
   }
 
@@ -56,27 +57,19 @@ export class AddProductComponent implements OnInit {
      subCategory: ['', Validators.required],
      price: ['', Validators.required],
      offerPrice: ['' , Validators.required],
-     description: ['', Validators.required],
-     file: new FormControl('', [Validators.required]),
-     fileSource: new FormControl('', [Validators.required])
+     description: ['', Validators.required]
    });
-  }   
-  
-   onFileChange(event) {
-    if (event.target.files && event.target.files[0]) {
-        var filesAmount = event.target.files.length;
-        for (let i = 0; i < filesAmount; i++) {
-                var reader = new FileReader();
-                reader.onload = (event:any) => {
-                  console.log(event.target.result);
-                   this.images.push(event.target.result); 
-                   this.productForm.patchValue({
-                      fileSource: this.images
-                   });
-                }
-                reader.readAsDataURL(event.target.files[i]);
-        }
-    }
+  }
+
+  editProductForm(){
+    this.productForm.patchValue({
+     productName: this.data.eproduct.productName,
+     category: this.data.eproduct.category,
+     subCategory: this.data.eproduct.subCategory,
+     price: this.data.eproduct.price,
+     offerPrice: this.data.eproduct.offerPrice,
+     description: this.data.eproduct.description
+    });   
   }
   
   getAllCategory(){

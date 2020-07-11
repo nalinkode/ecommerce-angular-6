@@ -32,7 +32,7 @@ export class AddCategoryDialogComponent implements OnInit {
   createCategoryForm(){
      this.categoryForm = this.fb.group({
      category: ['', Validators.required], 
-     isActivate:['']
+     isActivate:['', Validators.required]
    });
   }
 

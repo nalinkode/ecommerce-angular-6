@@ -46,7 +46,6 @@ export class CategoryListComponent implements OnInit {
     let response = this.categoryService.getAllCategory()
     response.subscribe(list =>{
       this.dataSource.data = list as Category[];
-      for (let i=0; i< this.dat
       this.isLoading = false;
       }, err =>{
         this.isLoading = false; 

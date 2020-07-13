@@ -60,7 +60,7 @@ export class CategoryListComponent implements OnInit {
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
-    position: { top : "0px"},
+    position: { top : "90px"},
     data: { message:"Add category" }
     });
     dialogRef.afterClosed().subscribe(result =>{
@@ -73,7 +73,7 @@ export class CategoryListComponent implements OnInit {
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
-    position: { top : "70px"},
+    position: { top : "90px"},
     data: { eCategory,
             message:"Edit category"
           }

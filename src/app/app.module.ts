@@ -54,6 +54,7 @@ import { CategoryService } from './shared/category.service';
 import { CategoryListComponent } from './admin/category/category-list/category-list.component';
 import { SubcategoryListComponent } from './admin/category/subcategory-list/subcategory-list.component';
 import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
+import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list/add-subcategory-dialog/add-subcategory-dialog.component';
 
 
 @NgModule({
@@ -103,6 +104,7 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     CategoryListComponent,
     SubcategoryListComponent,
     AddCategoryDialogComponent,
+    AddSubcategoryDialogComponent,
     
  
   ],

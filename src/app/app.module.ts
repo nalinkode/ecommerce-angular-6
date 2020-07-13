@@ -72,7 +72,7 @@ import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddCategoryDialogComponent],
+  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddCategoryDialogComponent, AddSubcategoryDialogComponent],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -105,8 +105,6 @@ import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list
     SubcategoryListComponent,
     AddCategoryDialogComponent,
     AddSubcategoryDialogComponent,
-    
- 
   ],
   bootstrap: [ AppComponent ],
   providers: [

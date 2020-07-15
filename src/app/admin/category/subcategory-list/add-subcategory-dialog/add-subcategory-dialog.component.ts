@@ -5,6 +5,7 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { CategoryService } from '../../../../shared/category.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Category } from '../../../../shared/category';
 
 @Component({
   selector: 'app-add-subcategory-dialog',
@@ -15,15 +16,19 @@ export class AddSubcategoryDialogComponent implements OnInit {
   
   subCategoryForm : FormGroup; 
   @BlockUI() blockUI: NgBlockUI;
+  categories = [];
 
   constructor(private fb: FormBuilder,
               private categoryService: CategoryService, 
               private toaster: ToastrManager, 
               private http: HttpClientModule,
               @Inject(MAT_DIALOG_DATA) public data: any,
-              private dialogRef : MatDialogRef<AddSubcategoryDialogComponent>) { }
+              private dialogRef : MatDialogRef<AddSubcategoryDialogComponent>) { 
+               
+              }
 
   ngOnInit() {
+     this.getAllCatgory();
      this.createSubCategoryForm();
      this.editSubCategoryForm();
   }
@@ -44,12 +49,19 @@ export class AddSubcategoryDialogComponent implements OnInit {
     });
   }
 
+  getAllCatgory(){
+    this.categoryService.getAllCategory().subscribe(resp => {
+        this.categories = resp as Category[]; 
+    })
+  }
+
   onNoClick(){
     this.dialogRef.close();
   }
 
   onSubmit(){
-    //console.log(this.categoryForm.value);
+    console.log(this.subCategoryForm.value);
+    console.log(this.data.esubCategory.subCategoryId);
     this.toaster.successToastr('Sub category added successfully .');  
     this.dialogRef.close();
   }

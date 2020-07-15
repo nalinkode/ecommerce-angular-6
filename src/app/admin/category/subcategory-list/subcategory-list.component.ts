@@ -18,7 +18,7 @@ import { AddSubcategoryDialogComponent } from './add-subcategory-dialog/add-subc
 })
 export class SubcategoryListComponent implements OnInit {
 
-   @BlockUI() blockUI: NgBlockUI;
+  @BlockUI() blockUI: NgBlockUI;
 
   ELEMENT_DATA : Category[];
   displayedColumns: string[] = ['serialNumber','category','subCategory', 'status', 'action'];
@@ -76,21 +76,21 @@ export class SubcategoryListComponent implements OnInit {
     const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
-    data: { message:"Add category" }
+    data: { message:"Add sub category" }
     });
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
   });
   }
 
-   public editSubcategory(eCategory : Category[]){
-    console.log(eCategory)
+   public editSubcategory(esubCategory : Category[]){
+    console.log(esubCategory)
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
-    data: { eCategory,
-            message:"Edit category"
+    data: { esubCategory,
+            message:"Edit sub category"
           }
     });
     dialogRef.afterClosed().subscribe(result =>{
@@ -98,12 +98,12 @@ export class SubcategoryListComponent implements OnInit {
   });
   }
 
-  public deleteSubcategory(eCategory){
+  public deleteSubcategory(esubCategory){
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
         if(res){
          
-          this.toastr.successToastr('Product deleted successfully.');;
+          this.toastr.successToastr('Sub category deleted successfully.');;
 
         }
      });

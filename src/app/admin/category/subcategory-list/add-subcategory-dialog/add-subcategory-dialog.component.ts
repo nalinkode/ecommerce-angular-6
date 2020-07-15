@@ -25,6 +25,7 @@ export class AddSubcategoryDialogComponent implements OnInit {
 
   ngOnInit() {
      this.createSubCategoryForm();
+     
   }
 
   createSubCategoryForm(){

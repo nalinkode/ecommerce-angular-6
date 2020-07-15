@@ -26,7 +26,8 @@ export class SubcategoryListComponent implements OnInit {
   
   isPopupOpen = false;
   isLoading = true;
-
+  finalCat = [];
+  
   constructor(
              private categoryService : CategoryService,
              private dialogService : DialogService,
@@ -45,7 +46,23 @@ export class SubcategoryListComponent implements OnInit {
   public getAllSubcategory(){
     let response = this.categoryService.getAllCategory()
     response.subscribe(list =>{
-      this.dataSource.data = list as Category[];
+      let tempCat = [];
+      tempCat = list as Category[];
+      
+      for(let i=0; i<tempCat.length;i++){
+        debugger  
+        for(let j=0;j<tempCat[i].subCategory.length;j++){
+          debugger
+          let cat = {};
+          cat['category'] = tempCat[i].category;
+          cat['subCategoryId'] = tempCat[i].subCategory[j].subCategoryId;
+          cat['subCategoryName'] = tempCat[i].subCategory[j].subCategoryName;
+          cat['status'] = tempCat[i].subCategory[j].status;
+          this.finalCat.push(cat);
+        }
+      }
+       this.dataSource.data = this.finalCat as Category[];
+  
       this.isLoading = false;
       }, err =>{
         this.isLoading = false; 

@@ -14,8 +14,8 @@
 			<label for="category" class="col-sm-4 col-form-label">Category</label>
 			<div class="col-sm-8">
 				<select class="form-control" style="height: auto;" (change)="onChangeCategory($event.target.value)" formControlName="category">
-					<option value="" disabled>Choose your category</option>
-					<option *ngFor="let category of category" [ngValue]="category.categoryName">
+					<option value="" disabled> Choose your category </option>
+					<option *ngFor="let category of category" [value]="category.categoryName">
             {{category.categoryName}}</option>
 				</select>
 			</div>

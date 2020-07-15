@@ -26,7 +26,7 @@ export class SubcategoryListComponent implements OnInit {
   
   isPopupOpen = false;
   isLoading = true;
-  varfinalCat = [];
+  finalCat = [];
   
   constructor(
              private categoryService : CategoryService,

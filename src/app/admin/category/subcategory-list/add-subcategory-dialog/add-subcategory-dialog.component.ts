@@ -29,8 +29,9 @@ export class AddSubcategoryDialogComponent implements OnInit {
 
   createSubCategoryForm(){
      this.subCategoryForm = this.fb.group({
+     category: ['', Validators.required],
      subCategory: ['', Validators.required], 
-     isActivate:['', Validators.required]
+     isActivate: ['', Validators.required]
    });
   }
 

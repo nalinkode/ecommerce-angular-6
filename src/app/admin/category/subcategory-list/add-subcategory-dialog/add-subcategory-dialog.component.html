@@ -9,10 +9,13 @@
     <div class="form-group row">
 			<label for="category" class="col-sm-4 col-form-label">Category</label>
 			<div class="col-sm-8">
-				<select class="form-control" style="height: auto;" formControlName="category" id ="category">
+				<select class="form-control" style="height: auto;" formControlName="category" 
+        id = "category">
 					<option value="" disabled>Select category..</option>
-					<option [value]="true">Active</option>
-           <option [value]="false">Deactive</option>
+						<option *ngFor="let category of categories; let i = index" 
+            [value]="category[i].categoryId">
+            {{category[i].category}}
+            </option>
 				</select>
 			</div>
 		</div>

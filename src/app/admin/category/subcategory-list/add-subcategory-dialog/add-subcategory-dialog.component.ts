@@ -25,6 +25,7 @@ export class AddSubcategoryDialogComponent implements OnInit {
 
   ngOnInit() {
      this.createSubCategoryForm();
+     this.editSubCategoryForm();
   }
 
   createSubCategoryForm(){
@@ -33,6 +34,16 @@ export class AddSubcategoryDialogComponent implements OnInit {
      subCategory: ['', Validators.required], 
      isActivate: ['', Validators.required]
    });
+  }
+
+
+  editSubCategoryForm(){
+    this.subCategoryForm.patchValue({
+      category: this.data.esubCategory.category,
+      subCategory: this.data.esubCategory.subCategoryName,
+      isActivate: this.data.eCategory.status
+    });
+
   }
 
   onNoClick(){

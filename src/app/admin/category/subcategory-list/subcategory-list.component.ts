@@ -26,7 +26,7 @@ export class SubcategoryListComponent implements OnInit {
   
   isPopupOpen = false;
   isLoading = true;
-  finalCat = [];
+  varfinalCat = [];
   
   constructor(
              private categoryService : CategoryService,
@@ -38,7 +38,6 @@ export class SubcategoryListComponent implements OnInit {
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-
   ngOnInit() {
     this.getAllSubcategory();
   }
@@ -49,10 +48,8 @@ export class SubcategoryListComponent implements OnInit {
       let tempCat = [];
       tempCat = list as Category[];
       
-      for(let i=0; i<tempCat.length;i++){
-        debugger  
+      for(let i=0; i<tempCat.length;i++){  
         for(let j=0;j<tempCat[i].subCategory.length;j++){
-          debugger
           let cat = {};
           cat['category'] = tempCat[i].category;
           cat['subCategoryId'] = tempCat[i].subCategory[j].subCategoryId;
@@ -61,15 +58,16 @@ export class SubcategoryListComponent implements OnInit {
           this.finalCat.push(cat);
         }
       }
-       this.dataSource.data = this.finalCat as Category[];
-  
+      this.dataSource.data = this.finalCat as Category[];
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
       this.isLoading = false;
       }, err =>{
         this.isLoading = false; 
       });
   }
 
-   public applyFilter(filterValue: string) {
+  public applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
   

@@ -51,6 +51,7 @@ export class SubcategoryListComponent implements OnInit {
       for(let i=0; i<tempCat.length;i++){  
         for(let j=0;j<tempCat[i].subCategory.length;j++){
           let cat = {};
+          cat['categoryId'] = tempCat[i].categoryId;
           cat['category'] = tempCat[i].category;
           cat['subCategoryId'] = tempCat[i].subCategory[j].subCategoryId;
           cat['subCategoryName'] = tempCat[i].subCategory[j].subCategoryName;

@@ -9,7 +9,7 @@
       "isOrderCompleted": false,
       "customer":{
         "customerId":7778,
-        "name": "Aditya A. Nichal",
+        "customerName": "Aditya A. Nichal",
         "email":"adityanichal@gmail.com",
         "phone": "8793200633"
       }

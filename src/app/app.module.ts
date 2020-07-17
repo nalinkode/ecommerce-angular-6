@@ -55,6 +55,7 @@ import { CategoryListComponent } from './admin/category/category-list/category-l
 import { SubcategoryListComponent } from './admin/category/subcategory-list/subcategory-list.component';
 import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
 import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list/add-subcategory-dialog/add-subcategory-dialog.component';
+import { OrderService } from './shared/order.service';
 
 
 @NgModule({
@@ -112,7 +113,8 @@ import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list
    // { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}
   ProductService,
   DialogService,
-  CategoryService]
+  CategoryService,
+  OrderService]
 })
 export class AppModule { }
 

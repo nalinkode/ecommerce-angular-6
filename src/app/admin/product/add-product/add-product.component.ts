@@ -16,7 +16,7 @@ export class AddProductComponent implements OnInit {
   public productForm : FormGroup; 
   images = [];
   categories = [];
-  subCategory = [];  
+  subCategories = [];  
   
   constructor(
     private productService : ProductService,
@@ -33,18 +33,6 @@ export class AddProductComponent implements OnInit {
      this.editProductForm();
   }
 
-  changeCategory(e) {
-    debugger
-    this.data.category.setValue(e.target.value, {
-      onlySelf: true
-    })
-  }
-
-  changeSubcategory(e) {
-    this.data.subCategory.setValue(e.target.value, {
-      onlySelf: true
-    })
-  }
 
   onChangeCategory(e) {
      console.log(e);

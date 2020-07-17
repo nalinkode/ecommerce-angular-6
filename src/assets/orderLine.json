@@ -16,7 +16,8 @@
      "product":{
        "productId":12,
        "productName": "Samsung Galaxy A50(White, 64Gb)",
-       "price": 24000
+       "price": 24000,
+       "offerPrice": 23000
      }
     }
   }

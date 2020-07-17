@@ -27,7 +27,7 @@
 				<td mat-cell *matCellDef="let element"> {{element.order.isOrderCompleted}} </td>
 			</ng-container>
 			<ng-container matColumnDef="customerId">
-				<th mat-header-cell *matHeaderCellDef> customerId </th>
+				<th mat-header-cell *matHeaderCellDef> customer Id </th>
 				<td mat-cell *matCellDef="let element" >{{element.order.customer.customerId}}</td>
 			</ng-container>
 			<ng-container matColumnDef="customerName">
@@ -45,24 +45,24 @@
 			</ng-container>
 
       <ng-container matColumnDef="productId">
-				<th mat-header-cell *matHeaderCellDef> productId </th>
+				<th mat-header-cell *matHeaderCellDef> product Id </th>
 				<td mat-cell *matCellDef="let element"> {{element.product.productId}} </td>
 			</ng-container>
 
       <ng-container matColumnDef="productName">
-				<th mat-header-cell *matHeaderCellDef> productName </th>
+				<th mat-header-cell *matHeaderCellDef> product Name </th>
 				<td mat-cell *matCellDef="let element"> {{element.product.productName}} </td>
 			</ng-container>
 
       
       <ng-container matColumnDef="price">
-				<th mat-header-cell *matHeaderCellDef> Productt price </th>
+				<th mat-header-cell *matHeaderCellDef> Product price </th>
 				<td mat-cell *matCellDef="let element"> {{element.product.price}} </td>
 			</ng-container>
 
       
       <ng-container matColumnDef="offerPrice">
-				<th mat-header-cell *matHeaderCellDef>  Productt off. price </th>
+				<th mat-header-cell *matHeaderCellDef>  Product off. price </th>
 				<td mat-cell *matCellDef="let element"> {{element.product.offerPrice}} </td>
 			</ng-container>
 			<!-- Action Column -->

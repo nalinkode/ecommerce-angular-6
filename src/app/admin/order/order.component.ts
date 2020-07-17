@@ -8,7 +8,7 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 import { Router } from '@angular/router';
 import { OrderService } from '../../shared/order.service';
 import { DialogService } from '../../shared/dialog.service';
-import { Order } from '../../shared/order';
+import { Order } from '../../shared/mode/order';
 
 @Component({
   selector: 'app-order',

@@ -25,7 +25,7 @@
 			<div class="col-sm-8">
 				<select class="form-control" style="height: auto;" (change)="changeSubcategory($event)" formControlName="subCategory">
 					<option value="" disabled >Choose your Subcategory</option>
-					<option *ngFor="let subCategory of subCategory" [ngValue]="subCategory">{{subCategory}}</option>
+					<option *ngFor="let subCategory of subCategories" [value]="subCategory.subCategoryId">{{subCategory.sub}}</option>
 				</select>
 			</div>
 		</div>

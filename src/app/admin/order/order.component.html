@@ -13,33 +13,57 @@
 				<th mat-header-cell mat-sort-header *matHeaderCellDef> Order Id </th>
 				<td mat-cell *matCellDef="let element"> {{element.orderId}} </td>
 			</ng-container>
-			<ng-container matColumnDef="productName">
-				<th mat-header-cell mat-sort-header *matHeaderCellDef> Name </th>
+			<ng-container matColumnDef="orderDate">
+				<th mat-header-cell mat-sort-header *matHeaderCellDef> orderDate </th>
+				<td mat-cell *matCellDef="let element"> {{element.orderDate}} </td>
+			</ng-container>
+			<ng-container matColumnDef="total">
+				<th mat-header-cell mat-sort-header *matHeaderCellDef> Total Amount  </th>
+				<td mat-cell *matCellDef="let element"> {{element.total}} </td>
+			</ng-container>
+	
+			<ng-container matColumnDef="isOrderCompleted">
+				<th mat-header-cell mat-sort-header *matHeaderCellDef> isOrderCompleted </th>
+				<td mat-cell *matCellDef="let element"> {{element.isOrderCompleted}} </td>
+			</ng-container>
+			<ng-container matColumnDef="customerId">
+				<th mat-header-cell *matHeaderCellDef> customerId </th>
+				<td mat-cell *matCellDef="let element" >{{element.customerId}}</td>
+			</ng-container>
+			<ng-container matColumnDef="customerName">
+				<th mat-header-cell mat-sort-header *matHeaderCellDef> Customer Name </th>
+				<td mat-cell *matCellDef="let element"> {{element.customerName}} </td>
+			</ng-container>
+			<ng-container matColumnDef="email">
+				<th mat-header-cell *matHeaderCellDef> email </th>
+				<td mat-cell *matCellDef="let element"> {{element.email}} </td>
+			</ng-container>
+
+      <ng-container matColumnDef="phone">
+				<th mat-header-cell *matHeaderCellDef> Phone </th>
+				<td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+			</ng-container>
+
+      <ng-container matColumnDef="productId">
+				<th mat-header-cell *matHeaderCellDef> productId </th>
+				<td mat-cell *matCellDef="let element"> {{element.productId}} </td>
+			</ng-container>
+
+      <ng-container matColumnDef="productName">
+				<th mat-header-cell *matHeaderCellDef> productName </th>
 				<td mat-cell *matCellDef="let element"> {{element.productName}} </td>
 			</ng-container>
-			<ng-container matColumnDef="category">
-				<th mat-header-cell mat-sort-header *matHeaderCellDef> Category </th>
-				<td mat-cell *matCellDef="let element"> {{element.category}} </td>
+
+      
+      <ng-container matColumnDef="price">
+				<th mat-header-cell *matHeaderCellDef> Productt price </th>
+				<td mat-cell *matCellDef="let element"> {{element.productName}} </td>
 			</ng-container>
-			<ng-container matColumnDef="imgUrl">
-				<th mat-header-cell *matHeaderCellDef> Image </th>
-				<td mat-cell *matCellDef="let element"><img style="max-height:50%; max-width:50%" src={{element.imgUrl}}/></td>
-			</ng-container>
-			<ng-container matColumnDef="price">
-				<th mat-header-cell mat-sort-header *matHeaderCellDef> Price </th>
-				<td mat-cell *matCellDef="let element"> {{element.price}} </td>
-			</ng-container>
-			<ng-container matColumnDef="description">
-				<th mat-header-cell *matHeaderCellDef> Description </th>
-				<td mat-cell *matCellDef="let element" [innerHTML]="element.description">{{element.description}}</td>
-			</ng-container>
-			<ng-container matColumnDef="offerPrice">
-				<th mat-header-cell mat-sort-header *matHeaderCellDef> Offer Price </th>
-				<td mat-cell *matCellDef="let element"> {{element.offerPrice}} </td>
-			</ng-container>
-			<ng-container matColumnDef="subCategory">
-				<th mat-header-cell *matHeaderCellDef> Sub-category </th>
-				<td mat-cell *matCellDef="let element"> {{element.subCategory}} </td>
+
+      
+      <ng-container matColumnDef="offerPrice">
+				<th mat-header-cell *matHeaderCellDef>  Productt off. price </th>
+				<td mat-cell *matCellDef="let element"> {{element.offer}} </td>
 			</ng-container>
 			<!-- Action Column -->
 			<ng-container matColumnDef="action">

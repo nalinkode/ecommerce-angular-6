@@ -20,5 +20,49 @@
        "price": 24000,
        "offerPrice": 23000
      }
+  },
+  {
+    "orderLineId" : 2,
+    "quantity": 12,
+    "order":{
+      "orderId":77777,
+      "orderDate": "26/05/2020",
+      "total":1000,
+      "isOrderCompleted": false,
+      "customer":{
+        "customerId":7778,
+        "customerName": "Nalin J. Kode",
+        "email":"nalinkode@gmail.com",
+        "phone": "7248976756"
+      }
+    },
+    "product":{
+       "productId":12,
+       "productName": "Samsung Galaxy A50(White, 64Gb)",
+       "price": 24000,
+       "offerPrice": 23000
+     }
+  },
+  {
+    "orderLineId" : ,
+    "quantity": 12,
+    "order":{
+      "orderId":77777,
+      "orderDate": "26/05/2020",
+      "total":1000,
+      "isOrderCompleted": false,
+      "customer":{
+        "customerId":7778,
+        "customerName": "Yash A. Nichal",
+        "email":"yashnichal@gmail.com",
+        "phone": "8793200633"
+      }
+    },
+    "product":{
+       "productId":12,
+       "productName": "Samsung Galaxy A50(White, 64Gb)",
+       "price": 24000,
+       "offerPrice": 23000
+     }
   }
 ]

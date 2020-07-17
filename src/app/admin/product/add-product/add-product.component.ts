@@ -34,8 +34,8 @@ export class AddProductComponent implements OnInit {
   }
 
   onChangeCategory(e) {
-    console.log(e);
-     console.log("The category Id========>  " + e);
+   
+     console.log("The category Id========> " + e);
   }
 
   createProductForm(){

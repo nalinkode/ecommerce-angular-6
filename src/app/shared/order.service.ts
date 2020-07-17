@@ -7,6 +7,11 @@ import { map } from 'rxjs/operators';
 })
 export class OrderService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+
+  getAllOrder(){
+    return this.http.get('/assets/orderLi.json');
+ }
 
 }

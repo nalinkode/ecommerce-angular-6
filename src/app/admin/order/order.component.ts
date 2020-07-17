@@ -17,7 +17,7 @@ import { Order } from '../../shared/model/order';
 })
 export class OrderComponent implements OnInit {
 
-   @BlockUI() blockUI: NgBlockUI;
+  @BlockUI() blockUI: NgBlockUI;
 
   ELEMENT_DATA : Order[];
   displayedColumns: string[] = ['orderId', 'orderDate', 'total', 'isOrderCompleted','customerId', 'name', 'email', 'phone','productId','productName','price','offerPrice','action'];
@@ -34,6 +34,18 @@ export class OrderComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   
   ngOnInit() {
+    this.getAllOrder();
   }
+
+  getAllOrder(){
+    let response = this.orderService.getAllOrder();
+    response.subscribe(list =>{
+      this.dataSource.data = list as Order[];
+      this.isLoading = false;
+      }, err =>{
+        this.isLoading = false; 
+      });
+  }
+
 
 }

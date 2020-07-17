@@ -2,7 +2,7 @@
   {
     "orderLineId" : 1,
     "quantity": 12,
-    "status": true,
+    "isOrCompleted": false,
     "order":{
       "orderId":77777,
       "orderDate": "26/05/2020",

@@ -28,9 +28,9 @@ export class AddProductComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+     this.getAllCategory();
      this.createProductForm();
      this.editProductForm();
-     this.getAllCategory();
   }
 
   changeCategory(e) {
@@ -63,6 +63,7 @@ export class AddProductComponent implements OnInit {
   }
 
   editProductForm(){
+   if(this.data.eproduct){
     this.productForm.patchValue({
      productName: this.data.eproduct.productName,
      category: this.data.eproduct.categoryId,
@@ -70,7 +71,8 @@ export class AddProductComponent implements OnInit {
      price: this.data.eproduct.price,
      offerPrice: this.data.eproduct.offerPrice,
      description: this.data.eproduct.description
-    });   
+    });
+   }   
   }
   
   getAllCategory(){

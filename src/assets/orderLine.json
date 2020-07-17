@@ -1,22 +1,24 @@
 [
-   
-   {
+  {
+    "orderLineId" : 1,
+    "quantity": 12,
+    "order":{
       "orderId":77777,
       "orderDate": "26/05/2020",
       "total":1000,
-      "quantity": 12,
       "isOrderCompleted": false,
       "customer":{
         "customerId":7778,
         "name": "Aditya A. Nichal",
         "email":"adityanichal@gmail.com",
         "phone": "8793200633"
-      },
-     "product":{
+      }
+    },
+    "product":{
        "productId":12,
        "productName": "Samsung Galaxy A50(White, 64Gb)",
        "price": 24000,
        "offerPrice": 23000
      }
-   }
+  }
 ]

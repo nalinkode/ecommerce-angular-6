@@ -4,6 +4,7 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProductService } from '../product.service';
 import { CategoryService } from '../../../shared/category.service';
+import { Category } from '../../../shared/category';
 
 @Component({
   selector: 'app-add-product',
@@ -14,7 +15,7 @@ export class AddProductComponent implements OnInit {
 
   public productForm : FormGroup; 
   images = [];
-  category = {};
+  categories = [];
   subCategory = [];  
   
   constructor(
@@ -74,7 +75,7 @@ export class AddProductComponent implements OnInit {
   
   getAllCategory(){
     this.categoryService.getAllCategory().subscribe(resp => {
-       this.category = resp;
+       this.categories = resp as Category[];
     });
   }
 

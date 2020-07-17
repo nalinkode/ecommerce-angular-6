@@ -11,7 +11,7 @@ export class OrderService {
 
 
   getAllOrder(){
-    return this.http.get('/assets/orderLi.json');
+    return this.http.get('/assets/orderLine.json');
  }
 
 }

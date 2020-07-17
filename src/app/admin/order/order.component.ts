@@ -40,7 +40,7 @@ export class OrderComponent implements OnInit {
   getAllOrder(){
     let response = this.orderService.getAllOrder();
     response.subscribe(list =>{
-      this.dataSource.data = list as Order[]
+      this.dataSource.data = list as Order[];
       this.isLoading = false;
       }, err =>{
         this.isLoading = false; 

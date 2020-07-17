@@ -66,7 +66,7 @@ export class AddProductComponent implements OnInit {
    if(this.data.eproduct){
     this.productForm.patchValue({
      productName: this.data.eproduct.productName,
-     category: this.data.eproduct.category,
+     category: this.data.eproduct.categoryId,
      subCategory: this.data.eproduct.subCategory,
      price: this.data.eproduct.price,
      offerPrice: this.data.eproduct.offerPrice,
@@ -78,6 +78,7 @@ export class AddProductComponent implements OnInit {
   getAllCategory(){
     this.categoryService.getAllCategory().subscribe(resp => {
        this.categories = resp as Category[];
+       console.log(this.categories);
     });
   }
 

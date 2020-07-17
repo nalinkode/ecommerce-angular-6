@@ -66,8 +66,8 @@ export class AddProductComponent implements OnInit {
    if(this.data.eproduct){
     this.productForm.patchValue({
      productName: this.data.eproduct.productName,
-     category: this.data.eproduct.category,
-     subCategory: this.data.eproduct.subCategory,
+     category: this.data.eproduct.categoryId,
+     subCategory: this.data.eproduct.subCategoryId,
      price: this.data.eproduct.price,
      offerPrice: this.data.eproduct.offerPrice,
      description: this.data.eproduct.description

@@ -4,9 +4,10 @@
     "productName": "Samsung Galaxy A50(White, 64Gb)",
     "price": 24000,
     "description": "<ul><li>6GB RAM |64GB ROM | Expandable Upto 512GB</li><li>16.26cm (6.4inch) Full HD+ Display </li><li>25MP + 5MP + 8MP | 25MP Front Camera</li><li>400mAh Lithium-ion Battery</li><li>Exynos 9610 Processor</li><li>Super AMOLED Display</li></ul>",
-    
-    "category": "Electronics",
-    "subCategory": "Mobiles",
+    "categoryId":2,
+    "subCategoryId":4,
+    "category": "Mobiles",
+    "subCategory": "Samsung",
     "offerPrice": 18999
   },
   { "productId": 1,

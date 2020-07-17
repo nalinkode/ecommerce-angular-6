@@ -20,7 +20,7 @@ export class OrderComponent implements OnInit {
    @BlockUI() blockUI: NgBlockUI;
 
   ELEMENT_DATA : Order[];
-  displayedColumns: string[] = ['productId', 'productName', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
+  displayedColumns: string[] = ['orderId', 'orderDate', 'total', 'isOrderCompleted','customerId', 'name', 'email', 'phone','productId','productName','price','offerPrice','action'];
   dataSource = new MatTableDataSource<Order>(this.ELEMENT_DATA);
   
   isPopupOpen = false;

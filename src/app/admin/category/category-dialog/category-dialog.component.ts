@@ -53,6 +53,7 @@ export class CategoryDialogComponent implements OnInit {
   getAllCatgory(){
     this.categoryService.getAllCategory().subscribe(resp => {
         this.categories = resp as Category[]; 
+        console.log(this.ca)
     })
   }
 

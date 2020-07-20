@@ -32,17 +32,20 @@ export class CategoryDialogComponent implements OnInit {
 
   createCategoryForm(){
      this.categoryForm = this.fb.group({
-     category: ['', Validators.required], 
+     category: ['', Validators.required],
+     subCategory: ['', Validators.required], 
      isActivate:['', Validators.required]
    });
   }
 
   editCategoryForm(){
+
+    if (this.data.eCategory){
     this.categoryForm.patchValue({
       category: this.data.eCategory.category,
       isActivate: this.data.eCategory.status
     });
-
+    }
   }
 
   onNoClick(){

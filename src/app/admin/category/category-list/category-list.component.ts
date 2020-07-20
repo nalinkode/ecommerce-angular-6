@@ -10,6 +10,7 @@ import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
 import { CategoryService } from '../../../shared/category.service';
 import { AddCategoryDialogComponent } from './add-category-dialog/add-category-dialog.component';
+import { CategoryDialogComponent } from '../category-dialog/category-dialog.component';
 
 @Component({
   selector: 'app-category-list',
@@ -58,7 +59,7 @@ export class CategoryListComponent implements OnInit {
   
   public addCategory(){
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
+    const dialogRef = this.dialog.open(CategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { message:"Add category" }
@@ -71,7 +72,7 @@ export class CategoryListComponent implements OnInit {
    public editCategory(eCategory : Category[]){
     console.log(eCategory)
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
+    const dialogRef = this.dialog.open(CategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { eCategory,

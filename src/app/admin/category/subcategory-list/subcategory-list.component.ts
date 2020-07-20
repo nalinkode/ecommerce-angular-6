@@ -77,7 +77,8 @@ export class SubcategoryListComponent implements OnInit {
     const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
-    data: { message : "Add sub category" }
+    data: { message : "Add sub category",
+            dialogType : "subCategory" }
     });
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
@@ -91,7 +92,8 @@ export class SubcategoryListComponent implements OnInit {
     width: "450px", 
     position: { top : "90px"},
     data: { esubCategory,
-            message : "Edit sub category"
+            message : "Edit sub category",
+            dialogType : "subCategory"
           }
     });
     dialogRef.afterClosed().subscribe(result =>{

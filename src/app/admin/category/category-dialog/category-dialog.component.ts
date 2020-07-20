@@ -44,6 +44,7 @@ export class CategoryDialogComponent implements OnInit {
     if (this.data.eCategory){
     this.categoryForm.patchValue({
       category: this.data.eCategory.category,
+      subCategory: this.data.eCategory.subCategory,
       isActivate: this.data.eCategory.status
     });
     }
@@ -72,6 +73,5 @@ export class CategoryDialogComponent implements OnInit {
     console.log(this.data.esubCategory.subCategoryId);
     this.toaster.successToastr('Sub category added successfully .');  
     this.dialogRef.close();
-    t
   }
 }

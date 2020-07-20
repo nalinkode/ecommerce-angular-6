@@ -9,7 +9,6 @@ import { Router } from '@angular/router';
 import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
 import { CategoryService } from '../../../shared/category.service';
-import { AddCategoryDialogComponent } from './add-category-dialog/add-category-dialog.component';
 import { CategoryDialogComponent } from '../category-dialog/category-dialog.component';
 
 @Component({

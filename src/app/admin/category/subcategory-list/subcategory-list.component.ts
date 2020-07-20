@@ -10,6 +10,7 @@ import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
 import { CategoryService } from '../../../shared/category.service';
 import { AddSubcategoryDialogComponent } from './add-subcategory-dialog/add-subcategory-dialog.component';
+import { CategoryDialogComponent } from '../category-dialog/category-dialog.component';
 
 @Component({
   selector: 'app-subcategory-list',
@@ -74,7 +75,7 @@ export class SubcategoryListComponent implements OnInit {
   
   public addSubcategory(){
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
+    const dialogRef = this.dialog.open(CategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { message : "Add sub category",
@@ -88,7 +89,7 @@ export class SubcategoryListComponent implements OnInit {
    public editSubcategory(esubCategory : Category[]){
     console.log(esubCategory)
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
+    const dialogRef = this.dialog.open(CategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { esubCategory,

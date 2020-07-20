@@ -53,11 +53,9 @@ import { ListProductComponent } from './admin/product/list-product/list-product.
 import { CategoryService } from './shared/category.service';
 import { CategoryListComponent } from './admin/category/category-list/category-list.component';
 import { SubcategoryListComponent } from './admin/category/subcategory-list/subcategory-list.component';
-import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
 import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list/add-subcategory-dialog/add-subcategory-dialog.component';
 import { OrderService } from './shared/order.service';
 import { CategoryDialogComponent } from './admin/category/category-dialog/category-dialog.component';
-
 
 @NgModule({
   imports: [
@@ -74,7 +72,7 @@ import { CategoryDialogComponent } from './admin/category/category-dialog/catego
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddCategoryDialogComponent, AddSubcategoryDialogComponent, CategoryDialogComponent],
+  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddSubcategoryDialogComponent, CategoryDialogComponent],
   declarations: [
     AppComponent,
     HomeComponent,
@@ -105,7 +103,6 @@ import { CategoryDialogComponent } from './admin/category/category-dialog/catego
     ListProductComponent,
     CategoryListComponent,
     SubcategoryListComponent,
-    AddCategoryDialogComponent,
     AddSubcategoryDialogComponent,
     CategoryDialogComponent,
   ],

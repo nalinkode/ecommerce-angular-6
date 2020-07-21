@@ -35,7 +35,6 @@ constructor(private fb: FormBuilder,
   createCategoryForm(){
      this.categoryForm = this.fb.group({
      category: ['', Validators.required],
-     subCategory: ['', Validators.required], 
      isActivate:['', Validators.required]
    });
   }
@@ -70,7 +69,6 @@ constructor(private fb: FormBuilder,
   onSubmit(){
     console.log(this.categoryForm.value);
     this.toaster.successToastr('Category added successfully .');  
-    this.toaster.successToastr('Sub category added successfully .');  
     this.dialogRef.close();
   }
 }

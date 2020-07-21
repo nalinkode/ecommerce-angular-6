@@ -10,6 +10,7 @@ import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
 import { CategoryService } from '../../../shared/category.service';
 import { CategoryDialogComponent } from '../category-dialog/category-dialog.component';
+import { AddCategoryDialogComponent } from './add-category-dialog/add-category-dialog.component';
 
 @Component({
   selector: 'app-category-list',

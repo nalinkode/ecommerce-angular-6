@@ -73,7 +73,7 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     FontAwesomeModule,
     MaterialModule,
   ],
-  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddSubcategoryDialogComponent, CategoryDialogComponent],
+  entryComponents:[AddProductComponent, ConfirmedDialogComponent, AddSubcategoryDialogComponent, AddCategoryDialogComponent],
   declarations: [
     AppComponent,
     HomeComponent,

@@ -59,7 +59,7 @@ export class CategoryListComponent implements OnInit {
   
   public addCategory(){
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(CategoryDialogComponent,{
+    const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { message:"Add category" }
@@ -72,7 +72,7 @@ export class CategoryListComponent implements OnInit {
    public editCategory(eCategory : Category[]){
     console.log(eCategory)
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(CategoryDialogComponent,{
+    const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { eCategory,

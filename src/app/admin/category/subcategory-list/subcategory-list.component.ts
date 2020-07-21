@@ -10,7 +10,6 @@ import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
 import { CategoryService } from '../../../shared/category.service';
 import { AddSubcategoryDialogComponent } from './add-subcategory-dialog/add-subcategory-dialog.component';
-import { CategoryDialogComponent } from '../category-dialog/category-dialog.component';
 
 @Component({
   selector: 'app-subcategory-list',

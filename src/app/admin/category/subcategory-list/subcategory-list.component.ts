@@ -84,13 +84,13 @@ export class SubcategoryListComponent implements OnInit {
   });
   }
 
-   public editSubcategory(eCategory : Category[]){
-    console.log(eCategory)
+   public editSubcategory(esubCategory : Category[]){
+    console.log(esubCategory)
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
-    data: { eCategory,
+    data: { esubCategory,
             message : "Edit sub category"
           }
     });

@@ -75,11 +75,10 @@ export class SubcategoryListComponent implements OnInit {
   
   public addSubcategory(){
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(CategoryDialogComponent,{
+    const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
-    data: { message : "Add sub category",
-            dialogType : "subCategory" }
+    data: { message : "Add sub category"}
     });
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
@@ -89,12 +88,11 @@ export class SubcategoryListComponent implements OnInit {
    public editSubcategory(eCategory : Category[]){
     console.log(eCategory)
     this.isPopupOpen = true;
-    const dialogRef = this.dialog.open(CategoryDialogComponent,{
+    const dialogRef = this.dialog.open(AddSubcategoryDialogComponent,{
     width: "450px", 
     position: { top : "90px"},
     data: { eCategory,
-            message : "Edit sub category",
-            dialogType : "subCategory"
+            message : "Edit sub category"
           }
     });
     dialogRef.afterClosed().subscribe(result =>{

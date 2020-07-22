@@ -68,7 +68,7 @@ export class CategoryListComponent implements OnInit {
   });
   }
 
-   public editCategory(eCategory : Category[]){
+   public editCategory(eCategory:Category[]){
     console.log(eCategory)
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddCategoryDialogComponent,{

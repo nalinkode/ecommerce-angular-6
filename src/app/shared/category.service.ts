@@ -22,4 +22,14 @@ export class CategoryService {
      })
    });
  }
+
+ editCategory(data : Category){
+    return this.http.post<Category>('http://localhost:8080/category/edit',data, {
+     headers: new HttpHeaders({
+       'Content-Type' : 'application/json'
+     })
+   });
+ }
+
 }
+

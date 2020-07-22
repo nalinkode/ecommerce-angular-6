@@ -53,11 +53,21 @@ constructor(private fb: FormBuilder,
 
   onSubmit(){
     console.log(this.categoryForm.value);
+    if(this.categoryForm.value.categoryId == null){
     this.categoryService.addCategory(this.categoryForm.value).subscribe(resp =>{
           this.toaster.successToastr('Category added successfully .');  
     }, err => {
         this.toaster.errorToastr('Failed to add category');
       }); 
+    } else {
+      this.categoryService.editCategory(this.categoryForm.value).subscribe(resp =>{
+          this.toaster.successToastr('Category updated successfully .');  
+    }, err => {
+        this.toaster.errorToastr('Failed to update category');
+      });
+
+    }
     this.dialogRef.close();
   }
+
 }

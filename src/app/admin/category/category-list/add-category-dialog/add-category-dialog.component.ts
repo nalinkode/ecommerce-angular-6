@@ -63,11 +63,10 @@ constructor(private fb: FormBuilder,
   onSubmit(){
     console.log(this.categoryForm.value);
     this.categoryService.addCategory(this.categoryForm.value).subscribe(resp =>{
-      console.log(resp);
           this.toaster.successToastr('Category added successfully .');  
-    }) 
-
-
+    }, err => {
+        this.toaster.errorToastr('Failed to add category');
+      }); 
     this.dialogRef.close();
   }
 }

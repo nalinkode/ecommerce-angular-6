@@ -19,7 +19,7 @@ export class CategoryService {
    debugger
    return this.http.post<Category>('http://localhost:8080/category/add',data, {
      headers: new HttpHeaders({
-       'Content-Type' : 'application/js'
+       'Content-Type' : 'application/json'
      })
    });
  }

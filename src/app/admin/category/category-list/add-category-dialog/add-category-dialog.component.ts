@@ -48,14 +48,6 @@ constructor(private fb: FormBuilder,
     }
   }
 
-  getAllCatgory(){
-    this.categoryService.getAllCategory().subscribe(resp => {
-        this.categories = resp as Category[]; 
-        console.log(this.categories)
-    })
-  }
-
-
   onNoClick(){
     this.dialogRef.close();
   }

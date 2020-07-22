@@ -12,7 +12,7 @@ export class CategoryService {
 
 
  getAllCategory(){
-    return this.http.get<Category>('http://localhost:8080/category/add');
+    return this.http.get<Category>('http://localhost:8080/category/al');
  }
 
  addCategory(data : Category){

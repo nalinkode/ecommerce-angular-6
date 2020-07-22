@@ -23,8 +23,8 @@
    },
    {
       "categoryId":2,
-      "category":"Mobiles",
-      "status": true,
+      "categoryName":"Mobiles",
+      "isActivate": true,
       "subCategory":[
          {
             "subCategoryId":4,

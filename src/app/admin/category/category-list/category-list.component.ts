@@ -21,7 +21,7 @@ export class CategoryListComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
 
   ELEMENT_DATA : Category[];
-  displayedColumns: string[] = ['serialNumber','categoryNa', 'IsActivate', 'action'];
+  displayedColumns: string[] = ['serialNumber','categoryName', 'IsActivate', 'action'];
   dataSource = new MatTableDataSource<Category>(this.ELEMENT_DATA);
   
   isPopupOpen = false;

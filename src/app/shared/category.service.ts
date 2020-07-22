@@ -16,6 +16,7 @@ export class CategoryService {
  }
 
  addCategory(data : Category){
+   debugger
    return this.http.post('http://localhost:8080/category/add',data);
  }
 }

@@ -1,8 +1,8 @@
 [
    {
       "categoryId":1,
-      "category":"Fashion",
-      "status": true,
+      "categoryName":"Fashion",
+      "isActivate": true,
       "subCategory":[
          {
             "subCategoryId":1,

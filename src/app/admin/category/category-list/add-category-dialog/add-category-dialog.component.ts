@@ -55,12 +55,6 @@ constructor(private fb: FormBuilder,
     })
   }
 
-  changeCategory(e) {
-    console.log(e.value)
-    this.categoryForm.value.Category.setValue(e.target.value, {
-      onlySelf: true
-    })
-  }
 
   onNoClick(){
     this.dialogRef.close();
@@ -69,6 +63,7 @@ constructor(private fb: FormBuilder,
   onSubmit(){
     console.log(this.categoryForm.value);
     this.categoryService.addCategory(this.categoryForm.value).subscribe(resp =>{
+      console.log(resp);
           this.toaster.successToastr('Category added successfully .');  
     }) 
 

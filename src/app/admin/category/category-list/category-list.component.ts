@@ -89,6 +89,7 @@ export class CategoryListComponent implements OnInit {
         if(res){
           this.categoryService.deleteCategory(eCategory).subscribe(resp=>{
               this.toastr.successToastr('Category deleted successfully.');
+              this.getAllCategory();
           }, err => {
               this.toastr.errorToastr('Failed to delete category');
       });

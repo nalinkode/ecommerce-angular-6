@@ -27,7 +27,6 @@ constructor(private fb: FormBuilder,
               ) { }
 
   ngOnInit() {
-      this.getAllCatgory();
       this.createCategoryForm();
       this.editCategoryForm();
   }

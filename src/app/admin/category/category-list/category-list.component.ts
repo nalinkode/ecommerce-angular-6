@@ -46,7 +46,6 @@ export class CategoryListComponent implements OnInit {
     let response = this.categoryService.getAllCategory()
     response.subscribe(list =>{
       this.dataSource.data = list as Category[];
-
       this.isLoading = false;
       }, err =>{
         this.isLoading = false; 
@@ -61,7 +60,7 @@ export class CategoryListComponent implements OnInit {
     this.isPopupOpen = true;
     const dialogRef = this.dialog.open(AddCategoryDialogComponent,{
     width: "450px", 
-    position: { top : "90px"},
+    position: { top : "90px" },
     data: { message:"Add category" }
     });
     dialogRef.afterClosed().subscribe(result =>{

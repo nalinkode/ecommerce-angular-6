@@ -12,11 +12,10 @@ export class CategoryService {
 
 
  getAllCategory(){
-    return this.http.get('/assets/category.json');
+    return this.http.get<Category>('http://localhost:8080/category/add');
  }
 
  addCategory(data : Category){
-   debugger
    return this.http.post<Category>('http://localhost:8080/category/add',data, {
      headers: new HttpHeaders({
        'Content-Type' : 'application/json'

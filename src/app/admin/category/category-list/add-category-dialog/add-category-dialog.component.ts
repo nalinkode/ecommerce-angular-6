@@ -33,6 +33,7 @@ constructor(private fb: FormBuilder,
 
   createCategoryForm(){
      this.categoryForm = this.fb.group({
+     categoryId : [''],
      categoryName: ['', Validators.required],
      isActivate:['', Validators.required]
    });
@@ -41,6 +42,7 @@ constructor(private fb: FormBuilder,
   editCategoryForm(){ 
     if (this.data.eCategory){
     this.categoryForm.patchValue({
+      categoryId: this.data.eCategory.categoryId,
       category: this.data.eCategory.categoryName,
       isActivate: this.data.eCategory.isActivate
     });
@@ -53,6 +55,7 @@ constructor(private fb: FormBuilder,
 
   onSubmit(){
     console.log(this.categoryForm.value);
+     debugger
     if(this.categoryForm.value.categoryId == null){
     this.categoryService.addCategory(this.categoryForm.value).subscribe(resp =>{
           this.toaster.successToastr('Category added successfully .');  
@@ -60,12 +63,11 @@ constructor(private fb: FormBuilder,
         this.toaster.errorToastr('Failed to add category');
       }); 
     } else {
-      this.categoryService.editCategory(this.categoryForm.value).subscribe(resp =>{
+      this.categoryService.updateCategory(this.categoryForm.value).subscribe(resp =>{
           this.toaster.successToastr('Category updated successfully .');  
     }, err => {
         this.toaster.errorToastr('Failed to update category');
       });
-
     }
     this.dialogRef.close();
   }

@@ -8,8 +8,9 @@ import { Category } from './category';
 })
 export class CategoryService {
 
-  constructor(private http: HttpClient) { }
+constructor(private http: HttpClient) { }
 
+ baseUrl = 'http://localhost:8080/category';
 
  getAllCategory(){
     return this.http.get<Category>('http://localhost:8080/category/all');
@@ -23,8 +24,10 @@ export class CategoryService {
    });
  }
 
- editCategory(data : Category){
-    return this.http.post<Category>('http://localhost:8080/category/U',data, {
+ updateCategory(data : Category){
+   console.log(data);
+   debugger
+    return this.http.put<Category>(`${this.baseUrl}/update/${data.categoryId}`,data, {
      headers: new HttpHeaders({
        'Content-Type' : 'application/json'
      })

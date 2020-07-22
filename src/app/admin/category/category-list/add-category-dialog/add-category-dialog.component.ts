@@ -56,7 +56,7 @@ constructor(private fb: FormBuilder,
   onSubmit(){
     console.log(this.categoryForm.value);
      debugger
-    if(this.categoryForm.value.categoryId == null){
+    if(this.categoryForm.value.categoryId == ""){
     this.categoryService.addCategory(this.categoryForm.value).subscribe(resp =>{
           this.toaster.successToastr('Category added successfully .');  
     }, err => {

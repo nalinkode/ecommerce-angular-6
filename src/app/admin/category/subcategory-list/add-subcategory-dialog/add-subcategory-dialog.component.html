@@ -13,7 +13,7 @@
         id = "category">
 					<option value="" disabled>Select category..</option>
 						<option *ngFor="let category of categories; let i = index" 
-            [value]="category[.categoryId">
+            [value]="category.categoryId">
             {{category.category}}
             </option>
 				</select>

@@ -13,4 +13,8 @@ export class CategoryService {
  getAllCategory(){
     return this.http.get('/assets/category.json');
  }
+
+ addCategory(data : any){
+   return this.http.post('http://localhost:8080/category/add',data);
+ }
 }

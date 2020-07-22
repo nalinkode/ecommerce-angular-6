@@ -7,12 +7,12 @@
 	<form [formGroup]="categoryForm" (ngSubmit)="categoryForm.valid && onSubmit()">
 		
     <div class="form-group row" >
-			<label for="category" class="col-sm-4 col-form-label">Category</label>
+			<label for="categoryName" class="col-sm-4 col-form-label">Category</label>
 			<div class="col-sm-8">
-				<input type="text" class="form-control" formControlName="category" id="category" 
+				<input type="text" class="form-control" formControlName="categoryName" id="categoryName" 
         placeholder="Enter Category ex.Fashion">
-         <div *ngIf="categoryForm.get('category').touched && categoryForm.get('category').invalid" class="invalid-feedback">
-			<div *ngIf="categoryForm.get('category').errors.required">Category is required </div>
+         <div *ngIf="categoryForm.get('categoryName').touched && categoryForm.get('categoryName').invalid" class="invalid-feedback">
+			<div *ngIf="categoryForm.get('categoryName').errors.required">Category is required </div>
 		</div>
          </div>
 		</div>

@@ -34,7 +34,7 @@ constructor(private fb: FormBuilder,
 
   createCategoryForm(){
      this.categoryForm = this.fb.group({
-     category: ['', Validators.required],
+     categoryName: ['', Validators.required],
      isActivate:['', Validators.required]
    });
   }

@@ -2,7 +2,7 @@ import { Subcategory } from './subcategory';
 
 export interface Category {
     categoryId : number;
-    category : string;
-    status : boolean;
+    categoryName : string;
+    isActivate : boolean;
     subCategory: Array<Subcategory>;
 }

@@ -27,7 +27,7 @@ constructor(private http: HttpClient) { }
  updateCategory(data : Category){
    console.log(data);
    debugger
-    return this.http.put<Category>(`${this.baseUrl}/update/${data.categoryId}`,data, {
+    return this.http.put<Category>(`${this.baseUrl}/update/`,data, {
      headers: new HttpHeaders({
        'Content-Type' : 'application/json'
      })

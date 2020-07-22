@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { Category } from './category';
 
@@ -17,6 +17,10 @@ export class CategoryService {
 
  addCategory(data : Category){
    debugger
-   return this.http.post('http://localhost:8080/category/add',data);
+   return this.http.post<Category>('http://localhost:8080/category/add',data, {
+     headers: new HttpHeaders({
+       'Content-Type' : 'application/js'
+     })
+   });
  }
 }

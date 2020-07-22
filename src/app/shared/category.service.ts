@@ -25,15 +25,16 @@ constructor(private http: HttpClient) { }
  }
 
  updateCategory(data : Category){
-   console.log(data);
-   debugger
-    return this.http.put<Category>(`${this.baseUrl}/update/`,data, {
+    return this.http.put<Category>(`${this.baseUrl}/update`,data, {
      headers: new HttpHeaders({
        'Content-Type' : 'application/json'
      })
    });
  }
 
+ deleteCategory(data : Category){
+   return this.http.delete<void>(`${this.baseUrl}/delete/${data.categoryId}`);
+ }
 
 }
 

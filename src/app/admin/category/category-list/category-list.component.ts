@@ -83,13 +83,15 @@ export class CategoryListComponent implements OnInit {
   });
   }
 
-  public deleteCategory(eCategory){
+  public deleteCategory(eCategory : Category){
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
         if(res){
-         
-          this.toastr.successToastr('Product deleted successfully.');;
-
+          this.categoryService.deleteCategory(eCategory).subscribe(resp=>{
+              this.toastr.successToastr('Category deleted successfully.');
+          }, err => {
+              this.toastr.errorToastr('Failed to delete category');
+      });
         }
      });
   }

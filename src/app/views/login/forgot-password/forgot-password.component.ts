@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { LoginService } from '../lo/login.service';
+import { HttpClientModule } from '@angular/common/http';
+import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
 @Component({
   selector: 'app-forgot-password',
@@ -7,10 +11,23 @@ import { Router } from '@angular/router';
   styleUrls: ['./forgot-password.component.css']
 })
 export class ForgotPasswordComponent implements OnInit {
-
-  constructor() { }
+  forgotPasswordForm : FormGroup; 
+  @BlockUI() blockUI: NgBlockUI;
+  
+  constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router,private http: HttpClientModule) { }
 
   ngOnInit() {
+    this.createForgotPasswordForm()
+  }
+
+  createForgotPasswordForm(){
+    this.forgotPasswordForm = this.fb.group({
+     userName: ['', Validators.required]
+   });
+  }
+   
+  login(){
+    this.router.navigate(['login']);
   }
 
 }

@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LoginService } from '../login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { ToastrManager } from 'ng6-toastr-notifications';
 
 @Component({
   selector: 'app-forgot-password',
@@ -24,6 +25,16 @@ export class ForgotPasswordComponent implements OnInit {
     this.forgotPasswordForm = this.fb.group({
      userName: ['', Validators.required]
    });
+  }
+
+  sendEmail() {
+    this.loginService.forgetPassword(this.forgotPasswordForm.value).subscribe((res: any) => {
+      if (res.Success) {
+        this.router.navigate(['check-mail']);
+      } else {
+        this.toastr.infoToastr('User not register yet.');
+      }
+    });
   }
   
 }

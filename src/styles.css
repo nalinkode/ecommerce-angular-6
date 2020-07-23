@@ -229,3 +229,7 @@ border-radius: 0px;
 .mat-icon {
   cursor: pointer;
 }
+
+.section-padding {
+      padding: 30px 0;
+}

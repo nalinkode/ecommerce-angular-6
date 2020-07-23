@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { LoginService } from '../lo/login.service';
+import { LoginService } from '../login.service';
 import { HttpClientModule } from '@angular/common/http';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 
@@ -25,9 +25,5 @@ export class ForgotPasswordComponent implements OnInit {
      userName: ['', Validators.required]
    });
   }
-   
-  login(){
-    this.router.navigate(['login']);
-  }
-
+  
 }

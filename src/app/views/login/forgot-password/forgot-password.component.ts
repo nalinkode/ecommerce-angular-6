@@ -15,7 +15,7 @@ export class ForgotPasswordComponent implements OnInit {
   forgotPasswordForm : FormGroup; 
   @BlockUI() blockUI: NgBlockUI;
   
-  constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router,private http: HttpClientModule) { }
+  constructor(private fb: FormBuilder,private loginService: LoginService, private router: Router,private http: HttpClientModule,private toaster: ToastrManager) { }
 
   ngOnInit() {
     this.createForgotPasswordForm()
@@ -29,10 +29,11 @@ export class ForgotPasswordComponent implements OnInit {
 
   sendEmail() {
     this.loginService.forgetPassword(this.forgotPasswordForm.value).subscribe((res: any) => {
+      this.router.navigate(['check-mail']);
       if (res.Success) {
         this.router.navigate(['check-mail']);
       } else {
-        this.toastr.infoToastr('User not register yet.');
+        this.toaster.infoToastr('User not register yet.');
       }
     });
   }

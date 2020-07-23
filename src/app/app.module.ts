@@ -19,6 +19,8 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 //custom component
 import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
+import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-password.component';
+import { CheckMailComponent } from './views/login/check-mail/check-mail.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
@@ -56,7 +58,6 @@ import { SubcategoryListComponent } from './admin/category/subcategory-list/subc
 import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list/add-subcategory-dialog/add-subcategory-dialog.component';
 import { OrderService } from './shared/order.service';
 import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
-import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-password.component';
 
 @NgModule({
   imports: [
@@ -107,6 +108,7 @@ import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-pa
     AddSubcategoryDialogComponent,
     AddCategoryDialogComponent,
     ForgotPasswordComponent,
+    CheckMailComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [

@@ -3,11 +3,9 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
 import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-password.component';
-
+import { CheckMailComponent } from './views/login/check-mail/check-mail.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
-
-
 import { OrderComponent } from './admin/order/order.component';
 import { AboutUsComponent } from './views/about-us/about-us.component';
 import { OurTeamComponent } from './views/about-us/our-team/our-team.component';
@@ -68,6 +66,10 @@ const appRoutes: Routes = [
     { 
         path: 'forgot-password', 
         component: ForgotPasswordComponent 
+    },
+    { 
+        path: 'check-mail', 
+        component: CheckMailComponent 
     },
     { 
         path: 'register', 

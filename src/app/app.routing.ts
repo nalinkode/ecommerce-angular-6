@@ -4,6 +4,7 @@ import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
 import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-password.component';
 import { CheckMailComponent } from './views/login/check-mail/check-mail.component';
+import { ResetPasswordComponent } from './views/login/reset-password/reset-password.component';
 import { AdminComponent } from './admin/admin.component';
 import { UserlistComponent } from './admin/userlist/userlist.component';
 import { OrderComponent } from './admin/order/order.component';
@@ -70,6 +71,10 @@ const appRoutes: Routes = [
     { 
         path: 'check-mail', 
         component: CheckMailComponent 
+    },
+    { 
+        path: 'reset-password', 
+        component: ResetPasswordComponent 
     },
     { 
         path: 'register', 

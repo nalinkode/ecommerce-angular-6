@@ -20,6 +20,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RegisterComponent } from './views/register/register.component';
 import { LoginComponent } from './views/login/login.component';
 import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './views/login/reset-password/reset-password.component';
 import { CheckMailComponent } from './views/login/check-mail/check-mail.component';
 import { HomeComponent } from './home/home.component';
 import { AdminComponent } from './admin/admin.component';
@@ -109,6 +110,7 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     AddCategoryDialogComponent,
     ForgotPasswordComponent,
     CheckMailComponent,
+    ResetPasswordComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [

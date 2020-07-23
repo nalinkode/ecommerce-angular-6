@@ -56,6 +56,7 @@ import { SubcategoryListComponent } from './admin/category/subcategory-list/subc
 import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list/add-subcategory-dialog/add-subcategory-dialog.component';
 import { OrderService } from './shared/order.service';
 import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
+import { ForgotPasswordComponent } from './views/login/forgot-password/forgot-password.component';
 
 @NgModule({
   imports: [
@@ -105,6 +106,7 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
     SubcategoryListComponent,
     AddSubcategoryDialogComponent,
     AddCategoryDialogComponent,
+    ForgotPasswordComponent,
   ],
   bootstrap: [ AppComponent ],
   providers: [

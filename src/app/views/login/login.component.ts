@@ -96,6 +96,10 @@ export class LoginComponent implements OnInit {
     }
   }
 
+  forgotPassword() {
+    this.router.navigate(['forgot-password']);
+  }
+
    blockedUI(value) {
      if (value) {
        this.blockUI.start(''); // Start blocking

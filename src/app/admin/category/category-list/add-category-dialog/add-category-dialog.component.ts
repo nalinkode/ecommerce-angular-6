@@ -40,10 +40,11 @@ constructor(private fb: FormBuilder,
   }
 
   editCategoryForm(){ 
+    debugger
     if (this.data.eCategory){
     this.categoryForm.patchValue({
       categoryId: this.data.eCategory.categoryId,
-      categoryNa: this.data.eCategory.categoryName,
+      categoryName: this.data.eCategory.categoryName,
       isActivate: this.data.eCategory.isActivate
     });
     }

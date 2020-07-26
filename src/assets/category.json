@@ -117,7 +117,7 @@
          {
             "subCategoryId":20,
             "subCategoryName":"Speakers",
-            "isActivate": true
+            "isActivate": false
          }
       ]
    },
@@ -129,17 +129,17 @@
          {
             "subCategoryId":210,
             "subCategoryName":"Kitchen & Dinning",
-            "isActivate": true
+            "isActivate": false
          },
          {
             "subCategoryId":211,
             "subCategoryName":"Home Furnishings",
-            "isActivate": true
+            "isActivate": false
          },
          {
             "subCategoryId":212,
             "subCategoryName":"Homee Decor",
-            "isActivate": true
+            "isActivate": false
          },
          {
             "subCategoryId":213,

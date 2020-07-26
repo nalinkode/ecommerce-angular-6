@@ -46,13 +46,13 @@ export class SubcategoryListComponent implements OnInit {
     let response = this.categoryService.getAllCategory()
     response.subscribe(list =>{
       let tempCat = [];
-      tempCat = list as Category[];
+      tempCat = list as Category
       
       for(let i=0; i<tempCat.length;i++){  
         for(let j=0;j<tempCat[i].subCategory.length;j++){
           let cat = {};
           cat['categoryId'] = tempCat[i].categoryId;
-          cat['categoryName'] = tempCat[i].categoryN;
+          cat['categoryName'] = tempCat[i].categoryName;
           cat['subCategoryId'] = tempCat[i].subCategory[j].subCategoryId;
           cat['subCategoryName'] = tempCat[i].subCategory[j].subCategoryName;
           cat['isActivate'] = tempCat[i].subCategory[j].isActivate;

@@ -43,7 +43,7 @@ constructor(private fb: FormBuilder,
     if (this.data.eCategory){
     this.categoryForm.patchValue({
       categoryId: this.data.eCategory.categoryId,
-      category: this.data.eCategory.categoryName,
+      categoryNa: this.data.eCategory.categoryName,
       isActivate: this.data.eCategory.isActivate
     });
     }

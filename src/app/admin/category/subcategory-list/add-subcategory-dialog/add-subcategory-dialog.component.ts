@@ -54,7 +54,6 @@ export class AddSubcategoryDialogComponent implements OnInit {
   getAllCatgory(){
     this.categoryService.getAllCategory().subscribe(resp => {
         this.categories = resp as Category[]; 
-        console.log(this.categories)
     })
   }
 

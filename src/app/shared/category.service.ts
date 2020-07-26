@@ -11,13 +11,20 @@ export class CategoryService {
 constructor(private http: HttpClient) { }
 
  baseUrl = 'http://localhost:8080/category';
+/*
+ getAllCategory(){
+    return this.http.get<Category>(`${this.baseUrl}/all`);
+ }
+*/
+
 
  getAllCategory(){
-    return this.http.get<Category>('http://localhost:8080/category/all');
+    return this.http.get<Category>('./assets/category.json');
  }
 
+
  addCategory(data : Category){
-   return this.http.post<Category>('http://localhost:8080/category/add',data, {
+   return this.http.post<Category>(`${this.baseUrl}/add`,data, {
      headers: new HttpHeaders({
        'Content-Type' : 'application/json'
      })

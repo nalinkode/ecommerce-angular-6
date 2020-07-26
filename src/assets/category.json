@@ -7,17 +7,17 @@
          {
             "subCategoryId":1,
             "subCategoryName":"Men",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":2,
             "subCategoryName":"Women",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":3,
             "subCategoryName":"Kids",
-            "status": true
+            "isActivate": true
          }
       ]
    },
@@ -29,32 +29,32 @@
          {
             "subCategoryId":4,
             "subCategoryName":"Samsung",
-            "status": true
+            "isActivate": false
          },
          {
             "subCategoryId":5,
             "subCategoryName":"iPhone",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":6,
             "subCategoryName":"Vivo",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":7,
             "subCategoryName":"Oppo",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":8,
             "subCategoryName":"iPhone",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":9,
             "subCategoryName":"Charger",
-            "status": true  
+            "isActivate": true  
 
          }
       ]
@@ -62,99 +62,99 @@
    {
       "categoryId":3,
       "category":"Electronics",
-      "status": true,
+      "isActivate": true,
       "subCategory":[
          {
             "subCategoryId":10,
             "subCategoryName":"Laptops",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":11,
             "subCategoryName":"Headphones",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":12,
             "subCategoryName":"Tablets",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":13,
             "subCategoryName":"Data Storage",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":14,
             "subCategoryName":"Smart Wearbles",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":15,
             "subCategoryName":"Power Banks",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":16,
             "subCategoryName":"Laptop Accessories",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":17,
             "subCategoryName":"Computer Peripherals",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":18,
             "subCategoryName":"Cameras",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":19,
             "subCategoryName":"TVs",
-            "status": true
+            "isActivate": false
          },
          {
             "subCategoryId":20,
             "subCategoryName":"Speakers",
-            "status": true
+            "isActivate": true
          }
       ]
    },
    {
       "categoryId":4,
       "category":"Home",
-      "status": false,
+      "isActivate": false,
       "subCategory":[
          {
             "subCategoryId":210,
             "subCategoryName":"Kitchen & Dinning",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":211,
             "subCategoryName":"Home Furnishings",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":212,
             "subCategoryName":"Homee Decor",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":213,
             "subCategoryName":"Large Furnitures",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":114,
             "subCategoryName":"Lighting and More",
-            "status": true
+            "isActivate": true
          },
          {
             "subCategoryId":155,
             "subCategoryName":"Tools & Utility",
-            "status": true
+            "isActivate": true
          }
       ]
    }

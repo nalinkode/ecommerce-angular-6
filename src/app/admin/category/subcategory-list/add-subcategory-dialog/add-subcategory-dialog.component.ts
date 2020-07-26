@@ -46,7 +46,7 @@ export class AddSubcategoryDialogComponent implements OnInit {
       this.subCategoryForm.patchValue({
       category: this.data.esubCategory.categoryId,
       subCategory: this.data.esubCategory.subCategoryName,
-      isActivate: this.data.esubCategory.status
+      isActivate: this.data.esubCategory.isActivate
     });
     }
   }

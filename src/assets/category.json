@@ -61,7 +61,7 @@
    },
    {
       "categoryId":3,
-      "category":"Electronics",
+      "categoryName":"Electronics",
       "isActivate": true,
       "subCategory":[
          {
@@ -123,7 +123,7 @@
    },
    {
       "categoryId":4,
-      "category":"Home",
+      "categoryName":"Home",
       "isActivate": false,
       "subCategory":[
          {

@@ -18,13 +18,13 @@
 									<input class="form-control custom-form-control" placeholder="Enter your last name" type="text" formControlName="lastName" required name="LastName" maxlength="50" pattern="^[a-zA-Z]+$"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('lastName').errors && (registerForm.get('lastName').dirty || registerForm.get('lastName').touched)" placement="bottom" ngbTooltip="Please enter valid last name." tooltipClass="my-custom-class"></span> </div>
 								<div class="form-group mb-3">
 									<input class="form-control custom-form-control" placeholder="Enter your mobile number" formControlName="mobileNo" type="text" required>
-									<div *ngIf="registerForm.get('mobileNo').touched && registerForm.get('mobileNo').invalid" class="alert alert-danger"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('mobileNo').errors.required" placement="bottom" ngbTooltip="Mobile Number is required." tooltipClass="my-custom-class">
+									<div *ngIf="registerForm.get('mobileNo').touched && registerForm.get('mobileNo').invalid" class="alert"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('mobileNo').errors.required" placement="bottom" ngbTooltip="Mobile Number is required." tooltipClass="my-custom-class">
                     </span> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('mobileNo').errors.pattern" placement="bottom" ngbTooltip="Please, Enter 10 digit Mobile Number." tooltipClass="my-custom-class">
                     </span> </div>
 								</div>
 								<div class="form-group mb-3">
 									<input class="form-control custom-form-control" placeholder="Enter your email address" type="text" formControlName="email">
-									<div *ngIf="registerForm.get('email').touched && registerForm.get('email').invalid" class="alert alert-danger"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('email').errors.required" placement="bottom" ngbTooltip="Email address is required." tooltipClass="my-custom-class">
+									<div *ngIf="registerForm.get('email').touched && registerForm.get('email').invalid" class="alert"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('email').errors.required" placement="bottom" ngbTooltip="Email address is required." tooltipClass="my-custom-class">
                     </span> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('email').errors.pattern" placement="bottom" ngbTooltip="Please, Enter valid email address ." tooltipClass="my-custom-class">
                     </span> </div>
 								</div>

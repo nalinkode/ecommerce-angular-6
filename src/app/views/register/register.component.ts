@@ -18,6 +18,7 @@ export class RegisterComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
   UserPassword: any;
  
+ 
   constructor(
      private fb: FormBuilder,
      private router: Router,

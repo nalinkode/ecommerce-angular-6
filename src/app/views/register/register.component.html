@@ -1,131 +1,53 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<div class="panel panel-default" style="border-color: rgb(133, 133, 247)">
-				<div class="panel">
-					<div class="text-center">
-						<h3>
-							<i class="fa fa-user-o" style="font-size:36px"></i>
-						</h3>
-						<h2 class="text-center">Sign Up</h2>
-						<div class="panel">
-							<form [formGroup] = "registerForm" (ngSubmit) = "registerForm.valid && onSubmit()" class="col s12 white">
-								
-                <div class="form-group">
-									<label for="firstName">First name</label>
-									<input type="text" 
-                  name="firstName" 
-                  class="form-control"  
-                  formControlName="firstName"
-                  placeholder="Enter first name" 
-                  id="firstName"
-                  [ngClass]="{'is-invalid':registerForm.get('firstName').touched && registerForm.get('firstName').invalid}"/>
-									
-                  <div *ngIf="registerForm.get('firstName').touched &&        registerForm.get('firstName').invalid"   class="invalid-feedback">
-									<div *ngIf="registerForm.get('firstName').errors.required">Name is required 
-                   </div>
-									</div>
-								</div>
-
+<main>
+	<section class="register section-padding">
+		<div class="container pt-lg-md">
+			<div class="row justify-content-center">
+				<div class="col-lg-5 col-md-6">
+					<div class="card border-0">
+						<div class="card-header layout-card-header border-0">
+							<div class="text-left">
+								<h3>Sign up for free.</h3>
+								<p>Please fill below information to create a new account</p>
+							</div>
+						</div>
+						<div class="card-body layout-card-body">
+							<form [formGroup]="registerForm" (ngSubmit)="registerForm.valid && onSubmit()">
+								<div class="form-group mb-3">
+									<input class="form-control custom-form-control" placeholder="Enter your first name" type="text" formControlName="firstName" required name="FirstName" maxlength="50" pattern="^[a-zA-Z]+$"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('firstName').errors && (registerForm.get('firstName').dirty || registerForm.get('firstName').touched)" placement="bottom" ngbTooltip="Please enter valid first name." tooltipClass="my-custom-class"></span> </div>
 								<div class="form-group">
-									<label for="lastName">Last name</label>
-									<input type="text" 
-                  name="lastName" 
-                  class="form-control"  
-                  formControlName="lastName"
-                  placeholder="Enter full name" id="lastName"
-                   [ngClass]="{'is-invalid':registerForm.get('lastName').touched && registerForm.get('lastName').invalid}"/>
-									
-                  <div *ngIf="registerForm.get('lastName').touched &&        registerForm.get('lastName').invalid"   class="invalid-feedback">
-									<div *ngIf="registerForm.get('lastName').errors.required">Name is required 
-                  </div>
-									</div>
+									<input class="form-control custom-form-control" placeholder="Enter your last name" type="text" formControlName="lastName" required name="LastName" maxlength="50" pattern="^[a-zA-Z]+$"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('lastName').errors && (registerForm.get('lastName').dirty || registerForm.get('lastName').touched)" placement="bottom" ngbTooltip="Please enter valid last name." tooltipClass="my-custom-class"></span> </div>
+								<div class="form-group mb-3">
+									<input class="form-control custom-form-control" placeholder="Enter your mobile number" formControlName="mobileNo" type="text" required>
+									<div *ngIf="registerForm.get('mobileNo').touched && registerForm.get('mobileNo').invalid" class="alert alert-danger"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('mobileNo').errors.required" placement="bottom" ngbTooltip="Mobile Number is required." tooltipClass="my-custom-class">
+                    </span> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('mobileNo').errors.pattern" placement="bottom" ngbTooltip="Please, Enter 10 digit Mobile Number." tooltipClass="my-custom-class">
+                    </span> </div>
 								</div>
-								
-                <div class="form-group">
-									<label for="email">E-mail</label>
-									<input type="email" 
-                  class="form-control" 
-                  formControlName="email" 
-                  id="email" 
-                  placeholder="Enter Email"
-                  [ngClass]="{'is-invalid':registerForm.get('email').touched && registerForm.get('email').invalid}"/>
-									
-                  <div *ngIf="registerForm.get('email').touched &&         registerForm.get('email').invalid"   class="invalid-feedback">
-									<div *ngIf="registerForm.get('email').errors.required">Email is required 
-                  </div>
-									<div *ngIf="registerForm.get('email').errors.email">
-                  Email must be valid email address                          </div>
-									</div>
+								<div class="form-group mb-3">
+									<input class="form-control custom-form-control" placeholder="Enter your email address" type="text" formControlName="email">
+									<div *ngIf="registerForm.get('email').touched && registerForm.get('email').invalid" class="alert alert-danger"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('email').errors.required" placement="bottom" ngbTooltip="Email address is required." tooltipClass="my-custom-class">
+                    </span> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('email').errors.pattern" placement="bottom" ngbTooltip="Please, Enter valid email address ." tooltipClass="my-custom-class">
+                    </span> </div>
 								</div>
-
 								<div class="form-group">
-									<label for="mobileno">Mobile number</label>
-									<input type="tel" 
-                  id="mobileno" 
-                  class="form-control" 
-                   formControlName="mobileno" 
-                   placeholder="Enter Mobile number"
-                   [ngClass]="{'is-invalid':registerForm.get('mobileno').touched && registerForm.get('mobileno').invalid}"/>
-									
-                  <div *ngIf="registerForm.get('mobileno').touched &&         registerForm.get('mobileno').invalid"   class="invalid-feedback">
-									<div *ngIf="registerForm.get('mobileno').errors.required">Mobile number is required 
-                  </div>
+									<input class="form-control custom-form-control" placeholder="Enter your password" type="password" formControlName="password" (keydown.space)="$event.preventDefault()"> <span class="fa fa-info-circle errspan" *ngIf="registerForm.get('password').errors && (registerForm.get('password').dirty || registerForm.get('password').touched)" placement="bottom" ngbTooltip="Password must contain minimum six characters" tooltipClass="my-custom-class"></span> </div>
+								<div class="password_secured">
+									<div class="icon-description">
+										<p><i class="fas fa-shield-alt"></i> Your passwords at ShopArena are encrypted and secured</p>
 									</div>
 								</div>
-								
-                <div class="form-group">
-									<label for="password">Password</label>
-									<input type="password" 
-                  formControlName="password" 
-                  class="form-control" 
-                  id="password" 
-                  placeholder="Enter Password"  
-                  [ngClass]="{'is-invalid':registerForm.get('password').touched && registerForm.get('password').invalid}"/>
-									<div *ngIf="registerForm.get('password').touched &&         registerForm.get('password').invalid"   class="invalid-feedback">
-									<div *ngIf="registerForm.get('password').errors.required">Password is required 
-                  </div>
-									<div *ngIf="registerForm.get('password').errors.minlength">
-                  password must be at least 6 characters</div>
-									</div>
+								<div class="text-center">
+									<button type="submit" class="btn btn-lg btn-primary btn-block" [disabled]="!registerForm.valid" (click)=register()>Sign Up</button>
 								</div>
-                
-								<button type="submit" [disabled]= "!registerForm.valid"
-                  class="btn btn-primary btn-block"> Submit</button>
 							</form>
-							<a [routerLink]="['/login']" class="btn btn-link">Sign-In</a>
+						</div>
+						<div class="card-footer layout-card-footer text-center border-0">
+							<p>By registering you confirm that you accept the
+								<br> <a href="">Terms and Conditions</a> and <a href="">Privacy Policy</a> </p>
+							<p class="mb-0">Already User? <a (click)="login()" class="sign-in"> Sign in</a></p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	</section>
+</main>

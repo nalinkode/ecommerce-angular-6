@@ -18,7 +18,6 @@ export class RegisterComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
   UserPassword: any;
  
- 
   constructor(
      private fb: FormBuilder,
      private router: Router,
@@ -36,8 +35,8 @@ export class RegisterComponent implements OnInit {
    this.registerForm = this.fb.group({
      firstName: ['', Validators.required],
      lastName: ['', Validators.required],
-     email: ['', Validators.required],
-     mobileno: ['', Validators.required],
+     email: ['', [Validators.required, Validators.pattern("^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"),Validators.maxLength(50)]],
+     mobileNo: ['', [Validators.required, Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]],
      password: ['', [Validators.required, Validators.minLength(6)]]
    });
   }

@@ -107,6 +107,8 @@ export class AddProductImageComponent implements OnInit {
     this.images = this.images.filter((a) => a !== url);
   }
 
+  
+
    blockedUI(value) {
      if (value) {
        this.blockUI.start(''); // Start blocking

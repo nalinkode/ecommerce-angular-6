@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild,ElementRef } from '@angular/core';
 import { ActivatedRoute , Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { DialogService } from '../../../shared/dialog.service';
@@ -17,12 +17,15 @@ import { BlockUI, NgBlockUI } from 'ng-block-ui';
 export class AddProductImageComponent implements OnInit {
   public productImageForm : FormGroup; 
   images = [];
+  file : string;
+  myFiles: string [] = [];
+
   isLoading = true;
   @BlockUI() blockUI: NgBlockUI;
   ELEMENT_DATA : Image[];
   displayedColumns: string[] = ['serialNumber','imageId','location', 'action'];
   dataSource = new MatTableDataSource<Image>(this.ELEMENT_DATA);
-
+  @ViewChild('image') image : ElementRef;
   constructor(private route : ActivatedRoute,
   private router : Router,
   private productService : ProductService,
@@ -37,21 +40,19 @@ export class AddProductImageComponent implements OnInit {
 
   createProductImageForm(){
     this.productImageForm = this.fb.group({
-      file: new FormControl('', [Validators.required]),
-      fileSource: new FormControl('', [Validators.required])
+      file: ['']
    });
   }
 
    onFileChange(event) {
     if (event.target.files && event.target.files[0]) {
-        var filesAmount = event.target.files.length;
-        for (let i = 0; i < filesAmount; i++) {
+        for (let i = 0; i < event.target.files.length; i++) {
+                this.file = event.target.files[i];
+                this.myFiles.push(event.target.files[i]);
+                this.productImageForm.get('file').setValue(this.myFiles);
                 var reader = new FileReader();
                 reader.onload = (event:any) => {
-                   this.images.push(event.target.result); 
-                   this.productImageForm.patchValue({
-                      fileSource: this.images
-                   });
+                   this.images.push(event.target.result);
                 }
                 reader.readAsDataURL(event.target.files[i]);
         }
@@ -88,23 +89,32 @@ export class AddProductImageComponent implements OnInit {
   }
 
   onSubmit(){
+    let id;
     this.route.paramMap.subscribe(params =>{
-      const productId = +params.get('id');
-      if(productId) {
-          debugger
-          this.productService.addProductImage(this.productImageForm.value,productId);
-          this.toaster.successToastr('Product added successfully .');  
+       id = +params.get('id');
+     });
+      if(id) {
+          const formData = new FormData();
+          for(let i = 0; i< this.myFiles.length; i++){
+             formData.append('fileUpload[]', this.myFiles[i]);
+          }
+          const imageData = { 'content': formData,'productId': id }
+
+          this.productService.addProductImage(formData,id).subscribe(resp=>{
+               this.toaster.successToastr('Product added successfully .');
+          }, err => {
+        
+          });             
        }
-  });
   }
    
   goToProduct(){
     this.router.navigate(['admin/product']);
   }
 
-  private deleteImage(url: any) {
-    debugger
-    this.images = this.images.filter((a) => a !== url);
+  private deleteImage(index) {
+    console.log(index)
+    this.images.splice(index,1);
   }
 
   

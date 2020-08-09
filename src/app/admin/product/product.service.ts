@@ -22,14 +22,14 @@ export class ProductService {
     return this.http.get('/assets/productbyid.json');
   }
   
-  public addProduct(product:Product){
+  public addProduct(product:Product):Observable<any>{
     console.log(product)
     debugger
+    return
   }
 
-  public addProductImage(product,productId){
-    console.log(product)
-    debugger
+  public addProductImage(formData,productId):Observable<any>{
+    return ;
   }
 
 

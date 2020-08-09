@@ -16,7 +16,7 @@
                 Maximum number of allowed files 10 with 300 KB for each
             </li>
             <li>
-                ou can select files from different folders
+                You can select files from different folders
             </li>
   </ul>
 </div>
@@ -24,12 +24,12 @@
 <form [formGroup]="productImageForm" (ngSubmit)="onSubmit()">
 		<div class="form-group row mt-4">
 			<div class="col-sm-5 ml-2">
-				<input type="file" class="form-control-" formControlName="file" id="file" multiple="" (change)="onFileChange($event)" accept="image/jpeg, image/png, image/gif,"> 
+				<input type="file" class="form-control-" name="file" id="file" multiple="" (change)="onFileChange($event)" accept="image/jpeg, image/png, image/gif"> 
         </div>
         <button type="submit" class="btn btn-primary">Upload</button>
 		</div>
-		<div class="row ml-2 img-thumbnail" *ngFor='let url of images | slice:1'> 
-			 <img [src]="url" height="100px" width="100px" style="margin: 4px; vertical-align: text-top;"><span class="delete-entry" style="cursor: pointer; padding: 12px;" (click)="deleteImage($event)">x</span>
+		<div class="row ml-2 img-thumbnail" *ngFor='let url of images; let index = index'> 
+			 <img [src]="url" height="100px" width="100px" style="margin: 4px; vertical-align: text-top;"><span class="delete-entry" style="cursor: pointer; padding: 12px;" (click)="deleteImage(index)">x</span>
       <br/>
     </div>
 	</form>

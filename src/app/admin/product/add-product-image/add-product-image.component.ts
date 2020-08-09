@@ -117,8 +117,6 @@ export class AddProductImageComponent implements OnInit {
     this.images.splice(index,1);
   }
 
-  
-
    blockedUI(value) {
      if (value) {
        this.blockUI.start(''); // Start blocking

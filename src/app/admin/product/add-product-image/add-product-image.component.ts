@@ -93,18 +93,18 @@ export class AddProductImageComponent implements OnInit {
     this.route.paramMap.subscribe(params =>{
        id = +params.get('id');
      });
-      if(id) {
+      if(id && this.myFiles.length != 0) {
           const formData = new FormData();
           for(let i = 0; i< this.myFiles.length; i++){
              formData.append('fileUpload[]', this.myFiles[i]);
           }
           const imageData = { 'content': formData,'productId': id }
 
-          this.productService.addProductImage(formData,id).subscribe(resp=>{
-               this.toaster.successToastr('Product images added successfully');
-          }, err => {
+          //this.productService.addProductImage(formData,id).subscribe(resp=>{
+            //   this.toaster.successToastr('Product images added successfully');
+          //}, err => {
         
-          });             
+          //});             
        }
   }
    
@@ -112,10 +112,12 @@ export class AddProductImageComponent implements OnInit {
     this.router.navigate(['admin/product']);
   }
 
-  private deleteImage(index) {
-    console.log(index)
+  private removeImage(index) {
     this.images.splice(index,1);
+    this.myFiles.splice(index,1);
   }
+
+  
 
    blockedUI(value) {
      if (value) {

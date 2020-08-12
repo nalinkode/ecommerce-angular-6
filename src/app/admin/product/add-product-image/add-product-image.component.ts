@@ -96,7 +96,7 @@ export class AddProductImageComponent implements OnInit {
       if(id && this.myFiles.length != 0) {
           const formData = new FormData();
           for(let i = 0; i< this.myFiles.length; i++){
-             formData.append('fileUpload[]', this.myFiles[i]);
+             formData.append('fileUp[]', this.myFiles[i]);
           }
           const imageData = { 'content': formData,'productId': id }
 

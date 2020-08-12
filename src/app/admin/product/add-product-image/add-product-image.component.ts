@@ -100,11 +100,11 @@ export class AddProductImageComponent implements OnInit {
           }
           const imageData = { 'content': formData,'productId': id }
 
-          //this.productService.addProductImage(formData,id).subscribe(resp=>{
-            //   this.toaster.successToastr('Product images added successfully');
-          //}, err => {
+          this.productService.addProductImage(formData,id).subscribe(resp=>{
+               this.toaster.successToastr('Product images added successfully');
+          }, err => {
         
-          //});             
+          });             
        }
   }
    

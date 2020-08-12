@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { Product } from '../product/product';
 import {Observable} from 'rxjs';
-import { Image } from './image';
+import { Image } from '../../shared/model/image';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -33,7 +34,11 @@ export class ProductService {
   }
 
   public addProductImage(formData,productId):Observable<any>{
-    return ;
+     return this.http.post<Image>(`${this.baseUrl}/add`,formData, {
+     headers: new HttpHeaders({
+       'Content-Type' : 'application/json'
+     })
+   });
   }
 
 

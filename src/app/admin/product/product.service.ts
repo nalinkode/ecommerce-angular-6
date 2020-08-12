@@ -34,7 +34,7 @@ export class ProductService {
   }
 
   public addProductImage(formData,productId):Observable<any>{
-     return this.http.post<Image>(`${this.baseUrl}/upload/productId`,formData, {
+     return this.http.post<Image>(`${this.baseUrl}/upload/1`,formData, {
      headers: new HttpHeaders({
        'Content-Type' : 'multipart/form-data'
      })

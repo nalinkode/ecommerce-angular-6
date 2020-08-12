@@ -63,10 +63,10 @@ export class AddProductImageComponent implements OnInit {
      this.route.paramMap.subscribe(params =>{
       const productId = +params.get('id');
       if(productId) {
-         this.productService.getImageProductById(productId).subscribe(resp =>{
+         this.productService.geImageProductById(productId).subscribe(resp =>{
               debugger
               console.log(resp)
-              this.dataSource.data = resp.imgUrl as Image[];
+             // this.dataSource.data = resp.imgUrl as Image[];
               this.isLoading = false;
          }, err => {
                this.isLoading = false;

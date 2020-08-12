@@ -34,7 +34,7 @@ export class ProductService {
   }
 
   public addProductImage(formData,productId):Observable<any>{
-     return this.http.post(`${this.baseUrl}/upload/19`,formData,{ }).pipe(map(resp =>));
+     return this.http.post(`${this.baseUrl}/upload/19`,formData,{ }).pipe(map(resp => resp));
   }
 
 
@@ -49,6 +49,6 @@ export class ProductService {
 
 
   public deleteProductImage(id){
-    
+    return this.http.delete(`${this.baseUrl}/delete/${id}`).pipe(map(resp => re)) 
   }  
 }

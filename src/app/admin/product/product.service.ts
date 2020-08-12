@@ -22,7 +22,8 @@ export class ProductService {
 
 
   public geImageProductById(productId : number): Observable<Image>{
-    return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/${productId}`);
+    //return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/${productId}`);
+    return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/19`);
   }
   
   public addProduct(product:Product):Observable<any>{

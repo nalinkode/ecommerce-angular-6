@@ -4,11 +4,14 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { Product } from '../product/product';
 import {Observable} from 'rxjs';
+import { Image } from './image';
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  
+
+
+  baseUrl = 'http://localhost:8080/image';
   productList: Product[]=[]
 
   constructor(private http: HttpClient) { }
@@ -18,8 +21,8 @@ export class ProductService {
   }
 
 
-  public getProductById(productId : number): Observable<Product>{
-    return this.http.get('/assets/productbyid.json');
+  public geImageProductById(productId : number): Observable<Image>{
+    return this.http.get<Image>(`${this.baseUrl}/getImageById/${productId}`);
   }
   
   public addProduct(product:Product):Observable<any>{

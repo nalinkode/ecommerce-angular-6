@@ -64,7 +64,7 @@ export class AddProductImageComponent implements OnInit {
       const productId = +params.get('id');
       if(productId) {
          this.productService.geImageProductById(productId).subscribe(resp =>{
-                        this.dataSource.data = resp as Image[];
+              this.dataSource.data = resp as Image[];
               this.isLoading = false;
          }, err => {
                this.isLoading = false;
@@ -74,8 +74,8 @@ export class AddProductImageComponent implements OnInit {
   }
 
 
-  deleteProductImage(productImage){
-    console.log(productImage)
+  deleteProductImage(id : number){
+
     this.dialogService.openConfirmedDialog('Are you sure to delete this product image ?')
      .afterClosed().subscribe(res => {
         if(res){

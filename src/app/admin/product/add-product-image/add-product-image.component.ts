@@ -64,9 +64,7 @@ export class AddProductImageComponent implements OnInit {
       const productId = +params.get('id');
       if(productId) {
          this.productService.geImageProductById(productId).subscribe(resp =>{
-              debugger
-              console.log(resp)
-              this.dataSource.data = resp as Image[];
+                        this.dataSource.data = resp as Image[];
               this.isLoading = false;
          }, err => {
                this.isLoading = false;

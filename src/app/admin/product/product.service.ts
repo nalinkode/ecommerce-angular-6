@@ -49,6 +49,6 @@ export class ProductService {
 
 
   public deleteProductImage(id){
-    return this.http.delete(`${this.baseUrl}/delete/${id}`).pipe(map(resp => re)) 
+    return this.http.delete(`${this.baseUrl}/delete/${id}`).pipe(map(resp => resp);
   }  
 }

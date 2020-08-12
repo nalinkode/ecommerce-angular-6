@@ -34,7 +34,7 @@ export class AddProductImageComponent implements OnInit {
   private toaster: ToastrManager  ) { }
 
   ngOnInit() {
-     this.getByProductId();
+     this.getIByProductId();
      this.createProductImageForm();
   }
 
@@ -59,7 +59,7 @@ export class AddProductImageComponent implements OnInit {
     }
   }
 
-  getByProductId(){
+  getImageByProductId(){
      this.route.paramMap.subscribe(params =>{
       const productId = +params.get('id');
       if(productId) {

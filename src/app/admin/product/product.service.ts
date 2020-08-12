@@ -22,7 +22,7 @@ export class ProductService {
 
 
   public geImageProductById(productId : number): Observable<Image>{
-    return this.http.get<Image>(`${this.baseUrl}/getImageById/${productId}`);
+    return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/${productId}`);
   }
   
   public addProduct(product:Product):Observable<any>{

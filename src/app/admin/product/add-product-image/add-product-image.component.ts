@@ -98,10 +98,10 @@ export class AddProductImageComponent implements OnInit {
           for(let i = 0; i< this.myFiles.length; i++){
              formData.append('files', this.myFiles[i]);
           }
-          //const imageData = { 'content': formData,'productId': id }
 
           this.productService.addProductImage(formData,id).subscribe(resp=>{
                this.toaster.successToastr('Product images added successfully');
+               this.getImageByProductId();
           }, err => {
         
           });             

@@ -20,8 +20,8 @@ export class ProductService {
     return this.http.get<Product>(`${this.baseUrl}/all`).pipe(map(res => res));
   }
   
-  public addProduct(product:Product):Observable<any>{
-    console.log(product)
+  public addProduct(data):Observable<any>{
+    console.log(data)
     debugger
     return
   }

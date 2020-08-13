@@ -81,10 +81,23 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmit(){
-    this.productService.addProduct(this.productForm.value).subscribe(resp =>{
+     const data = {
+    "productName": this.productForm.value.productName,
+    "productPrice":this.productForm.value.productPrice,
+    "productOfferPrice":this.productForm.value.productOfferPrice,
+    "productDescription": this.productForm.value.productDescription, 
+    "productColor": this.productForm.value.productColor,
+    "productSize": this.productForm.value.productSize,
+    "productQuantity": this.productForm.value.productQuantity,
+    "subCategory":{
+      "subCategoryId":this.productForm.value.subCategory
+      }
+    };
+    
+    this.productService.addProduct(data).subscribe(resp =>{
       this.toaster.successToastr('Product added successfully .');  
-     this.dialogRef.close();
+      this.dialogRef.close();
  
     });
-     }
+  }
 }

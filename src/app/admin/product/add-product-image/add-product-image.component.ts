@@ -75,11 +75,11 @@ export class AddProductImageComponent implements OnInit {
 
 
   deleteProductImage(id : number){
-
     this.dialogService.openConfirmedDialog('Are you sure to delete this product image ?')
      .afterClosed().subscribe(res => {
         if(res){
-          this.productService.deleteProductImage(productImage);
+          this.productService.deleteProductImage(id);
+          
           this.toaster.successToastr('Product image deleted successfully.');
         }
      });

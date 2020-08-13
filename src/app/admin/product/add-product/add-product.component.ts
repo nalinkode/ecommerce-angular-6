@@ -5,7 +5,8 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { ProductService } from '../product.service';
 import { CategoryService } from '../../../shared/category.service';
 import { Category } from '../../../shared/model/category';
-
+import { Subcategory } from '../../../shared/model/sub-category';
+import { SubCategoryService } from '../../../shared/sub-category.service';
 @Component({
   selector: 'app-add-product',
   templateUrl: './add-product.component.html',
@@ -21,6 +22,7 @@ export class AddProductComponent implements OnInit {
   constructor(
     private productService : ProductService,
     private categoryService : CategoryService,
+    private subcategoryService : SubCategoryService,
     private dialogRef : MatDialogRef<AddProductComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
     private fb: FormBuilder,

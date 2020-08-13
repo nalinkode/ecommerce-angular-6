@@ -5,7 +5,7 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { CategoryService } from '../../../../shared/category.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Category } from '../../../../shared/category';
+import { Category } from '../../../../shared/model/category';
 
 @Component({
   selector: 'app-add-subcategory-dialog',

@@ -61,10 +61,11 @@
 			<div class="col-sm-8">
 					<select class="form-control" style="height: auto;" formControlName="productSize" id ="productSize">
 					<option value="" disabled>Select size..</option>
+          <option [value]="Null">Def</option>
 					<option [value]="Small">Small</option>
           <option [value]="Medium">Medium</option>
           <option [value]="Large">Large</option>
-          <option [value]="Extra large">Extra Large</option>
+          <option [value]="Extralarge">Extra Large</option>
 				</select>
 		</div>
      </div>

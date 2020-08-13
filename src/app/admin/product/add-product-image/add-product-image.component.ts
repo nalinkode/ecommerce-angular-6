@@ -100,6 +100,7 @@ export class AddProductImageComponent implements OnInit {
              formData.append('files', this.myFiles[i]);
           }
           this.productImageService.addProductImage(formData,id).subscribe(resp=>{
+               this.image.nativeElement.value = "";
                this.toaster.successToastr('Product images added successfully');
                this.getImageByProductId();
           }, err => {

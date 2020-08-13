@@ -24,7 +24,7 @@
 <form [formGroup]="productImageForm" (ngSubmit)="onSubmit()">
 		<div class="form-group row mt-4">
 			<div class="col-sm-5 ml-2">
-				<input type="file" class="form-control-" name="file" id="file" multiple="" (change)="onFileChange($event)" accept="image/*"> 
+				<input #image type="file" class="form-control-" name="file" id="file" multiple="" (change)="onFileChange($event)" accept="image/*"> 
         </div>
         <button type="submit" class="btn btn-primary">Upload</button>
 		</div>

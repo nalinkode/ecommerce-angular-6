@@ -1,11 +1,11 @@
-import { Image } from './image';
-
 export interface Product {
   productId: number;
   productName: string;
-  categoryId: number;
-  subCategoryId: number;
-  price: number;
-  imgUrl: Array<Image>;
-  description: string;
+  productPrice : number,
+  productOfferPrice : number,
+  productDescription : string,
+  productColor : string,
+  size: string,
+  isStock : boolean,
+  quantity : number
  }

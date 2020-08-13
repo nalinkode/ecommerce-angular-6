@@ -10,14 +10,14 @@ import {Observable} from 'rxjs';
 })
 export class ProductService {
 
-
+  baseUrl = 'http://localhost:8080/product';
 
   productList: Product[]=[]
 
   constructor(private http: HttpClient) { }
 
-  public getAllProduct():Observable<Product[]>{
-    return this.http.get('/assets/product.json').pipe(map(res => res));
+  public getAllProduct():Observable<Product>{
+    return this.http.get<Product>(`${this.baseUrl}/all`).pipe(map(res => res));
   }
   
   public addProduct(product:Product):Observable<any>{

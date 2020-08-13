@@ -23,7 +23,7 @@ export class ListProductComponent implements OnInit {
   @BlockUI() blockUI: NgBlockUI;
 
   ELEMENT_DATA : Product[];
-  displayedColumns: string[] = ['productId', 'productName', 'category', 'subCategory','imgUrl', 'price', 'offerPrice', 'description', 'action'];
+  displayedColumns: string[] = ['productId', 'productName', 'productPrice','productOfferPrice','productDescription','productColor','productSize','isStock','productQuantity', 'categoryName', 'subCategoryName','imgUrl', 'action'];
   dataSource = new MatTableDataSource<Product>(this.ELEMENT_DATA);
   
   isPopupOpen = false;
@@ -48,6 +48,8 @@ export class ListProductComponent implements OnInit {
   public getAllProduct(){
     let response = this.productService.getAllProduct()
     response.subscribe(list =>{
+      debugger
+      console.log(list)
       this.dataSource.data = list as Product[];
       this.isLoading = false;
       }, err =>{

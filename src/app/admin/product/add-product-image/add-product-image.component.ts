@@ -3,7 +3,7 @@ import { ActivatedRoute , Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { DialogService } from '../../../shared/dialog.service';
 import { Product } from '../product';
-import { Image } from '../../../shared/model/i';
+import { Image } from '../../../shared/model/image';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatTableDataSource } from '@angular/material/table';
@@ -99,7 +99,6 @@ export class AddProductImageComponent implements OnInit {
           for(let i = 0; i< this.myFiles.length; i++){
              formData.append('files', this.myFiles[i]);
           }
-
           this.productImageService.addProductImage(formData,id).subscribe(resp=>{
                this.toaster.successToastr('Product images added successfully');
                this.getImageByProductId();
@@ -117,8 +116,6 @@ export class AddProductImageComponent implements OnInit {
     this.images.splice(index,1);
     this.myFiles.splice(index,1);
   }
-
-  
 
    blockedUI(value) {
      if (value) {

@@ -5,7 +5,8 @@
 
 <mat-dialog-content>
 	<form [formGroup]="productForm" (ngSubmit)="onSubmit()">
-		<div class="form-group row">
+		
+    <div class="form-group row">
 			<label for="productName" class="col-sm-4 col-form-label">Product Name</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" formControlName="productName" id="name"> </div>
@@ -20,6 +21,7 @@
 				</select>
 			</div>
 		</div>
+
 		<div class="form-group row">
 			<label for="subcategroy" class="col-sm-4 col-form-label">Sub-category</label>
 			<div class="col-sm-8">
@@ -29,12 +31,14 @@
 				</select>
 			</div>
 		</div>
-		<div class="form-group row">
+		
+    <div class="form-group row">
 			<label for="productPrice" class="col-sm-4 col-form-label">Price</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" formControlName="productPrice" id="productPrice"> </div>
 		</div>
-		<div class="form-group row">
+	
+  	<div class="form-group row">
 			<label for="productOfferPrice" class="col-sm-4 col-form-label">Offer Price</label>
 			<div class="col-sm-8">
 				<input type="text" class="form-control" formControlName="productOfferPrice" id="productOfferPrice"> </div>
@@ -53,7 +57,7 @@
 		</div>
     
      <div class="form-group row">
-			<label for="productColor" class="col-sm-4 col-form-label">Product Size</label>
+			<label for="productSize" class="col-sm-4 col-form-label">Product Size</label>
 			<div class="col-sm-8">
 					<select class="form-control" style="height: auto;" formControlName="productSize" id ="productSize">
 					<option value="" disabled>Select size..</option>
@@ -63,6 +67,7 @@
           <option [value]="Extra large">Extra Large</option>
 				</select>
 		</div>
+     </div>
 
 		<div class="form-group row">
 			<label for="productDescription" class="col-sm-4 col-form-label">Description</label>

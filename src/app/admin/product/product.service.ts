@@ -4,7 +4,6 @@ import { map } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 import { Product } from '../product/product';
 import {Observable} from 'rxjs';
-import { Image } from '../../shared/model/image';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +11,7 @@ import { Image } from '../../shared/model/image';
 export class ProductService {
 
 
-  baseUrl = 'http://localhost:8080/image';
+
   productList: Product[]=[]
 
   constructor(private http: HttpClient) { }
@@ -20,23 +19,12 @@ export class ProductService {
   public getAllProduct():Observable<Product[]>{
     return this.http.get('/assets/product.json').pipe(map(res => res));
   }
-
-
-  public geImageProductById(productId : number): Observable<Image>{
-    //return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/${productId}`);
-    return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/19`);
-  }
   
   public addProduct(product:Product):Observable<any>{
     console.log(product)
     debugger
     return
   }
-
-  public addProductImage(formData,productId):Observable<any>{
-     return this.http.post(`${this.baseUrl}/upload/19`,formData,{ }).pipe(map(resp => resp));
-  }
-
 
   public editProduct(product:Product){
     debugger
@@ -48,8 +36,6 @@ export class ProductService {
   }
 
 
-  public deleteProductImage(id){
-    return this.http.delete<>(`${this.baseUrl}/delete/${id}`).pipe(map(resp => resp));
-  }
+ 
     
 }

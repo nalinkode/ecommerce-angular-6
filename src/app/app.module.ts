@@ -59,6 +59,7 @@ import { SubcategoryListComponent } from './admin/category/subcategory-list/subc
 import { AddSubcategoryDialogComponent } from './admin/category/subcategory-list/add-subcategory-dialog/add-subcategory-dialog.component';
 import { OrderService } from './shared/order.service';
 import { AddCategoryDialogComponent } from './admin/category/category-list/add-category-dialog/add-category-dialog.component';
+import { ProductImageService } from './shared/product-image.service';
 
 @NgModule({
   imports: [
@@ -119,7 +120,8 @@ import { AddCategoryDialogComponent } from './admin/category/category-list/add-c
   ProductService,
   DialogService,
   CategoryService,
-  OrderService]
+  OrderService,
+  ProductImageService]
 })
 export class AppModule { }
 

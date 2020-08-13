@@ -3,11 +3,12 @@ import { ActivatedRoute , Router } from '@angular/router';
 import { ProductService } from '../product.service';
 import { DialogService } from '../../../shared/dialog.service';
 import { Product } from '../product';
-import { Image } from '../image';
+import { Image } from '../../../shared/model/i';
 import { FormBuilder, FormGroup,FormControl, Validators } from '@angular/forms';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatTableDataSource } from '@angular/material/table';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
+import { ProductImageService} from '../../../shared/product-image.service';
 
 @Component({
   selector: 'app-add-product-image',
@@ -28,7 +29,7 @@ export class AddProductImageComponent implements OnInit {
   @ViewChild('image') image : ElementRef;
   constructor(private route : ActivatedRoute,
   private router : Router,
-  private productService : ProductService,
+  private productImageService : ProductImageService,
   private dialogService : DialogService,
   private fb: FormBuilder,
   private toaster: ToastrManager  ) { }
@@ -63,7 +64,7 @@ export class AddProductImageComponent implements OnInit {
      this.route.paramMap.subscribe(params =>{
       const productId = +params.get('id');
       if(productId) {
-         this.productService.geImageProductById(productId).subscribe(resp =>{
+         this.productImageService.geImageProductById(productId).subscribe(resp =>{
               this.dataSource.data = resp as Image[];
               this.isLoading = false;
          }, err => {
@@ -78,7 +79,7 @@ export class AddProductImageComponent implements OnInit {
     this.dialogService.openConfirmedDialog('Are you sure to delete this product image ?')
      .afterClosed().subscribe(res => {
         if(res){
-          this.productService.deleteProductImage(id).subscribe(resp =>{
+          this.productImageService.deleteProductImage(id).subscribe(resp =>{
             console.log(resp)
            this.getImageByProductId();
           });
@@ -99,7 +100,7 @@ export class AddProductImageComponent implements OnInit {
              formData.append('files', this.myFiles[i]);
           }
 
-          this.productService.addProductImage(formData,id).subscribe(resp=>{
+          this.productImageService.addProductImage(formData,id).subscribe(resp=>{
                this.toaster.successToastr('Product images added successfully');
                this.getImageByProductId();
           }, err => {

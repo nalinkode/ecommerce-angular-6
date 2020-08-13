@@ -4,7 +4,7 @@ import { ToastrManager } from 'ng6-toastr-notifications';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ProductService } from '../product.service';
 import { CategoryService } from '../../../shared/category.service';
-import { Category } from '../../../shared/category';
+import { Category } from '../../../shared/model/category';
 
 @Component({
   selector: 'app-add-product',

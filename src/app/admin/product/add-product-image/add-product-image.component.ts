@@ -79,7 +79,7 @@ export class AddProductImageComponent implements OnInit {
      .afterClosed().subscribe(res => {
         if(res){
           this.productService.deleteProductImage(id);
-          
+          this.getImageByProductId();
           this.toaster.successToastr('Product image deleted successfully.');
         }
      });

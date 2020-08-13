@@ -5,7 +5,7 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dial
 import { ProductService } from '../product.service';
 import { CategoryService } from '../../../shared/category.service';
 import { Category } from '../../../shared/model/category';
-import { Subcategory } from '../../../shared/model/sub-category';
+import { SubCategory } from '../../../shared/model/sub-category';
 import { SubCategoryService } from '../../../shared/sub-category.service';
 @Component({
   selector: 'app-add-product',

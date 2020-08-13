@@ -48,9 +48,12 @@ export class AddProductComponent implements OnInit {
      productName: ['', Validators.required],
      category: ['', Validators.required],
      subCategory: ['', Validators.required],
-     price: ['', Validators.required],
-     offerPrice: ['' , Validators.required],
-     description: ['', Validators.required]
+     productPrice: ['', Validators.required],
+     productOfferPrice: ['' , Validators.required],
+     productDescription: ['', Validators.required],
+     productColor: ['', Validators.required],
+     productQuantity: ['', Validators.required],
+    productSize: ['', Validators.required],
    });
   }
 

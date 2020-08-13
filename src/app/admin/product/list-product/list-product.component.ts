@@ -86,12 +86,14 @@ export class ListProductComponent implements OnInit {
   });
   }
 
-  public deleteProduct(eproduct){
+  public deleteProduct(productId : number){
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
         if(res){
-          this.productService.deleteProduct(eproduct);
-          this.toastr.successToastr('Product deleted successfully.');;
+          this.productService.deleteProduct(productId).subscribe(()=>{
+               this.toastr.successToastr('Product deleted successfully.');
+          });
+        
 
         }
      });

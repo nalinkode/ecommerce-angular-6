@@ -30,9 +30,8 @@ export class ProductService {
     debugger
   }
     
-  public deleteProduct(product:Product){
-    console.log('The product to delete .....');
-    console.log(product);
+  public deleteProduct(productId){
+    return this.http.delete<void>(`${this.baseUrl}/delete/${productId}`).pipe(map(resp => resp));
   }
 
 

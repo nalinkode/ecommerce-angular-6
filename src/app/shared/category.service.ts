@@ -11,7 +11,7 @@ export class CategoryService {
 constructor(private http: HttpClient) { }
 
  baseUrl = 'http://localhost:8080/category';
-/
+
  getAllCategory(){
     return this.http.get<Category>(`${this.baseUrl}/all`);
  }

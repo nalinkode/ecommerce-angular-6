@@ -14,8 +14,8 @@ export class ProductImageService {
   constructor(private http: HttpClient) { }
   
   public geImageProductById(productId : number): Observable<Image>{
-    //return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/${productId}`);
-    return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/19`);
+    return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/${productId}`);
+    //return this.http.get<Image>(`${this.baseUrl}/getImageByProductId/19`);
   }
 
    public addProductImage(formData,productId):Observable<any>{

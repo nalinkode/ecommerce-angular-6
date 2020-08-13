@@ -26,7 +26,7 @@ export class AddProductImageComponent implements OnInit {
   ELEMENT_DATA : Image[];
   displayedColumns: string[] = ['serialNumber','imageId','location', 'action'];
   dataSource = new MatTableDataSource<Image>(this.ELEMENT_DATA);
-  @ViewChild('image') image : ElementRef;
+  @ViewChild('imageFile') imageFile : ElementRef;
   constructor(private route : ActivatedRoute,
   private router : Router,
   private productImageService : ProductImageService,
@@ -79,9 +79,8 @@ export class AddProductImageComponent implements OnInit {
     this.dialogService.openConfirmedDialog('Are you sure to delete this product image ?')
      .afterClosed().subscribe(res => {
         if(res){
-          this.productImageService.deleteProductImage(id).subscribe(resp =>{
-            console.log(resp)
-           this.getImageByProductId();
+          this.productImageService.deleteProductImage(id).subscribe(() =>{
+              this.getImageByProductId();
           });
           this.toaster.successToastr('Product image deleted successfully.');
         }
@@ -99,8 +98,10 @@ export class AddProductImageComponent implements OnInit {
           for(let i = 0; i< this.myFiles.length; i++){
              formData.append('files', this.myFiles[i]);
           }
+        
           this.productImageService.addProductImage(formData,id).subscribe(resp=>{
-               this.image.nativeElement.value = "";
+               
+               this.imageFile.nativeElement.value = "";
                this.toaster.successToastr('Product images added successfully');
                this.getImageByProductId();
           }, err => {

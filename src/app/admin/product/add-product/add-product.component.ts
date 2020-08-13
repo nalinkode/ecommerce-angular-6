@@ -81,8 +81,10 @@ export class AddProductComponent implements OnInit {
   }
 
   onSubmit(){
-    this.productService.addProduct(this.productForm.value);
-    this.toaster.successToastr('Product added successfully .');  
-    this.dialogRef.close();
-  }
+    this.productService.addProduct(this.productForm.value).subscribe(resp =>{
+      this.toaster.successToastr('Product added successfully .');  
+     this.dialogRef.close();
+ 
+    });
+     }
 }

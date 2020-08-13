@@ -48,8 +48,6 @@ export class ListProductComponent implements OnInit {
   public getAllProduct(){
     let response = this.productService.getAllProduct()
     response.subscribe(list =>{
-      debugger
-      console.log(list)
       this.dataSource.data = list as Product[];
       this.isLoading = false;
       }, err =>{

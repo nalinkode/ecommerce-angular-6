@@ -35,8 +35,11 @@ export class AddProductComponent implements OnInit {
      this.editProductForm();
   }
 
-  onChangeCategory(e) {
-     
+  onChangeCategory(id) {
+     this.subcategoryService.getSubCategoryById(id).subscribe(resp => {
+       this.subCategories = resp as SubCategory[];
+    });
+
   }
 
   createProductForm(){

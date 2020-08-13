@@ -22,8 +22,11 @@ export class ProductService {
   
   public addProduct(data):Observable<any>{
     console.log(data)
-    debugger
-    return
+     return this.http.post<>(`${this.baseUrl}/add`,data, {
+     headers: new HttpHeaders({
+       'Content-Type' : 'application/json'
+     })
+   });
   }
 
   public editProduct(product:Product){

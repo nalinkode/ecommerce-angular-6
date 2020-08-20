@@ -8,6 +8,10 @@
   box-sizing: content-box;
 }
 
+.background-custom {
+   background:#2F4F4F!important;
+}
+
 .site-footer
 {
   background:#2F4F4F!important;

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { fafaceboo } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +6,11 @@ import { fafaceboo } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  dateYear: number = new Date().getFullYear();
+  dateYear : number  dateYear = new Date().getFullYear();
   constructor() { }
    
   ngOnInit() {
+
   }
 
 }

@@ -65,8 +65,8 @@ export class CategoryListComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
-  });
-    this.getAllCategory(); 
+    this.getAllCategory();
+  }); 
   }
 
    public editCategory(eCategory:Category[]){
@@ -81,6 +81,7 @@ export class CategoryListComponent implements OnInit {
     });
     dialogRef.afterClosed().subscribe(result =>{
     this.isPopupOpen = false;
+    
   });
     this.getAllCategory();
   }

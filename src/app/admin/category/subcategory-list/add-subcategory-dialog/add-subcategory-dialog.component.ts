@@ -84,5 +84,4 @@ export class AddSubcategoryDialogComponent implements OnInit {
   }
   }
 
-
 }

@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 import { DialogService } from '../../../shared/dialog.service';
 import { Category } from '../../../shared/category';
 import { CategoryService } from '../../../shared/category.service';
+import { SubCategoryService } from '../../../shared/sub-category.service';
 import { AddSubcategoryDialogComponent } from './add-subcategory-dialog/add-subcategory-dialog.component';
 
 @Component({
@@ -30,6 +31,7 @@ export class SubcategoryListComponent implements OnInit {
   
   constructor(
              private categoryService : CategoryService,
+             private subCategoryService : SubCategoryService,
              private dialogService : DialogService,
              private router: Router,
              private toastr : ToastrManager,     
@@ -103,9 +105,9 @@ export class SubcategoryListComponent implements OnInit {
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
         if(res){
-      
-          this.toastr.successToastr('Sub category deleted successfully.');;
-
+          this.subCategoryService.deleteSubCategoryById(subCategoryId).subscribe(resp =>{
+            this.toastr.successToastr('Sub category deleted successfully.');
+          })
         }
      });
   }

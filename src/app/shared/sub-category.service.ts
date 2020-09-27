@@ -35,6 +35,4 @@ export class SubCategoryService {
   deleteSubCategoryById(data){
     return this.http.delete<void>(`${this.baseUrl}/delete/${data.subCategoryId}`);
   }
-
-
 }

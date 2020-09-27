@@ -83,5 +83,5 @@ export class AddSubcategoryDialogComponent implements OnInit {
     }
     this.dialogRef.close();
   }
-  
+
 }

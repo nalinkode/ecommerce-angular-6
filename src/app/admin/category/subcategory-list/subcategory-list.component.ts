@@ -103,7 +103,7 @@ export class SubcategoryListComponent implements OnInit {
      this.dialogService.openConfirmedDialog('Are you sure to delete this record ?')
      .afterClosed().subscribe(res => {
         if(res){
-         
+      
           this.toastr.successToastr('Sub category deleted successfully.');;
 
         }

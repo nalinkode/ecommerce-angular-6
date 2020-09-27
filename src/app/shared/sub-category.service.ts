@@ -30,7 +30,10 @@ export class SubCategoryService {
        'Content-Type' : 'application/json'
      })
    });
+  }
 
+  deleteSubCategoryById(data){
+    return this.http.delete<void>(`${this.baseUrl}/delete/${data.subCategoryId}`);
   }
 
 

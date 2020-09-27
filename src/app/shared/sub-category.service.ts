@@ -16,5 +16,22 @@ export class SubCategoryService {
     return this.http.get<Subcategory>(`${this.baseUrl}/getById/${categoryId}`);
   }
 
+  addSubCategory(data : Subcategory){
+     return this.http.post<Subcategory>(`${this.baseUrl}/add`,data, {
+     headers: new HttpHeaders({
+       'Content-Type' : 'application/json'
+     })
+   });
+  }
+
+  updateSubCategory(data : Subcategory){
+     return this.http.post<Subcategory>(`${this.baseUrl}/add`,data, {
+     headers: new HttpHeaders({
+       'Content-Type' : 'application/json'
+     })
+   });
+
+  }
+
 
 }

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ToastrManager } from 'ng6-toastr-notifications';
 import { BlockUI, NgBlockUI } from 'ng-block-ui';
 import { CategoryService } from '../../../../shared/category.service';
+import { SubCategoryService } from '../../../../shared/sub-category.service';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Category } from '../../../../shared/model/category';
 
@@ -19,12 +20,12 @@ export class AddSubcategoryDialogComponent implements OnInit {
   categories = [];
 
   constructor(private fb: FormBuilder,
-              private categoryService: CategoryService, 
+              private categoryService: CategoryService,
+              private subCategoryService : SubCategoryService, 
               private toaster: ToastrManager, 
               private http: HttpClientModule,
               @Inject(MAT_DIALOG_DATA) public data: any,
               private dialogRef : MatDialogRef<AddSubcategoryDialogComponent>) { 
-               
               }
 
   ngOnInit() {
@@ -35,6 +36,7 @@ export class AddSubcategoryDialogComponent implements OnInit {
 
   createSubCategoryForm(){
      this.subCategoryForm = this.fb.group({
+     subCategoryId: [''],  
      category: ['', Validators.required],
      subCategory: ['', Validators.required], 
      isActivate: ['', Validators.required]
@@ -45,6 +47,7 @@ export class AddSubcategoryDialogComponent implements OnInit {
     if(this.data.esubCategory){
       this.subCategoryForm.patchValue({
       category: this.data.esubCategory.categoryId,
+      subCategoryId: this.data.esubCategory.subCategoryId, 
       subCategory: this.data.esubCategory.subCategoryName,
       isActivate: this.data.esubCategory.isActivate
     });
@@ -57,13 +60,6 @@ export class AddSubcategoryDialogComponent implements OnInit {
     })
   }
 
-   changeCategory(e) {
-    console.log(e.value)
-    this.subCategoryForm.value.Category.setValue(e.target.value, {
-      onlySelf: true
-    })
-  }
-
   onNoClick(){
     this.dialogRef.close();
   }
@@ -71,8 +67,21 @@ export class AddSubcategoryDialogComponent implements OnInit {
   onSubmit(){
     console.log(this.subCategoryForm.value);
     console.log(this.data.esubCategory.subCategoryId);
-    this.toaster.successToastr('Sub category added successfully .');  
+    if (this.subCategoryForm.value.subCategoryId == ''){
+    this.subCategoryService.addSubCategory(this.subCategoryForm.value).subscribe(resp =>{
+          this.toaster.successToastr('Sub category added successfully .');  
+    }, err => {
+        this.toaster.errorToastr('Failed to add sub category');
+      }); 
+    } else {
+      this.subCategoryService.updateSubCategory(this.subCategoryForm.value).subscribe(resp =>{
+          this.toaster.successToastr('Sub category updated successfully .');  
+    }, err => {
+        this.toaster.errorToastr('Failed to update sub category');
+      });
+    }
     this.dialogRef.close();
+  }
   }
 
 

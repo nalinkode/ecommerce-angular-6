@@ -52,7 +52,7 @@ export class CategoryListComponent implements OnInit {
       });
   }
 
-   public applyFilter(filterValue: string) {
+  public applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase(); 
   }
   
@@ -90,8 +90,8 @@ export class CategoryListComponent implements OnInit {
      .afterClosed().subscribe(res => {
         if(res){
           this.categoryService.deleteCategory(eCategory).subscribe(resp=>{
+              this.getAllCategory(); 
               this.toastr.successToastr('Category deleted successfully.');
-              this.getAllCategory();
           }, err => {
               this.toastr.errorToastr('Failed to delete category');
       });

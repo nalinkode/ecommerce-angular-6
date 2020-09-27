@@ -106,8 +106,11 @@ export class SubcategoryListComponent implements OnInit {
      .afterClosed().subscribe(res => {
         if(res){
           this.subCategoryService.deleteSubCategoryById(subCategoryId).subscribe(resp =>{
+             this.getAllSubcategory();
             this.toastr.successToastr('Sub category deleted successfully.');
-          })
+          },err => {
+              this.toastr.errorToastr('Failed to delete scategory');
+          });
         }
      });
   }

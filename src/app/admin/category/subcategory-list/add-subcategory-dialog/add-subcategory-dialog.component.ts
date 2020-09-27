@@ -69,6 +69,7 @@ export class AddSubcategoryDialogComponent implements OnInit {
     console.log(this.data.esubCategory.subCategoryId);
     if (this.subCategoryForm.value.subCategoryId == ''){
     this.subCategoryService.addSubCategory(this.subCategoryForm.value).subscribe(resp =>{
+           
           this.toaster.successToastr('Sub category added successfully .');  
     }, err => {
         this.toaster.errorToastr('Failed to add sub category');
@@ -83,5 +84,4 @@ export class AddSubcategoryDialogComponent implements OnInit {
     this.dialogRef.close();
   }
   }
-
 }
